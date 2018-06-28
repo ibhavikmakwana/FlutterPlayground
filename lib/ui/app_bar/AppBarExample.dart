@@ -14,7 +14,7 @@ class AppBarExample extends StatelessWidget {
           GestureDetector(
             child: Container(
               child: new AppBar(
-                title: new Text("Appbar 1"),
+                title: new Text("Title"),
                 backgroundColor: Colors.orange,
                 elevation: 4.0,
               ),
@@ -53,7 +53,7 @@ class AppBarExample extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(bottom: 16.0),
             child: new AppBar(
-              title: new Text("Appbar Icon Theme"),
+              title: new Text("Appbar Icon and Text Theme"),
               actions: <Widget>[
                 new IconButton(
                   icon: new Icon(Icons.search),
@@ -91,6 +91,27 @@ class AppBarExample extends StatelessWidget {
                   new Text(
                     "subtitle",
                     style: TextStyle(fontSize: 14.0),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          ///App bar with the title and and icon/image at start
+          Container(
+            margin: EdgeInsets.only(bottom: 16.0),
+            child: new AppBar(
+              backgroundColor: Colors.orangeAccent,
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                children: <Widget>[
+                  new FlutterLogo(),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: new Text(
+                      "Title with image",
+                    ),
                   ),
                 ],
               ),
