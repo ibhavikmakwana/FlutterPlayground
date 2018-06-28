@@ -9,8 +9,7 @@ class BottomNavigation extends StatefulWidget {
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
-  String _title = "Navigation Example";
-
+  PageController _pageController;
   var _page = 0;
 
   @override
@@ -19,7 +18,21 @@ class _BottomNavigationState extends State<BottomNavigation> {
       appBar: AppBar(
         title: new Text(widget.title),
       ),
-      body: Center(child: new Text(_title)),
+      body: PageView(
+        children: <Widget>[
+          Container(
+            color: Colors.orangeAccent,
+          ),
+          Container(
+            color: Colors.redAccent,
+          ),
+          Container(
+            color: Colors.blueAccent,
+          ),
+        ],
+        controller: _pageController,
+        onPageChanged: onPageChanged,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
@@ -44,16 +57,29 @@ class _BottomNavigationState extends State<BottomNavigation> {
   ///
   /// Bottom Navigation tap listener
   ///
-  void navigationTapped(int value) {
+  void navigationTapped(int page) {
+    _pageController.animateToPage(
+      page,
+      duration: Duration(milliseconds: 300),
+      curve: Curves.easeIn,
+    );
+  }
+
+  void onPageChanged(int page) {
     setState(() {
-      this._page = value;
-      if (value == 0) {
-        _title = "Photo";
-      } else if (value == 1) {
-        _title = "Map";
-      } else if (value == 2) {
-        _title = "Favorite";
-      }
+      this._page = page;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = new PageController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _pageController.dispose();
   }
 }

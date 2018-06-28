@@ -4,6 +4,7 @@ import 'package:flutter_examples/models/ExapmleNames.dart';
 import 'package:flutter_examples/ui/DefaultExample.dart';
 import 'package:flutter_examples/ui/app_bar/AppBarExample.dart';
 import 'package:flutter_examples/ui/bottomnavigation/BottomNavigation.dart';
+import 'package:flutter_examples/ui/buttons/Buttons.dart';
 import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
 import 'package:flutter_examples/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_examples/utils/Strings.dart';
@@ -31,6 +32,8 @@ class MyApp extends StatelessWidget {
               BottomNavigation(title: Strings.bottomNavigationTitle),
           Strings.collapsibleToolbarExampleRoute: (BuildContext context) =>
               CollapsibleToolbar(title: Strings.appName),
+          Strings.buttonsExampleRoute: (BuildContext context) =>
+              Buttons(title: Strings.buttonsTitle),
         });
   }
 }
@@ -67,9 +70,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
 // The list displayed by this app.
 final List<ExampleNames> names = <ExampleNames>[
-  new ExampleNames('Default Example'),
+  new ExampleNames(Strings.defaultExampleTitle),
   new ExampleNames('App Bar'),
   new ExampleNames('Navigation Drawer'),
   new ExampleNames('Collapsible toolbar'),
-  new ExampleNames('Bottom Navigation'),
+  new ExampleNames(Strings.bottomNavigationTitle),
+  new ExampleNames(Strings.buttonsTitle),
 ];
