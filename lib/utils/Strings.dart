@@ -12,13 +12,23 @@ class Strings {
   static const String defaultExampleRoute = "/Default Example";
   static const String appBarExampleRoute = "/App Bar";
   static const String navigationDrawerExampleRoute = "/Navigation Drawer";
-  static const String bottomNavigationExampleRoute = "/Bottom Navigation with PageView";
+  static const String bottomNavigationExampleRoute =
+      "/Bottom Navigation with PageView";
   static const String collapsibleToolbarExampleRoute = "/Collapsible toolbar";
   static const String buttonsExampleRoute = "/Buttons";
+  static const String animatedIconsExampleRoute = "/Animated Icons";
+  static const String animatedSizeExampleRoute = "/Animated Size";
+  static const String progressButtonExampleRoute = "/Progress Button";
 
   ///Strings
   //Titles
-  static const String defaultExampleTitle = "Default Example";
+
+  static const String appBarTitle = "App Bar";
   static const String bottomNavigationTitle = "Bottom Navigation with PageView";
   static const String buttonsTitle = "Buttons";
+  static const String animatedIconsTitle = "Animated Icons";
+  static const String animatedSizeTitle = "Animated Size";
+  static const String collapsibleToolbarTitle = "Collapsible toolbar";
+  static const String navigationDrawerTitle = "Navigation Drawer";
+  static const String progressButtonTitle = "Progress Button";
 }

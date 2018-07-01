@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_examples/ExampleNameItem.dart';
 import 'package:flutter_examples/models/ExapmleNames.dart';
-import 'package:flutter_examples/ui/DefaultExample.dart';
+import 'package:flutter_examples/ui/animatedicons/AnimatedIcons.dart';
+import 'package:flutter_examples/ui/animatedsize/AnimatedSize.dart';
 import 'package:flutter_examples/ui/app_bar/AppBarExample.dart';
 import 'package:flutter_examples/ui/bottomnavigation/BottomNavigation.dart';
-import 'package:flutter_examples/ui/buttons/Buttons.dart';
 import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
 import 'package:flutter_examples/ui/drawer/NavigationDrawer.dart';
+import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
 import 'package:flutter_examples/utils/Strings.dart';
 
 void main() => runApp(new MyApp());
@@ -23,8 +24,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: new MyHomePage(title: Strings.appName),
         routes: <String, WidgetBuilder>{
-          Strings.defaultExampleRoute: (BuildContext context) =>
-              DefaultExample(title: Strings.defaultExampleTitle),
           Strings.appBarExampleRoute: (BuildContext context) => AppBarExample(),
           Strings.navigationDrawerExampleRoute: (BuildContext context) =>
               NavigationDrawer(),
@@ -32,8 +31,12 @@ class MyApp extends StatelessWidget {
               BottomNavigation(title: Strings.bottomNavigationTitle),
           Strings.collapsibleToolbarExampleRoute: (BuildContext context) =>
               CollapsibleToolbar(title: Strings.appName),
-          Strings.buttonsExampleRoute: (BuildContext context) =>
-              Buttons(title: Strings.buttonsTitle),
+          Strings.animatedIconsExampleRoute: (BuildContext context) =>
+              AnimatedIconsDemo(title: Strings.animatedIconsTitle),
+          Strings.animatedSizeExampleRoute: (BuildContext context) =>
+              AnimatedSizeDemo(title: Strings.animatedSizeTitle),
+          Strings.progressButtonExampleRoute: (BuildContext context) =>
+              ProgressButton(title: Strings.progressButtonTitle),
         });
   }
 }
@@ -70,10 +73,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
 // The list displayed by this app.
 final List<ExampleNames> names = <ExampleNames>[
-  new ExampleNames(Strings.defaultExampleTitle),
-  new ExampleNames('App Bar'),
-  new ExampleNames('Navigation Drawer'),
-  new ExampleNames('Collapsible toolbar'),
+  new ExampleNames(Strings.appBarTitle),
+  new ExampleNames(Strings.navigationDrawerTitle),
+  new ExampleNames(Strings.collapsibleToolbarTitle),
   new ExampleNames(Strings.bottomNavigationTitle),
-  new ExampleNames(Strings.buttonsTitle),
+  new ExampleNames(Strings.animatedIconsTitle),
+  new ExampleNames(Strings.animatedSizeTitle),
+  new ExampleNames(Strings.progressButtonTitle),
 ];
