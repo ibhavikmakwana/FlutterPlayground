@@ -8,6 +8,7 @@ import 'package:flutter_examples/ui/bottomnavigation/BottomNavigation.dart';
 import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
 import 'package:flutter_examples/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
+import 'package:flutter_examples/ui/staggeredanimation/StaggerDemo.dart';
 import 'package:flutter_examples/utils/Strings.dart';
 
 void main() => runApp(new MyApp());
@@ -37,6 +38,8 @@ class MyApp extends StatelessWidget {
               AnimatedSizeDemo(title: Strings.animatedSizeTitle),
           Strings.progressButtonExampleRoute: (BuildContext context) =>
               ProgressButton(title: Strings.progressButtonTitle),
+          Strings.staggerDemoExampleRoute: (BuildContext context) =>
+              StaggerDemo(title: Strings.staggerDemoTitle),
         });
   }
 }
@@ -80,4 +83,5 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.animatedIconsTitle),
   new ExampleNames(Strings.animatedSizeTitle),
   new ExampleNames(Strings.progressButtonTitle),
+  new ExampleNames(Strings.staggerDemoTitle)
 ];

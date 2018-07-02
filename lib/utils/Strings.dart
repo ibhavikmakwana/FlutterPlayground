@@ -19,6 +19,7 @@ class Strings {
   static const String animatedIconsExampleRoute = "/Animated Icons";
   static const String animatedSizeExampleRoute = "/Animated Size";
   static const String progressButtonExampleRoute = "/Progress Button";
+  static const String staggerDemoExampleRoute = "/Stagger Animation";
 
   ///Strings
   //Titles
@@ -31,4 +32,5 @@ class Strings {
   static const String collapsibleToolbarTitle = "Collapsible toolbar";
   static const String navigationDrawerTitle = "Navigation Drawer";
   static const String progressButtonTitle = "Progress Button";
+  static const String staggerDemoTitle = "Stagger Animation";
 }
