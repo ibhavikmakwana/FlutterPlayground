@@ -83,5 +83,5 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.animatedIconsTitle),
   new ExampleNames(Strings.animatedSizeTitle),
   new ExampleNames(Strings.progressButtonTitle),
-  new ExampleNames(Strings.staggerDemoTitle)
+  new ExampleNames(Strings.staggerDemoTitle),
 ];

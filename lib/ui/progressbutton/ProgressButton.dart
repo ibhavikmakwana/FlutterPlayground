@@ -73,13 +73,9 @@ class _ProgressButtonState extends State<ProgressButton>
         ),
       );
     } else if (_state == 1) {
-      return SizedBox(
-        height: 36.0,
-        width: 36.0,
-        child: CircularProgressIndicator(
-          value: null,
-          valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-        ),
+      return CircularProgressIndicator(
+        value: null,
+        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
       );
     } else {
       return Icon(Icons.check, color: Colors.white);
