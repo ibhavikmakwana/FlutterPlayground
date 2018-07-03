@@ -14,16 +14,38 @@ class ExampleNameItem extends StatelessWidget {
   Widget _buildTiles(ExampleNames root, BuildContext context) {
     return Column(
       children: <Widget>[
-        new ListTile(
-            contentPadding: EdgeInsets.only(left: 16.0, right: 16.0),
-            title: new Text(
-              root.title,
-              softWrap: true,
+        Card(
+          shape:
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.0)),
+          elevation: 4.0,
+          child: Container(
+            decoration: new BoxDecoration(
+              border: new Border(
+                left: new BorderSide(
+                  width: 4.0,
+                  color: Colors.lightGreen,
+                ),
+              ),
             ),
-            onTap: () {
-              Navigator.pushNamed(context, "/${exampleNames.title}");
-            }),
-        new Divider(),
+            child: new ListTile(
+                contentPadding: EdgeInsets.only(left: 16.0, right: 16.0),
+                title: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Expanded(
+                      child: new Text(
+                        root.title,
+                        softWrap: true,
+                      ),
+                    ),
+                    new Icon(Icons.chevron_right)
+                  ],
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, "/${exampleNames.title}");
+                }),
+          ),
+        ),
       ],
     );
   }

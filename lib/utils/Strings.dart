@@ -1,6 +1,6 @@
 class Strings {
   ///App name
-  static const String appName = "Flutter Exapmles";
+  static const String appName = "Flutter Playground";
 
   ///Assets
   //Fonts
