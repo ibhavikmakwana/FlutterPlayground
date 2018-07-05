@@ -25,6 +25,10 @@ Contains some examples I have created.
 | <img src="./preview/animated_size.gif" height="400" alt="Screenshot"/>  | <img src="./preview/progress_button.gif" height="400" alt="Screenshot"/> | <img src="./preview/staggered_animation.gif" height="400" alt="Screenshot"/> |
 
 
+| Tab bar |
+| ------------------ |
+| <img src="./preview/tab_bar.gif" height="400" alt="Screenshot"/>  |
+
 ## Getting Started
 
 For help getting started with Flutter, view online
