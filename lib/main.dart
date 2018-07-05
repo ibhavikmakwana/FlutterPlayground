@@ -9,6 +9,7 @@ import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
 import 'package:flutter_examples/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
 import 'package:flutter_examples/ui/staggeredanimation/StaggerDemo.dart';
+import 'package:flutter_examples/ui/tabbar/TabBarExample.dart';
 import 'package:flutter_examples/utils/Strings.dart';
 
 void main() => runApp(new MyApp());
@@ -26,6 +27,9 @@ class MyApp extends StatelessWidget {
         home: new MyHomePage(title: Strings.appName),
         routes: <String, WidgetBuilder>{
           Strings.appBarExampleRoute: (BuildContext context) => AppBarExample(),
+          Strings.tabBarExampleRoute: (BuildContext context) => TabBarExample(
+                title: Strings.TabBarTitle,
+              ),
           Strings.navigationDrawerExampleRoute: (BuildContext context) =>
               NavigationDrawer(),
           Strings.bottomNavigationExampleRoute: (BuildContext context) =>
@@ -77,6 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
 // The list displayed by this app.
 final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.appBarTitle),
+  new ExampleNames(Strings.TabBarTitle),
   new ExampleNames(Strings.navigationDrawerTitle),
   new ExampleNames(Strings.collapsibleToolbarTitle),
   new ExampleNames(Strings.bottomNavigationTitle),
