@@ -11,15 +11,13 @@ class AppBarExample extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           ///App bar with background color
-          GestureDetector(
-            child: Container(
-              child: new AppBar(
-                title: new Text("Title"),
-                backgroundColor: Colors.orange,
-                elevation: 4.0,
-              ),
-              margin: EdgeInsets.only(top: 16.0, bottom: 16.0),
+          Container(
+            child: new AppBar(
+              title: new Text("Title"),
+              backgroundColor: Colors.orange,
+              elevation: 4.0,
             ),
+            margin: EdgeInsets.only(top: 16.0, bottom: 16.0),
           ),
 
           ///App bar with Action items
@@ -117,6 +115,23 @@ class AppBarExample extends StatelessWidget {
               ),
             ),
           ),
+
+          ///App Bar with transparent background
+          Container(
+            margin: EdgeInsets.only(bottom: 16.0),
+            child: AppBar(
+              backgroundColor: Colors.transparent,
+              title: Text("Transparent AppBar"),
+              actions: <Widget>[
+                IconButton(
+                  icon: Icon(
+                    Icons.search,
+                  ),
+                  onPressed: () {},
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
