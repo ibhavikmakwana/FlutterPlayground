@@ -40,6 +40,13 @@ Hit me on twitter [![Twitter URL](https://img.shields.io/twitter/url/http/shield
 [![Medium](https://img.shields.io/badge/Medium-ibhavikmakwana-green.svg)](https://medium.com/@ibhavikmakwana)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-ibhavikmakwana-blue.svg)](https://www.linkedin.com/in/ibhavikmakwana/)
 
+
+# Donate
+
+> If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee:
+>
+> - [PayPal](https://www.paypal.me/ibhavikmakwana)
+
 ## License
 
 Copyright 2018 Bhavik Makwana
