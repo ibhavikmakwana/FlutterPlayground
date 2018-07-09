@@ -9,6 +9,7 @@ import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
 import 'package:flutter_examples/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
 import 'package:flutter_examples/ui/staggeredanimation/StaggerDemo.dart';
+import 'package:flutter_examples/ui/stepper/StepperExample.dart';
 import 'package:flutter_examples/ui/tabbar/TabBarExample.dart';
 import 'package:flutter_examples/utils/Strings.dart';
 
@@ -44,6 +45,8 @@ class MyApp extends StatelessWidget {
               ProgressButton(title: Strings.progressButtonTitle),
           Strings.staggerDemoExampleRoute: (BuildContext context) =>
               StaggerDemo(title: Strings.staggerDemoTitle),
+          Strings.stepperExampleRoute: (BuildContext context) =>
+              StepperExample(title: Strings.stepperExampleTitle),
         });
   }
 }
@@ -89,4 +92,5 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.animatedSizeTitle),
   new ExampleNames(Strings.progressButtonTitle),
   new ExampleNames(Strings.staggerDemoTitle),
+  new ExampleNames(Strings.stepperExampleTitle),
 ];

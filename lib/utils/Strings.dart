@@ -21,6 +21,7 @@ class Strings {
   static const String animatedSizeExampleRoute = "/Animated Size";
   static const String progressButtonExampleRoute = "/Progress Button";
   static const String staggerDemoExampleRoute = "/Stagger Animation";
+  static const String stepperExampleRoute = "/Stepper Example";
 
   ///Strings
   //Titles
@@ -35,4 +36,5 @@ class Strings {
   static const String navigationDrawerTitle = "Navigation Drawer";
   static const String progressButtonTitle = "Progress Button";
   static const String staggerDemoTitle = "Stagger Animation";
+  static const String stepperExampleTitle = "Stepper Example";
 }
