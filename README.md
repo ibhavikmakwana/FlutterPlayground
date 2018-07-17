@@ -25,9 +25,9 @@ Contains some examples I have created.
 | <img src="./preview/animated_size.gif" height="400" alt="Screenshot"/>  | <img src="./preview/progress_button.gif" height="400" alt="Screenshot"/> | <img src="./preview/staggered_animation.gif" height="400" alt="Screenshot"/> |
 
 
-| Tab bar |
-| ------------------ |
-| <img src="./preview/tab_bar.gif" height="400" alt="Screenshot"/>  |
+| Tab bar | List to Grid | Hardware clicks |
+| ------------------ | --------------------------- | ------------------ |
+| <img src="./preview/tab_bar.gif" height="400" alt="Screenshot"/>  | <img src="./preview/ListGrid.gif" height="400" alt="Screenshot"/> | <img src="./preview/Hardware.gif" height="400" alt="Screenshot"/> |
 
 ## Getting Started
 
