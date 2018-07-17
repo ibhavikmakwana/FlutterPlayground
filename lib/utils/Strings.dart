@@ -22,6 +22,7 @@ class Strings {
   static const String progressButtonExampleRoute = "/Progress Button";
   static const String staggerDemoExampleRoute = "/Stagger Animation";
   static const String stepperExampleRoute = "/Stepper Example";
+  static const String hardwareKeyExampleRoute = "/Hardware Key Example";
 
   ///Strings
   //Titles
@@ -37,4 +38,5 @@ class Strings {
   static const String progressButtonTitle = "Progress Button";
   static const String staggerDemoTitle = "Stagger Animation";
   static const String stepperExampleTitle = "Stepper Example";
+  static const String hardwareKeyExampleTitle = "Hardware Key Example";
 }

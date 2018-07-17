@@ -7,6 +7,7 @@ import 'package:flutter_examples/ui/app_bar/AppBarExample.dart';
 import 'package:flutter_examples/ui/bottomnavigation/BottomNavigation.dart';
 import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
 import 'package:flutter_examples/ui/drawer/NavigationDrawer.dart';
+import 'package:flutter_examples/ui/hardwarekey/RawKeyboardDemo.dart';
 import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
 import 'package:flutter_examples/ui/staggeredanimation/StaggerDemo.dart';
 import 'package:flutter_examples/ui/stepper/StepperExample.dart';
@@ -47,6 +48,8 @@ class MyApp extends StatelessWidget {
               StaggerDemo(title: Strings.staggerDemoTitle),
           Strings.stepperExampleRoute: (BuildContext context) =>
               StepperExample(title: Strings.stepperExampleTitle),
+          Strings.hardwareKeyExampleRoute: (BuildContext context) =>
+              RawKeyboardDemo(title: Strings.hardwareKeyExampleTitle),
         });
   }
 }
@@ -79,6 +82,8 @@ class _MyHomePageState extends State<MyHomePage>
     super.dispose();
   }
 
+  bool status = false;
+
   bool get _status {
     final AnimationStatus status = _controller.status;
     return status == AnimationStatus.completed ||
@@ -94,6 +99,9 @@ class _MyHomePageState extends State<MyHomePage>
           new IconButton(
             onPressed: () {
               _controller.fling(velocity: _status ? -2.0 : 2.0);
+              setState(() {
+                status = _status;
+              });
             },
             icon: new AnimatedIcon(
               icon: AnimatedIcons.view_list,
@@ -105,15 +113,35 @@ class _MyHomePageState extends State<MyHomePage>
       body: new Column(
         children: <Widget>[
           Expanded(
-            child: new ListView.builder(
-              itemBuilder: (BuildContext context, int index) =>
-                  new ExampleNameItem(names[index]),
-              itemCount: names.length,
-            ),
+            child: _buildExampleItemsWidget(_status),
           ),
         ],
       ),
     );
+  }
+
+  _buildExampleItemsWidget(bool status) {
+    if (status) {
+      return new ListView.builder(
+        itemBuilder: (BuildContext context, int index) =>
+        new ExampleNameItem(
+          exampleNames: names[index],
+        ),
+        itemCount: names.length,
+      );
+    } else {
+      return GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 3.0,
+        ),
+        itemBuilder: (BuildContext context, int index) =>
+        new ExampleNameItem(
+          exampleNames: names[index],
+        ),
+        itemCount: names.length,
+      );
+    }
   }
 }
 
@@ -129,4 +157,5 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.progressButtonTitle),
   new ExampleNames(Strings.staggerDemoTitle),
   new ExampleNames(Strings.stepperExampleTitle),
+  new ExampleNames(Strings.hardwareKeyExampleTitle),
 ];
