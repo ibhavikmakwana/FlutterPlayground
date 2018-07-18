@@ -23,10 +23,10 @@ class Strings {
   static const String staggerDemoExampleRoute = "/Stagger Animation";
   static const String stepperExampleRoute = "/Stepper Example";
   static const String hardwareKeyExampleRoute = "/Hardware Key Example";
+  static const String dragDropExampleRoute = "/Drag and Drop";
 
   ///Strings
   //Titles
-
   static const String appBarTitle = "App Bar";
   static const String TabBarTitle = "Tab Bar with Tab Bar View";
   static const String bottomNavigationTitle = "Bottom Navigation with PageView";
@@ -39,4 +39,5 @@ class Strings {
   static const String staggerDemoTitle = "Stagger Animation";
   static const String stepperExampleTitle = "Stepper Example";
   static const String hardwareKeyExampleTitle = "Hardware Key Example";
+  static const String dragDropExampleTitle = "Drag and Drop";
 }

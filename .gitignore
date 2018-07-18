@@ -16,3 +16,4 @@ build/
 
 **/ios/Flutter/Generated.xcconfig
 **/ios/Runner/GeneratedPluginRegistrant.*
+/lib/ui/sample.dart

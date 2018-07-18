@@ -6,6 +6,7 @@ import 'package:flutter_examples/ui/animatedsize/AnimatedSize.dart';
 import 'package:flutter_examples/ui/app_bar/AppBarExample.dart';
 import 'package:flutter_examples/ui/bottomnavigation/BottomNavigation.dart';
 import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
+import 'package:flutter_examples/ui/dragdrop/ExampleDragDrop.dart';
 import 'package:flutter_examples/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_examples/ui/hardwarekey/RawKeyboardDemo.dart';
 import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
@@ -50,6 +51,8 @@ class MyApp extends StatelessWidget {
               StepperExample(title: Strings.stepperExampleTitle),
           Strings.hardwareKeyExampleRoute: (BuildContext context) =>
               RawKeyboardDemo(title: Strings.hardwareKeyExampleTitle),
+          Strings.dragDropExampleRoute: (BuildContext context) =>
+              DragAndDropExample(title: Strings.dragDropExampleTitle),
         });
   }
 }
@@ -158,4 +161,5 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.staggerDemoTitle),
   new ExampleNames(Strings.stepperExampleTitle),
   new ExampleNames(Strings.hardwareKeyExampleTitle),
+  new ExampleNames(Strings.dragDropExampleTitle),
 ];
