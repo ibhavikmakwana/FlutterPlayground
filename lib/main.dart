@@ -13,6 +13,7 @@ import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
 import 'package:flutter_examples/ui/staggeredanimation/StaggerDemo.dart';
 import 'package:flutter_examples/ui/stepper/StepperExample.dart';
 import 'package:flutter_examples/ui/tabbar/TabBarExample.dart';
+import 'package:flutter_examples/ui/textspan/TextSpan.dart';
 import 'package:flutter_examples/utils/Strings.dart';
 
 void main() => runApp(new MyApp());
@@ -53,6 +54,8 @@ class MyApp extends StatelessWidget {
               RawKeyboardDemo(title: Strings.hardwareKeyExampleTitle),
           Strings.dragDropExampleRoute: (BuildContext context) =>
               DragAndDropExample(title: Strings.dragDropExampleTitle),
+          Strings.textSpanExampleRoute: (BuildContext context) =>
+              TextSpanExample(title: Strings.textSpanExampleTitle),
         });
   }
 }
@@ -162,4 +165,5 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.stepperExampleTitle),
   new ExampleNames(Strings.hardwareKeyExampleTitle),
   new ExampleNames(Strings.dragDropExampleTitle),
+  new ExampleNames(Strings.textSpanExampleTitle),
 ];

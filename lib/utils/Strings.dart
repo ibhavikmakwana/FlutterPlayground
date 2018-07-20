@@ -24,6 +24,7 @@ class Strings {
   static const String stepperExampleRoute = "/Stepper Example";
   static const String hardwareKeyExampleRoute = "/Hardware Key Example";
   static const String dragDropExampleRoute = "/Drag and Drop";
+  static const String textSpanExampleRoute = "/Text Span";
 
   ///Strings
   //Titles
@@ -40,4 +41,5 @@ class Strings {
   static const String stepperExampleTitle = "Stepper Example";
   static const String hardwareKeyExampleTitle = "Hardware Key Example";
   static const String dragDropExampleTitle = "Drag and Drop";
+  static const String textSpanExampleTitle = "Text Span";
 }
