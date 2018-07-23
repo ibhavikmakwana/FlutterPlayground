@@ -27,42 +27,38 @@ class _TextSpanState extends State<TextSpanExample> {
 
   Widget textSpanPage() {
     return Center(
-      child: Column(
-        children: <Widget>[
-          new RichText(
-            text: new TextSpan(
-              children: <TextSpan>[
-                new TextSpan(
-                  text: 'Hello, ',
-                  style: new TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 24.0,
-                    color: Colors.blue.shade500,
-                  ),
-                ),
-                new TextSpan(
-                  recognizer: recognizer,
-                  text: 'Bhavik',
-                  style: new TextStyle(
-                    fontWeight: FontWeight.w900,
-                    fontSize: 24.0,
-                    color: Colors.blue.shade900,
-                  ),
-                ),
-                new TextSpan(
-                  text: 'Makwana',
-                  style: new TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 24.0,
-                    color: Colors.blue.shade700,
-                  ),
-                ),
-              ],
+      child: new RichText(
+        text: new TextSpan(
+          children: <TextSpan>[
+            new TextSpan(
+              text: 'Hello, ',
+              style: new TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 24.0,
+                color: Colors.blue.shade500,
+              ),
             ),
-            textAlign: TextAlign.center,
-            textDirection: TextDirection.ltr,
-          ),
-        ],
+            new TextSpan(
+              recognizer: recognizer,
+              text: 'Bhavik',
+              style: new TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 24.0,
+                color: Colors.blue.shade900,
+              ),
+            ),
+            new TextSpan(
+              text: 'Makwana',
+              style: new TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 24.0,
+                color: Colors.blue.shade700,
+              ),
+            ),
+          ],
+        ),
+        textAlign: TextAlign.center,
+        textDirection: TextDirection.ltr,
       ),
     );
   }
