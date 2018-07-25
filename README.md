@@ -34,6 +34,10 @@ Contains some examples I have created.
 | ------------------ | --------------------------- | ------------------ |
 | <img src="./preview/tab_bar.gif" height="400" alt="Screenshot"/>  | <img src="./preview/ListGrid.gif" height="400" alt="Screenshot"/> | <img src="./preview/Hardware.gif" height="400" alt="Screenshot"/> |
 
+| AnimatedSwitcher |
+| ------------------ |
+| <img src="./preview/AnimatedSwitcher.gif" height="400" alt="Screenshot"/>  |
+
 ## Getting Started
 
 For help getting started with Flutter, view online
