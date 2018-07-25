@@ -15,6 +15,11 @@ Contains some examples I have created.
 | <img src="./preview/nav_drawer_left.png" height="400" alt="Screenshot"/>  | <img src="./preview/nav_drawer_right.png" height="400" alt="Screenshot"/> | <img src="./preview/nav_drawer_right_two.png" height="400" alt="Screenshot"/> |
 
 
+| Text Span |
+| ------------------ |
+| <img src="./preview/text_span.png" height="400" alt="Screenshot"/>  |
+
+
 | Collapsible Toolbar | Bottom Navigation | Animated Icons |
 | ------------------ | --------------------------- | ------------------ |
 | <img src="./preview/collapsing_app_bar.gif" height="400" alt="Screenshot"/>  | <img src="./preview/bottom_nav_bar.gif" height="400" alt="Screenshot"/> | <img src="./preview/animated_icons.gif" height="400" alt="Screenshot"/> |
