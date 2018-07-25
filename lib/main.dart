@@ -3,6 +3,7 @@ import 'package:flutter_examples/ExampleNameItem.dart';
 import 'package:flutter_examples/models/ExapmleNames.dart';
 import 'package:flutter_examples/ui/animatedicons/AnimatedIcons.dart';
 import 'package:flutter_examples/ui/animatedsize/AnimatedSize.dart';
+import 'package:flutter_examples/ui/animatedswitcher/AnimatedSwitcherExample.dart';
 import 'package:flutter_examples/ui/app_bar/AppBarExample.dart';
 import 'package:flutter_examples/ui/bottomnavigation/BottomNavigation.dart';
 import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
@@ -56,6 +57,9 @@ class MyApp extends StatelessWidget {
               DragAndDropExample(title: Strings.dragDropExampleTitle),
           Strings.textSpanExampleRoute: (BuildContext context) =>
               TextSpanExample(title: Strings.textSpanExampleTitle),
+          Strings.animatedSwitcherExampleRoute: (BuildContext context) =>
+              AnimatedSwitcherExample(
+                  title: Strings.animatedSwitcherExampleTitle),
         });
   }
 }
@@ -166,4 +170,5 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.hardwareKeyExampleTitle),
   new ExampleNames(Strings.dragDropExampleTitle),
   new ExampleNames(Strings.textSpanExampleTitle),
+  new ExampleNames(Strings.animatedSwitcherExampleTitle),
 ];

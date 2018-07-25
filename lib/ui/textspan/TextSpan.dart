@@ -13,7 +13,7 @@ class TextSpanExample extends StatefulWidget {
 class _TextSpanState extends State<TextSpanExample> {
   final recognizer = new TapGestureRecognizer()
     ..onTap = () {
-      print("You HAVE tapped Bhavik");
+      print("You have tapped Bhavik");
     };
 
   @override
