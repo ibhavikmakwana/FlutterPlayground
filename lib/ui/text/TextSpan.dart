@@ -30,7 +30,6 @@ class _TextSpanState extends State<TextSpanExample> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         textSpan(),
-        textUnderLine(),
       ],
     );
   }
@@ -51,7 +50,7 @@ class _TextSpanState extends State<TextSpanExample> {
               ),
               new TextSpan(
                 recognizer: recognizer,
-                text: 'Bhavik',
+                text: 'Flutter',
                 style: new TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: 24.0,
@@ -59,7 +58,7 @@ class _TextSpanState extends State<TextSpanExample> {
                 ),
               ),
               new TextSpan(
-                text: 'Makwana',
+                text: 'Playground',
                 style: new TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 24.0,
@@ -72,16 +71,6 @@ class _TextSpanState extends State<TextSpanExample> {
           textDirection: TextDirection.ltr,
         ),
       ],
-    );
-  }
-
-  textUnderLine() {
-    return Text(
-      "Bhavik",
-      style: TextStyle(
-          fontSize: 24.0,
-          decoration: TextDecoration.underline,
-          decorationStyle: TextDecorationStyle.solid),
     );
   }
 }

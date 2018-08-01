@@ -24,8 +24,13 @@ class Strings {
   static const String stepperExampleRoute = "/Stepper Example";
   static const String hardwareKeyExampleRoute = "/Hardware Key Example";
   static const String dragDropExampleRoute = "/Drag and Drop";
-  static const String textSpanExampleRoute = "/Text Span";
   static const String animatedSwitcherExampleRoute = "/AnimatedSwitcher";
+  static const String textExampleExampleRoute = "/Text Examples";
+
+
+  //Text specific routes
+  static const String textSpanExampleRoute = "/Text Span";
+  static const String textUnderlineExampleRoute = "/Text Underline";
 
   ///Strings
   //Titles
@@ -42,6 +47,10 @@ class Strings {
   static const String stepperExampleTitle = "Stepper Example";
   static const String hardwareKeyExampleTitle = "Hardware Key Example";
   static const String dragDropExampleTitle = "Drag and Drop";
-  static const String textSpanExampleTitle = "Text Span";
   static const String animatedSwitcherExampleTitle = "AnimatedSwitcher";
+  static const String textExampleExampleTitle = "Text Examples";
+
+  //Text specific
+  static const String textSpanExampleTitle = "Text Span";
+  static const String textUnderlineExampleTitle = "Text Underline";
 }
