@@ -26,7 +26,7 @@ class Strings {
   static const String dragDropExampleRoute = "/Drag and Drop";
   static const String animatedSwitcherExampleRoute = "/AnimatedSwitcher";
   static const String textExampleExampleRoute = "/Text Examples";
-
+  static const String lifeCycleStateExampleRoute = "/Lifecycle State";
 
   //Text specific routes
   static const String textSpanExampleRoute = "/Text Span";
@@ -49,6 +49,7 @@ class Strings {
   static const String dragDropExampleTitle = "Drag and Drop";
   static const String animatedSwitcherExampleTitle = "AnimatedSwitcher";
   static const String textExampleExampleTitle = "Text Examples";
+  static const String lifeCycleStateExampleTitle = "Lifecycle State";
 
   //Text specific
   static const String textSpanExampleTitle = "Text Span";
