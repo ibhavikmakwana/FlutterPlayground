@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_examples/ExampleNameItem.dart';
 import 'package:flutter_examples/models/ExapmleNames.dart';
+import 'package:flutter_examples/ui/aboutlisttile/AboutListTileExample.dart';
 import 'package:flutter_examples/ui/lifecycle/Lifecycle.dart';
 import 'package:flutter_examples/ui/animatedicons/AnimatedIcons.dart';
 import 'package:flutter_examples/ui/animatedsize/AnimatedSize.dart';
@@ -68,6 +69,8 @@ class MyApp extends StatelessWidget {
               TextSpanExample(title: Strings.textSpanExampleTitle),
           Strings.textUnderlineExampleRoute: (BuildContext context) =>
               TextUnderline(title: Strings.textUnderlineExampleTitle),
+          Strings.aboutListTileExampleRoute: (BuildContext context) =>
+              AboutListTileExample(title: Strings.aboutListTileExampleTitle),
           Strings.lifeCycleStateExampleRoute: (BuildContext context) =>
               Lifecycle(title: Strings.lifeCycleStateExampleTitle),
         });
@@ -181,5 +184,6 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.dragDropExampleTitle),
   new ExampleNames(Strings.textExampleExampleTitle),
   new ExampleNames(Strings.animatedSwitcherExampleTitle),
+  new ExampleNames(Strings.aboutListTileExampleTitle),
   new ExampleNames(Strings.lifeCycleStateExampleTitle),
 ];

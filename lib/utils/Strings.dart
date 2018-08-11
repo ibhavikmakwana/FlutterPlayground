@@ -27,6 +27,7 @@ class Strings {
   static const String animatedSwitcherExampleRoute = "/AnimatedSwitcher";
   static const String textExampleExampleRoute = "/Text Examples";
   static const String lifeCycleStateExampleRoute = "/Lifecycle State";
+  static const String aboutListTileExampleRoute = "/AboutListTile";
 
   //Text specific routes
   static const String textSpanExampleRoute = "/Text Span";
@@ -50,6 +51,7 @@ class Strings {
   static const String animatedSwitcherExampleTitle = "AnimatedSwitcher";
   static const String textExampleExampleTitle = "Text Examples";
   static const String lifeCycleStateExampleTitle = "Lifecycle State";
+  static const String aboutListTileExampleTitle = "AboutListTile";
 
   //Text specific
   static const String textSpanExampleTitle = "Text Span";
