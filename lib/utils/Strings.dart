@@ -32,6 +32,7 @@ class Strings {
   //Text specific routes
   static const String textSpanExampleRoute = "/Text Span";
   static const String textUnderlineExampleRoute = "/Text Underline";
+  static const String localAuthExampleRoute = "/Local Auth Example";
 
   ///Strings
   //Titles
@@ -56,4 +57,6 @@ class Strings {
   //Text specific
   static const String textSpanExampleTitle = "Text Span";
   static const String textUnderlineExampleTitle = "Text Underline";
+
+  static const String localAuthTitle = "Local Auth Example";
 }

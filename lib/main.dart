@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_examples/ExampleNameItem.dart';
 import 'package:flutter_examples/models/ExapmleNames.dart';
 import 'package:flutter_examples/ui/aboutlisttile/AboutListTileExample.dart';
-import 'package:flutter_examples/ui/lifecycle/Lifecycle.dart';
 import 'package:flutter_examples/ui/animatedicons/AnimatedIcons.dart';
 import 'package:flutter_examples/ui/animatedsize/AnimatedSize.dart';
 import 'package:flutter_examples/ui/animatedswitcher/AnimatedSwitcherExample.dart';
@@ -12,6 +11,8 @@ import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
 import 'package:flutter_examples/ui/dragdrop/ExampleDragDrop.dart';
 import 'package:flutter_examples/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_examples/ui/hardwarekey/RawKeyboardDemo.dart';
+import 'package:flutter_examples/ui/lifecycle/Lifecycle.dart';
+import 'package:flutter_examples/ui/local_auth/LocalAuth.dart';
 import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
 import 'package:flutter_examples/ui/staggeredanimation/StaggerDemo.dart';
 import 'package:flutter_examples/ui/stepper/StepperExample.dart';
@@ -73,6 +74,7 @@ class MyApp extends StatelessWidget {
               AboutListTileExample(title: Strings.aboutListTileExampleTitle),
           Strings.lifeCycleStateExampleRoute: (BuildContext context) =>
               Lifecycle(title: Strings.lifeCycleStateExampleTitle),
+          Strings.localAuthExampleRoute: (BuildContext context) => LocalAuth(),
         });
   }
 }
@@ -186,4 +188,5 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.animatedSwitcherExampleTitle),
   new ExampleNames(Strings.aboutListTileExampleTitle),
   new ExampleNames(Strings.lifeCycleStateExampleTitle),
+  new ExampleNames(Strings.localAuthTitle)
 ];
