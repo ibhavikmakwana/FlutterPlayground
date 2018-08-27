@@ -11,8 +11,8 @@ import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
 import 'package:flutter_examples/ui/dragdrop/ExampleDragDrop.dart';
 import 'package:flutter_examples/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_examples/ui/hardwarekey/RawKeyboardDemo.dart';
-import 'package:flutter_examples/ui/lifecycle/Lifecycle.dart';
 import 'package:flutter_examples/ui/local_auth/LocalAuth.dart';
+import 'package:flutter_examples/ui/nestedlist/NestedListExample.dart';
 import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
 import 'package:flutter_examples/ui/staggeredanimation/StaggerDemo.dart';
 import 'package:flutter_examples/ui/stepper/StepperExample.dart';
@@ -37,8 +37,7 @@ class MyApp extends StatelessWidget {
         home: new MyHomePage(title: Strings.appName),
         routes: <String, WidgetBuilder>{
           Strings.appBarExampleRoute: (BuildContext context) => AppBarExample(),
-          Strings.tabBarExampleRoute: (BuildContext context) =>
-              TabBarExample(
+          Strings.tabBarExampleRoute: (BuildContext context) => TabBarExample(
                 title: Strings.TabBarTitle,
               ),
           Strings.navigationDrawerExampleRoute: (BuildContext context) =>
@@ -73,7 +72,7 @@ class MyApp extends StatelessWidget {
           Strings.aboutListTileExampleRoute: (BuildContext context) =>
               AboutListTileExample(title: Strings.aboutListTileExampleTitle),
           Strings.lifeCycleStateExampleRoute: (BuildContext context) =>
-              Lifecycle(title: Strings.lifeCycleStateExampleTitle),
+              NestedListExample(),
           Strings.localAuthExampleRoute: (BuildContext context) => LocalAuth(),
         });
   }
@@ -148,10 +147,9 @@ class _MyHomePageState extends State<MyHomePage>
   _buildExampleItemsWidget(bool status) {
     if (status) {
       return new ListView.builder(
-        itemBuilder: (BuildContext context, int index) =>
-        new ExampleNameItem(
-          exampleNames: names[index],
-        ),
+        itemBuilder: (BuildContext context, int index) => new ExampleNameItem(
+              exampleNames: names[index],
+            ),
         itemCount: names.length,
       );
     } else {
@@ -160,10 +158,9 @@ class _MyHomePageState extends State<MyHomePage>
           crossAxisCount: 2,
           childAspectRatio: 3.0,
         ),
-        itemBuilder: (BuildContext context, int index) =>
-        new ExampleNameItem(
-          exampleNames: names[index],
-        ),
+        itemBuilder: (BuildContext context, int index) => new ExampleNameItem(
+              exampleNames: names[index],
+            ),
         itemCount: names.length,
       );
     }

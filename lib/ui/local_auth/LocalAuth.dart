@@ -12,6 +12,24 @@ class LocalAuth extends StatefulWidget {
 class _LocalAuthState extends State<LocalAuth> {
   String _authorized = 'Not Authorized';
 
+  Future<Null> _authenticateWithBiometrics() async {
+    final LocalAuthentication auth = new LocalAuthentication();
+    bool authenticated = false;
+    try {
+      authenticated = await auth.authenticateWithBiometrics(
+          localizedReason: 'Scan your fingerprint to authenticate',
+          useErrorDialogs: true,
+          stickyAuth: false);
+    } on PlatformException catch (e) {
+      print(e);
+    }
+    if (!mounted) return;
+
+    setState(() {
+      _authorized = authenticated ? 'Authorized' : 'Not Authorized';
+    });
+  }
+
   Future<Null> _authenticate() async {
     final LocalAuthentication auth = new LocalAuthentication();
     bool authenticated = false;
@@ -35,19 +53,23 @@ class _LocalAuthState extends State<LocalAuth> {
     return new MaterialApp(
         home: new Scaffold(
       appBar: new AppBar(
-        title: const Text('Plugin example app'),
+        title: const Text('Local authentication'),
       ),
       body: new ConstrainedBox(
-          constraints: const BoxConstraints.expand(),
-          child: new Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                new Text('Current State: $_authorized\n'),
-                new RaisedButton(
-                  child: const Text('Authenticate'),
-                  onPressed: _authenticate,
-                )
-              ])),
+        constraints: const BoxConstraints.expand(),
+        child: ListView(
+          children: <Widget>[
+            new RaisedButton(
+              child: const Text('Authenticate'),
+              onPressed: _authenticateWithBiometrics,
+            ),
+            new RaisedButton(
+              child: const Text('Authenticate'),
+              onPressed: _authenticateWithBiometrics,
+            ),
+          ],
+        ),
+      ),
     ));
   }
 }
