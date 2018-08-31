@@ -28,11 +28,10 @@ class Strings {
   static const String textExampleExampleRoute = "/Text Examples";
   static const String lifeCycleStateExampleRoute = "/Lifecycle State";
   static const String aboutListTileExampleRoute = "/AboutListTile";
-
-  //Text specific routes
+  static const String rotatedBoxExampleRoute = "/RotatedBox Example";
   static const String textSpanExampleRoute = "/Text Span";
   static const String textUnderlineExampleRoute = "/Text Underline";
-  static const String localAuthExampleRoute = "/Local Auth Example";
+  static const String localAuthExampleRoute = "/Local authentication Example";
 
   ///Strings
   //Titles
@@ -58,5 +57,6 @@ class Strings {
   static const String textSpanExampleTitle = "Text Span";
   static const String textUnderlineExampleTitle = "Text Underline";
 
-  static const String localAuthTitle = "Local Auth Example";
+  static const String localAuthTitle = "Local authentication Example";
+  static const String rotatedBoxTitle = "RotatedBox Example";
 }

@@ -14,6 +14,7 @@ import 'package:flutter_examples/ui/hardwarekey/RawKeyboardDemo.dart';
 import 'package:flutter_examples/ui/local_auth/LocalAuth.dart';
 import 'package:flutter_examples/ui/nestedlist/NestedListExample.dart';
 import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
+import 'package:flutter_examples/ui/rotatedbox/RotatedBox.dart';
 import 'package:flutter_examples/ui/staggeredanimation/StaggerDemo.dart';
 import 'package:flutter_examples/ui/stepper/StepperExample.dart';
 import 'package:flutter_examples/ui/tabbar/TabBarExample.dart';
@@ -73,7 +74,10 @@ class MyApp extends StatelessWidget {
               AboutListTileExample(title: Strings.aboutListTileExampleTitle),
           Strings.lifeCycleStateExampleRoute: (BuildContext context) =>
               NestedListExample(),
-          Strings.localAuthExampleRoute: (BuildContext context) => LocalAuth(),
+          Strings.localAuthExampleRoute: (BuildContext context) =>
+              LocalAuthExample(title: Strings.localAuthTitle),
+          Strings.rotatedBoxExampleRoute: (BuildContext context) =>
+              RotatedBoxExample(Strings.rotatedBoxTitle),
         });
   }
 }
@@ -151,6 +155,7 @@ class _MyHomePageState extends State<MyHomePage>
               exampleNames: names[index],
             ),
         itemCount: names.length,
+        padding: new EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
       );
     } else {
       return GridView.builder(
@@ -162,6 +167,7 @@ class _MyHomePageState extends State<MyHomePage>
               exampleNames: names[index],
             ),
         itemCount: names.length,
+        padding: new EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
       );
     }
   }
@@ -185,5 +191,6 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.animatedSwitcherExampleTitle),
   new ExampleNames(Strings.aboutListTileExampleTitle),
   new ExampleNames(Strings.lifeCycleStateExampleTitle),
-  new ExampleNames(Strings.localAuthTitle)
+  new ExampleNames(Strings.localAuthTitle),
+  new ExampleNames(Strings.rotatedBoxTitle)
 ];
