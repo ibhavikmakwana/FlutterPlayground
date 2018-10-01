@@ -11,8 +11,8 @@ import 'package:flutter_examples/ui/collapsibletoolbar/CollapsibleToolbar.dart';
 import 'package:flutter_examples/ui/dragdrop/ExampleDragDrop.dart';
 import 'package:flutter_examples/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_examples/ui/hardwarekey/RawKeyboardDemo.dart';
+import 'package:flutter_examples/ui/lifecycle/Lifecycle.dart';
 import 'package:flutter_examples/ui/local_auth/LocalAuth.dart';
-import 'package:flutter_examples/ui/nestedlist/NestedListExample.dart';
 import 'package:flutter_examples/ui/progressbutton/ProgressButton.dart';
 import 'package:flutter_examples/ui/rotatedbox/RotatedBox.dart';
 import 'package:flutter_examples/ui/staggeredanimation/StaggerDemo.dart';
@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
           Strings.aboutListTileExampleRoute: (BuildContext context) =>
               AboutListTileExample(title: Strings.aboutListTileExampleTitle),
           Strings.lifeCycleStateExampleRoute: (BuildContext context) =>
-              NestedListExample(),
+              Lifecycle(title: Strings.lifeCycleStateExampleTitle),
           Strings.localAuthExampleRoute: (BuildContext context) =>
               LocalAuthExample(title: Strings.localAuthTitle),
           Strings.rotatedBoxExampleRoute: (BuildContext context) =>

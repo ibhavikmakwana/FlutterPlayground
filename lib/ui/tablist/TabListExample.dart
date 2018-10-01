@@ -18,7 +18,7 @@ class MessageItem implements ListItem {
   MessageItem(this.sender, this.body);
 }
 
-class NestedListExample extends StatefulWidget {
+class TabListExample extends StatefulWidget {
   final items = List<ListItem>.generate(
     20,
     (i) => HeadingItem("Heading $i"),
@@ -28,7 +28,7 @@ class NestedListExample extends StatefulWidget {
   _NestedListExampleState createState() => _NestedListExampleState();
 }
 
-class _NestedListExampleState extends State<NestedListExample>
+class _NestedListExampleState extends State<TabListExample>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
   ScrollController _scrollController;
