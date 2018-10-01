@@ -32,6 +32,7 @@ class Strings {
   static const String textSpanExampleRoute = "/Text Span";
   static const String textUnderlineExampleRoute = "/Text Underline";
   static const String localAuthExampleRoute = "/Local authentication Example";
+  static const String nestedListExampleRoute = "/Nested Example";
 
   ///Strings
   //Titles
@@ -52,11 +53,11 @@ class Strings {
   static const String textExampleExampleTitle = "Text Examples";
   static const String lifeCycleStateExampleTitle = "Lifecycle State";
   static const String aboutListTileExampleTitle = "AboutListTile";
+  static const String localAuthTitle = "Local authentication Example";
+  static const String rotatedBoxTitle = "RotatedBox Example";
+  static const String nestedListTitle = "Nested Example";
 
   //Text specific
   static const String textSpanExampleTitle = "Text Span";
   static const String textUnderlineExampleTitle = "Text Underline";
-
-  static const String localAuthTitle = "Local authentication Example";
-  static const String rotatedBoxTitle = "RotatedBox Example";
 }

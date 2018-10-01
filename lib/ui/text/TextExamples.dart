@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_examples/utils/Strings.dart';
+import 'package:flutter_playground/utils/Strings.dart';
 
 class TextExamples extends StatefulWidget {
   final String title;

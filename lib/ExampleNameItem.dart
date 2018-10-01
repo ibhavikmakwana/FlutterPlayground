@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_examples/models/ExapmleNames.dart';
+import 'package:flutter_playground/models/ExapmleNames.dart';
 import 'package:meta/meta.dart';
 
 /// A [ExampleNameItem] to display a [ExampleNames].
