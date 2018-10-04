@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/ExampleNameItem.dart';
 import 'package:flutter_playground/models/ExapmleNames.dart';
@@ -8,6 +9,9 @@ import 'package:flutter_playground/ui/animatedswitcher/AnimatedSwitcherExample.d
 import 'package:flutter_playground/ui/app_bar/AppBarExample.dart';
 import 'package:flutter_playground/ui/bottomnavigation/BottomNavigation.dart';
 import 'package:flutter_playground/ui/collapsibletoolbar/CollapsibleToolbar.dart';
+import 'package:flutter_playground/ui/cupertino/CupertinoActionSheetExample.dart';
+import 'package:flutter_playground/ui/cupertino/CupertinoProgressIndicatorExample.dart';
+import 'package:flutter_playground/ui/cupertino/CupertinoTimerPickerExample.dart';
 import 'package:flutter_playground/ui/dragdrop/ExampleDragDrop.dart';
 import 'package:flutter_playground/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_playground/ui/hardwarekey/RawKeyboardDemo.dart';
@@ -81,7 +85,14 @@ class MyApp extends StatelessWidget {
           Strings.rotatedBoxExampleRoute: (BuildContext context) =>
               RotatedBoxExample(Strings.rotatedBoxTitle),
           Strings.nestedListExampleRoute: (BuildContext context) =>
-              NestedList(Strings.nestedListTitle)
+              NestedList(Strings.nestedListTitle),
+          Strings.cupertinoTimerPickerRoute: (BuildContext context) =>
+              CupertinoTimerPickerExample(Strings.cupertinoTimerPickerTitle),
+          Strings.CupertinoActionSheetRoute: (BuildContext context) =>
+              CupertinoActionSheetExample(Strings.CupertinoActionSheetTitle),
+          Strings.CupertinoProgressIndicatorRoute: (BuildContext context) =>
+              CupertinoProgressIndicatorExample(
+                  Strings.CupertinoProgressIndicatorTitle),
         });
   }
 }
@@ -160,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage>
           exampleNames: names[index],
         ),
         itemCount: names.length,
-        padding: new EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+        padding: new EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
       );
     } else {
       return GridView.builder(
@@ -173,7 +184,7 @@ class _MyHomePageState extends State<MyHomePage>
           exampleNames: names[index],
         ),
         itemCount: names.length,
-        padding: new EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+        padding: new EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
       );
     }
   }
@@ -199,5 +210,8 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.lifeCycleStateExampleTitle),
   new ExampleNames(Strings.localAuthTitle),
   new ExampleNames(Strings.rotatedBoxTitle),
-  new ExampleNames(Strings.nestedListTitle)
+  new ExampleNames(Strings.nestedListTitle),
+  new ExampleNames(Strings.cupertinoTimerPickerTitle),
+  new ExampleNames(Strings.CupertinoActionSheetTitle),
+  new ExampleNames(Strings.CupertinoProgressIndicatorTitle),
 ];

@@ -33,6 +33,12 @@ class Strings {
   static const String textUnderlineExampleRoute = "/Text Underline";
   static const String localAuthExampleRoute = "/Local authentication Example";
   static const String nestedListExampleRoute = "/Nested Example";
+  static const String cupertinoTimerPickerRoute =
+      "/CupertinoTimerPicker Example";
+  static const String CupertinoActionSheetRoute =
+      "/CupertinoActionSheet Example";
+  static const String CupertinoProgressIndicatorRoute =
+      "/CupertinoProgressIndicator Example";
 
   ///Strings
   //Titles
@@ -56,6 +62,13 @@ class Strings {
   static const String localAuthTitle = "Local authentication Example";
   static const String rotatedBoxTitle = "RotatedBox Example";
   static const String nestedListTitle = "Nested Example";
+
+  static const String cupertinoTimerPickerTitle =
+      "CupertinoTimerPicker Example";
+  static const String CupertinoActionSheetTitle =
+      "CupertinoActionSheet Example";
+  static const String CupertinoProgressIndicatorTitle =
+      "CupertinoProgressIndicator Example";
 
   //Text specific
   static const String textSpanExampleTitle = "Text Span";

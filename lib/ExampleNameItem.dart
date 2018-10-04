@@ -34,20 +34,26 @@ class ExampleNameItem extends StatelessWidget {
             Navigator.pushNamed(context, "/${exampleNames.title}");
           },
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                child: Container(
+                  margin: EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
                   child: new Text(
                     exampleNames.title,
+                    softWrap: true,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ),
-              new Icon(
-                Icons.chevron_right,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: new Icon(
+                  Icons.chevron_right,
+                ),
               ),
             ],
           ),
