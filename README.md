@@ -21,6 +21,10 @@ Contains list examples I have created.
 | ------------------ | ------------------ | ------------------ |
 | <img src="./preview/text_span.png" height="400" alt="Screenshot"/>  | <img src="./preview/text_underline.png" height="400" alt="Screenshot"/>  | <img src="./preview/about_list_tile.png" height="400" alt="Screenshot"/>  |
 
+| Rotated Box |
+| ------------------ |
+| <img src="./preview/rotated_box.png" height="400" alt="Screenshot"/>  |
+
 
 | Collapsible Toolbar | Bottom Navigation | Animated Icons |
 | ------------------ | --------------------------- | ------------------ |
@@ -36,9 +40,9 @@ Contains list examples I have created.
 | ------------------ | --------------------------- | ------------------ |
 | <img src="./preview/tab_bar.gif" height="400" alt="Screenshot"/>  | <img src="./preview/ListGrid.gif" height="400" alt="Screenshot"/> | <img src="./preview/Hardware.gif" height="400" alt="Screenshot"/> |
 
-| AnimatedSwitcher |
-| ------------------ |
-| <img src="./preview/AnimatedSwitcher.gif" height="400" alt="Screenshot"/>  |
+| AnimatedSwitcher | Nested List |
+| ------------------ | ------------------ |
+| <img src="./preview/AnimatedSwitcher.gif" height="400" alt="Screenshot"/>  | <img src="./preview/nested_list.gif" height="400" alt="Screenshot"/>  |
 
 ## Getting Started
 
