@@ -13,7 +13,8 @@ class TextSpanExample extends StatefulWidget {
 class _TextSpanState extends State<TextSpanExample> {
   final recognizer = new TapGestureRecognizer()
     ..onTap = () {
-      print("You have tapped Bhavik");
+      
+      print("You have tapped Flutter");
     };
 
   @override
@@ -27,7 +28,8 @@ class _TextSpanState extends State<TextSpanExample> {
 
   Widget textSpanPage() {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         textSpan(),
       ],
@@ -35,42 +37,38 @@ class _TextSpanState extends State<TextSpanExample> {
   }
 
   textSpan() {
-    return Row(
-      children: <Widget>[
-        new RichText(
-          text: new TextSpan(
-            children: <TextSpan>[
-              new TextSpan(
-                text: 'Hello, ',
-                style: new TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 24.0,
-                  color: Colors.blue.shade500,
-                ),
-              ),
-              new TextSpan(
-                recognizer: recognizer,
-                text: 'Flutter',
-                style: new TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 24.0,
-                  color: Colors.blue.shade900,
-                ),
-              ),
-              new TextSpan(
-                text: 'Playground',
-                style: new TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 24.0,
-                  color: Colors.blue.shade700,
-                ),
-              ),
-            ],
-          ),
-          textAlign: TextAlign.center,
-          textDirection: TextDirection.ltr,
+    return new RichText(
+      text: new TextSpan(
+        style: new TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 24.0,
+          color: Colors.blue.shade500,
         ),
-      ],
+        children: <TextSpan>[
+          new TextSpan(
+            text: 'Hello, This is the ',
+            style: new TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 24.0,
+              color: Colors.blue.shade500,
+            ),
+          ),
+          new TextSpan(
+            recognizer: recognizer,
+            text: 'Flutter ',
+            style: new TextStyle(
+              fontWeight: FontWeight.w900,
+              fontSize: 24.0,
+              color: Colors.blue.shade900,
+            ),
+          ),
+          new TextSpan(
+            text: 'Playground',
+          ),
+        ],
+      ),
+      textAlign: TextAlign.center,
+      textDirection: TextDirection.ltr,
     );
   }
 }
