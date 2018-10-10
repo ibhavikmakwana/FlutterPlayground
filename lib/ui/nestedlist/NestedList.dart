@@ -12,7 +12,6 @@ class NestedList extends StatelessWidget {
         title: Text(title),
       ),
       body: ListView.builder(
-        shrinkWrap: true,
         primary: true,
         itemBuilder: (BuildContext context, int index) {
           return buildHorizontalListView();
