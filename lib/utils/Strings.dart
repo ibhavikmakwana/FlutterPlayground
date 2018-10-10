@@ -39,6 +39,7 @@ class Strings {
       "/CupertinoActionSheet Example";
   static const String CupertinoProgressIndicatorRoute =
       "/CupertinoProgressIndicator Example";
+  static const String GridPaperRoute = "/GridPaper Example";
 
   ///Strings
   //Titles
@@ -69,6 +70,7 @@ class Strings {
       "CupertinoActionSheet Example";
   static const String CupertinoProgressIndicatorTitle =
       "CupertinoProgressIndicator Example";
+  static const String GridPaperTitle = "GridPaper Example";
 
   //Text specific
   static const String textSpanExampleTitle = "Text Span";

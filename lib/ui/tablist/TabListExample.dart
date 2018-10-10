@@ -52,8 +52,6 @@ class _NestedListExampleState extends State<TabListExample>
 
   void _handleTabSelection() {
     setState(() {
-      var height = _globalKey.currentContext;
-      final RenderBox box = height.findRenderObject();
       _scrollController.animateTo(_tabController.offset,
           curve: Curves.ease, duration: Duration(seconds: 2));
     });

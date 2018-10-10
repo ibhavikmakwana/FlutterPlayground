@@ -14,6 +14,7 @@ import 'package:flutter_playground/ui/cupertino/CupertinoProgressIndicatorExampl
 import 'package:flutter_playground/ui/cupertino/CupertinoTimerPickerExample.dart';
 import 'package:flutter_playground/ui/dragdrop/ExampleDragDrop.dart';
 import 'package:flutter_playground/ui/drawer/NavigationDrawer.dart';
+import 'package:flutter_playground/ui/gridpaper/GridPaperExample.dart';
 import 'package:flutter_playground/ui/hardwarekey/RawKeyboardDemo.dart';
 import 'package:flutter_playground/ui/lifecycle/Lifecycle.dart';
 import 'package:flutter_playground/ui/local_auth/LocalAuth.dart';
@@ -43,8 +44,7 @@ class MyApp extends StatelessWidget {
         home: new MyHomePage(title: Strings.appName),
         routes: <String, WidgetBuilder>{
           Strings.appBarExampleRoute: (BuildContext context) => AppBarExample(),
-          Strings.tabBarExampleRoute: (BuildContext context) =>
-              TabBarExample(
+          Strings.tabBarExampleRoute: (BuildContext context) => TabBarExample(
                 title: Strings.TabBarTitle,
               ),
           Strings.navigationDrawerExampleRoute: (BuildContext context) =>
@@ -93,6 +93,8 @@ class MyApp extends StatelessWidget {
           Strings.CupertinoProgressIndicatorRoute: (BuildContext context) =>
               CupertinoProgressIndicatorExample(
                   Strings.CupertinoProgressIndicatorTitle),
+          Strings.GridPaperRoute: (BuildContext context) =>
+              GridPaperExample(Strings.GridPaperTitle),
         });
   }
 }
@@ -166,10 +168,9 @@ class _MyHomePageState extends State<MyHomePage>
   _buildExampleItemsWidget(bool status) {
     if (status) {
       return new ListView.builder(
-        itemBuilder: (BuildContext context, int index) =>
-        new ExampleNameItem(
-          exampleNames: names[index],
-        ),
+        itemBuilder: (BuildContext context, int index) => new ExampleNameItem(
+              exampleNames: names[index],
+            ),
         itemCount: names.length,
         padding: new EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
       );
@@ -179,10 +180,9 @@ class _MyHomePageState extends State<MyHomePage>
           crossAxisCount: 2,
           childAspectRatio: 3.0,
         ),
-        itemBuilder: (BuildContext context, int index) =>
-        new ExampleNameItem(
-          exampleNames: names[index],
-        ),
+        itemBuilder: (BuildContext context, int index) => new ExampleNameItem(
+              exampleNames: names[index],
+            ),
         itemCount: names.length,
         padding: new EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
       );
@@ -214,4 +214,5 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.cupertinoTimerPickerTitle),
   new ExampleNames(Strings.CupertinoActionSheetTitle),
   new ExampleNames(Strings.CupertinoProgressIndicatorTitle),
+  new ExampleNames(Strings.GridPaperTitle),
 ];
