@@ -21,9 +21,9 @@ Contains list examples I have created.
 | ------------------ | ------------------ | ------------------ |
 | <img src="./preview/text_span.png" height="400" alt="Screenshot"/>  | <img src="./preview/text_underline.png" height="400" alt="Screenshot"/>  | <img src="./preview/about_list_tile.png" height="400" alt="Screenshot"/>  |
 
-| Rotated Box |
-| ------------------ |
-| <img src="./preview/rotated_box.png" height="400" alt="Screenshot"/>  |
+| Rotated Box | Grid Paper |
+| ------------------ | ------------------ |
+| <img src="./preview/rotated_box.png" height="400" alt="Screenshot"/>  | <img src="./preview/GridPaper.jpg" height="400" alt="Screenshot"/>  |
 
 
 | Collapsible Toolbar | Bottom Navigation | Animated Icons |
