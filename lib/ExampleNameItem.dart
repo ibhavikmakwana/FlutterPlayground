@@ -11,8 +11,7 @@ class ExampleNameItem extends StatelessWidget {
     Key key,
     @required this.exampleNames,
     this.onTap,
-  })
-      : assert(exampleNames != null),
+  })  : assert(exampleNames != null),
         super(key: key);
 
   @override
@@ -41,8 +40,11 @@ class ExampleNameItem extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: new Text(
-                    exampleNames.title,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: new Text(
+                      exampleNames.title,
+                    ),
                   ),
                 ),
               ),
