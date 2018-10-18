@@ -8,6 +8,7 @@ import 'package:flutter_playground/ui/animatedsize/AnimatedSize.dart';
 import 'package:flutter_playground/ui/animatedswitcher/AnimatedSwitcherExample.dart';
 import 'package:flutter_playground/ui/app_bar/AppBarExample.dart';
 import 'package:flutter_playground/ui/bottomnavigation/BottomNavigation.dart';
+import 'package:flutter_playground/ui/chipsexample/ChipsExample.dart';
 import 'package:flutter_playground/ui/collapsibletoolbar/CollapsibleToolbar.dart';
 import 'package:flutter_playground/ui/cupertino/CupertinoActionSheetExample.dart';
 import 'package:flutter_playground/ui/cupertino/CupertinoProgressIndicatorExample.dart';
@@ -95,6 +96,8 @@ class MyApp extends StatelessWidget {
                   Strings.CupertinoProgressIndicatorTitle),
           Strings.GridPaperRoute: (BuildContext context) =>
               GridPaperExample(Strings.GridPaperTitle),
+          Strings.ChipsExampleRoute: (BuildContext context) =>
+              ChipsExample(Strings.ChipsExampleTitle),
         });
   }
 }
@@ -215,4 +218,5 @@ final List<ExampleNames> names = <ExampleNames>[
   new ExampleNames(Strings.CupertinoActionSheetTitle),
   new ExampleNames(Strings.CupertinoProgressIndicatorTitle),
   new ExampleNames(Strings.GridPaperTitle),
+  new ExampleNames(Strings.ChipsExampleTitle),
 ];
