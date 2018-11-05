@@ -47,15 +47,13 @@ class ExpansionTileExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: ListView.builder(
-          itemBuilder: (BuildContext context, int index) => Item(data[index]),
-          itemCount: data.length,
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: ListView.builder(
+        itemBuilder: (BuildContext context, int index) => Item(data[index]),
+        itemCount: data.length,
       ),
     );
   }
