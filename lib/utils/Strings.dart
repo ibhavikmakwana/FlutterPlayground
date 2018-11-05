@@ -42,7 +42,7 @@ class Strings {
   static const String GridPaperRoute = "/GridPaper Example";
   static const String ChipsExampleRoute = "/Chips Example";
   static const String ExpansionTileRoute = "/Expansion Tile Example";
-
+  static const String RotationTransitionRoute = "/Rotation Transition Example";
 
   ///Strings
   //Titles
@@ -76,6 +76,8 @@ class Strings {
   static const String GridPaperTitle = "GridPaper Example";
   static const String ChipsExampleTitle = "Chips Example";
   static const String ExpansionTileTitle = "Expansion Tile Example";
+
+  static const String RotationTransitionTitle = "Rotation Transition Example";
 
   static const String textSpanExampleTitle = "Text Span";
   static const String textUnderlineExampleTitle = "Text Underline";

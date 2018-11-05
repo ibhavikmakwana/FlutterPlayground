@@ -23,6 +23,7 @@ import 'package:flutter_playground/ui/local_auth/LocalAuth.dart';
 import 'package:flutter_playground/ui/nestedlist/NestedList.dart';
 import 'package:flutter_playground/ui/progressbutton/ProgressButton.dart';
 import 'package:flutter_playground/ui/rotatedbox/RotatedBox.dart';
+import 'package:flutter_playground/ui/rotation_transition/RotationTransitionExample.dart';
 import 'package:flutter_playground/ui/staggeredanimation/StaggerDemo.dart';
 import 'package:flutter_playground/ui/stepper/StepperExample.dart';
 import 'package:flutter_playground/ui/tabbar/TabBarExample.dart';
@@ -101,6 +102,8 @@ class MyApp extends StatelessWidget {
               ChipsExample(Strings.ChipsExampleTitle),
           Strings.ExpansionTileRoute: (BuildContext context) =>
               ExpansionTileExample(Strings.ExpansionTileTitle),
+          Strings.RotationTransitionRoute: (BuildContext context) =>
+              RotationTransitionExample(Strings.RotationTransitionTitle),
         });
   }
 }
@@ -223,4 +226,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.GridPaperTitle),
   ExampleNames(Strings.ChipsExampleTitle),
   ExampleNames(Strings.ExpansionTileTitle),
+  ExampleNames(Strings.RotationTransitionTitle),
 ];
