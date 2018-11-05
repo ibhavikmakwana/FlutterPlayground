@@ -15,6 +15,7 @@ import 'package:flutter_playground/ui/cupertino/CupertinoProgressIndicatorExampl
 import 'package:flutter_playground/ui/cupertino/CupertinoTimerPickerExample.dart';
 import 'package:flutter_playground/ui/dragdrop/ExampleDragDrop.dart';
 import 'package:flutter_playground/ui/drawer/NavigationDrawer.dart';
+import 'package:flutter_playground/ui/expansion_tile/ExpansionTileExample.dart';
 import 'package:flutter_playground/ui/gridpaper/GridPaperExample.dart';
 import 'package:flutter_playground/ui/hardwarekey/RawKeyboardDemo.dart';
 import 'package:flutter_playground/ui/lifecycle/Lifecycle.dart';
@@ -98,6 +99,8 @@ class MyApp extends StatelessWidget {
               GridPaperExample(Strings.GridPaperTitle),
           Strings.ChipsExampleRoute: (BuildContext context) =>
               ChipsExample(Strings.ChipsExampleTitle),
+          Strings.ExpansionTileRoute: (BuildContext context) =>
+              ExpansionTileExample(Strings.ExpansionTileTitle),
         });
   }
 }
@@ -195,28 +198,29 @@ class _MyHomePageState extends State<MyHomePage>
 
 // The list displayed by this app.
 final List<ExampleNames> names = <ExampleNames>[
-  new ExampleNames(Strings.appBarTitle),
-  new ExampleNames(Strings.TabBarTitle),
-  new ExampleNames(Strings.navigationDrawerTitle),
-  new ExampleNames(Strings.collapsibleToolbarTitle),
-  new ExampleNames(Strings.bottomNavigationTitle),
-  new ExampleNames(Strings.animatedIconsTitle),
-  new ExampleNames(Strings.animatedSizeTitle),
-  new ExampleNames(Strings.progressButtonTitle),
-  new ExampleNames(Strings.staggerDemoTitle),
-  new ExampleNames(Strings.stepperExampleTitle),
-  new ExampleNames(Strings.hardwareKeyExampleTitle),
-  new ExampleNames(Strings.dragDropExampleTitle),
-  new ExampleNames(Strings.textExampleExampleTitle),
-  new ExampleNames(Strings.animatedSwitcherExampleTitle),
-  new ExampleNames(Strings.aboutListTileExampleTitle),
-  new ExampleNames(Strings.lifeCycleStateExampleTitle),
-  new ExampleNames(Strings.localAuthTitle),
-  new ExampleNames(Strings.rotatedBoxTitle),
-  new ExampleNames(Strings.nestedListTitle),
-  new ExampleNames(Strings.cupertinoTimerPickerTitle),
-  new ExampleNames(Strings.CupertinoActionSheetTitle),
-  new ExampleNames(Strings.CupertinoProgressIndicatorTitle),
-  new ExampleNames(Strings.GridPaperTitle),
-  new ExampleNames(Strings.ChipsExampleTitle),
+  ExampleNames(Strings.appBarTitle),
+  ExampleNames(Strings.TabBarTitle),
+  ExampleNames(Strings.navigationDrawerTitle),
+  ExampleNames(Strings.collapsibleToolbarTitle),
+  ExampleNames(Strings.bottomNavigationTitle),
+  ExampleNames(Strings.animatedIconsTitle),
+  ExampleNames(Strings.animatedSizeTitle),
+  ExampleNames(Strings.progressButtonTitle),
+  ExampleNames(Strings.staggerDemoTitle),
+  ExampleNames(Strings.stepperExampleTitle),
+  ExampleNames(Strings.hardwareKeyExampleTitle),
+  ExampleNames(Strings.dragDropExampleTitle),
+  ExampleNames(Strings.textExampleExampleTitle),
+  ExampleNames(Strings.animatedSwitcherExampleTitle),
+  ExampleNames(Strings.aboutListTileExampleTitle),
+  ExampleNames(Strings.lifeCycleStateExampleTitle),
+  ExampleNames(Strings.localAuthTitle),
+  ExampleNames(Strings.rotatedBoxTitle),
+  ExampleNames(Strings.nestedListTitle),
+  ExampleNames(Strings.cupertinoTimerPickerTitle),
+  ExampleNames(Strings.CupertinoActionSheetTitle),
+  ExampleNames(Strings.CupertinoProgressIndicatorTitle),
+  ExampleNames(Strings.GridPaperTitle),
+  ExampleNames(Strings.ChipsExampleTitle),
+  ExampleNames(Strings.ExpansionTileTitle),
 ];

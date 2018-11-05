@@ -41,6 +41,8 @@ class Strings {
       "/CupertinoProgressIndicator Example";
   static const String GridPaperRoute = "/GridPaper Example";
   static const String ChipsExampleRoute = "/Chips Example";
+  static const String ExpansionTileRoute = "/Expansion Tile Example";
+
 
   ///Strings
   //Titles
@@ -73,8 +75,8 @@ class Strings {
       "CupertinoProgressIndicator Example";
   static const String GridPaperTitle = "GridPaper Example";
   static const String ChipsExampleTitle = "Chips Example";
+  static const String ExpansionTileTitle = "Expansion Tile Example";
 
-  //Text specific
   static const String textSpanExampleTitle = "Text Span";
   static const String textUnderlineExampleTitle = "Text Underline";
 }
