@@ -16,6 +16,7 @@ import 'package:flutter_playground/ui/cupertino/CupertinoTimerPickerExample.dart
 import 'package:flutter_playground/ui/dragdrop/ExampleDragDrop.dart';
 import 'package:flutter_playground/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_playground/ui/expansion_tile/ExpansionTileExample.dart';
+import 'package:flutter_playground/ui/flow_example/FlowWidgetExample.dart';
 import 'package:flutter_playground/ui/gridpaper/GridPaperExample.dart';
 import 'package:flutter_playground/ui/hardwarekey/RawKeyboardDemo.dart';
 import 'package:flutter_playground/ui/lifecycle/Lifecycle.dart';
@@ -38,73 +39,77 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-        title: Strings.appName,
-        theme: new ThemeData(
-          primarySwatch: Colors.blue,
-          fontFamily: Strings.fontRobotoRegular,
-        ),
-        debugShowCheckedModeBanner: false,
-        home: new MyHomePage(title: Strings.appName),
-        routes: <String, WidgetBuilder>{
-          Strings.appBarExampleRoute: (BuildContext context) => AppBarExample(),
-          Strings.tabBarExampleRoute: (BuildContext context) => TabBarExample(
-                title: Strings.TabBarTitle,
-              ),
-          Strings.navigationDrawerExampleRoute: (BuildContext context) =>
-              NavigationDrawer(),
-          Strings.bottomNavigationExampleRoute: (BuildContext context) =>
-              BottomNavigation(title: Strings.bottomNavigationTitle),
-          Strings.collapsibleToolbarExampleRoute: (BuildContext context) =>
-              CollapsibleToolbar(title: Strings.appName),
-          Strings.animatedIconsExampleRoute: (BuildContext context) =>
-              AnimatedIconsDemo(title: Strings.animatedIconsTitle),
-          Strings.animatedSizeExampleRoute: (BuildContext context) =>
-              AnimatedSizeDemo(title: Strings.animatedSizeTitle),
-          Strings.progressButtonExampleRoute: (BuildContext context) =>
-              ProgressButton(title: Strings.progressButtonTitle),
-          Strings.staggerDemoExampleRoute: (BuildContext context) =>
-              StaggerDemo(title: Strings.staggerDemoTitle),
-          Strings.stepperExampleRoute: (BuildContext context) =>
-              StepperExample(title: Strings.stepperExampleTitle),
-          Strings.hardwareKeyExampleRoute: (BuildContext context) =>
-              RawKeyboardDemo(title: Strings.hardwareKeyExampleTitle),
-          Strings.dragDropExampleRoute: (BuildContext context) =>
-              DragAndDropExample(title: Strings.dragDropExampleTitle),
-          Strings.animatedSwitcherExampleRoute: (BuildContext context) =>
-              AnimatedSwitcherExample(
-                  title: Strings.animatedSwitcherExampleTitle),
-          Strings.textExampleExampleRoute: (BuildContext context) =>
-              TextExamples(title: Strings.textExampleExampleTitle),
-          Strings.textSpanExampleRoute: (BuildContext context) =>
-              TextSpanExample(title: Strings.textSpanExampleTitle),
-          Strings.textUnderlineExampleRoute: (BuildContext context) =>
-              TextUnderline(title: Strings.textUnderlineExampleTitle),
-          Strings.aboutListTileExampleRoute: (BuildContext context) =>
-              AboutListTileExample(title: Strings.aboutListTileExampleTitle),
-          Strings.lifeCycleStateExampleRoute: (BuildContext context) =>
-              Lifecycle(title: Strings.lifeCycleStateExampleTitle),
-          Strings.localAuthExampleRoute: (BuildContext context) =>
-              LocalAuthExample(title: Strings.localAuthTitle),
-          Strings.rotatedBoxExampleRoute: (BuildContext context) =>
-              RotatedBoxExample(Strings.rotatedBoxTitle),
-          Strings.nestedListExampleRoute: (BuildContext context) =>
-              NestedList(Strings.nestedListTitle),
-          Strings.cupertinoTimerPickerRoute: (BuildContext context) =>
-              CupertinoTimerPickerExample(Strings.cupertinoTimerPickerTitle),
-          Strings.CupertinoActionSheetRoute: (BuildContext context) =>
-              CupertinoActionSheetExample(Strings.CupertinoActionSheetTitle),
-          Strings.CupertinoProgressIndicatorRoute: (BuildContext context) =>
-              CupertinoProgressIndicatorExample(
-                  Strings.CupertinoProgressIndicatorTitle),
-          Strings.GridPaperRoute: (BuildContext context) =>
-              GridPaperExample(Strings.GridPaperTitle),
-          Strings.ChipsExampleRoute: (BuildContext context) =>
-              ChipsExample(Strings.ChipsExampleTitle),
-          Strings.ExpansionTileRoute: (BuildContext context) =>
-              ExpansionTileExample(Strings.ExpansionTileTitle),
-          Strings.RotationTransitionRoute: (BuildContext context) =>
-              RotationTransitionExample(Strings.RotationTransitionTitle),
-        });
+      title: Strings.appName,
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: Strings.fontRobotoRegular,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(title: Strings.appName),
+      routes: <String, WidgetBuilder>{
+        Strings.appBarExampleRoute: (BuildContext context) => AppBarExample(),
+        Strings.tabBarExampleRoute: (BuildContext context) =>
+            TabBarExample(
+              title: Strings.TabBarTitle,
+            ),
+        Strings.navigationDrawerExampleRoute: (BuildContext context) =>
+            NavigationDrawer(),
+        Strings.bottomNavigationExampleRoute: (BuildContext context) =>
+            BottomNavigation(title: Strings.bottomNavigationTitle),
+        Strings.collapsibleToolbarExampleRoute: (BuildContext context) =>
+            CollapsibleToolbar(title: Strings.appName),
+        Strings.animatedIconsExampleRoute: (BuildContext context) =>
+            AnimatedIconsDemo(title: Strings.animatedIconsTitle),
+        Strings.animatedSizeExampleRoute: (BuildContext context) =>
+            AnimatedSizeDemo(title: Strings.animatedSizeTitle),
+        Strings.progressButtonExampleRoute: (BuildContext context) =>
+            ProgressButton(title: Strings.progressButtonTitle),
+        Strings.staggerDemoExampleRoute: (BuildContext context) =>
+            StaggerDemo(title: Strings.staggerDemoTitle),
+        Strings.stepperExampleRoute: (BuildContext context) =>
+            StepperExample(title: Strings.stepperExampleTitle),
+        Strings.hardwareKeyExampleRoute: (BuildContext context) =>
+            RawKeyboardDemo(title: Strings.hardwareKeyExampleTitle),
+        Strings.dragDropExampleRoute: (BuildContext context) =>
+            DragAndDropExample(title: Strings.dragDropExampleTitle),
+        Strings.animatedSwitcherExampleRoute: (BuildContext context) =>
+            AnimatedSwitcherExample(
+                title: Strings.animatedSwitcherExampleTitle),
+        Strings.textExampleExampleRoute: (BuildContext context) =>
+            TextExamples(title: Strings.textExampleExampleTitle),
+        Strings.textSpanExampleRoute: (BuildContext context) =>
+            TextSpanExample(title: Strings.textSpanExampleTitle),
+        Strings.textUnderlineExampleRoute: (BuildContext context) =>
+            TextUnderline(title: Strings.textUnderlineExampleTitle),
+        Strings.aboutListTileExampleRoute: (BuildContext context) =>
+            AboutListTileExample(title: Strings.aboutListTileExampleTitle),
+        Strings.lifeCycleStateExampleRoute: (BuildContext context) =>
+            Lifecycle(title: Strings.lifeCycleStateExampleTitle),
+        Strings.localAuthExampleRoute: (BuildContext context) =>
+            LocalAuthExample(title: Strings.localAuthTitle),
+        Strings.rotatedBoxExampleRoute: (BuildContext context) =>
+            RotatedBoxExample(Strings.rotatedBoxTitle),
+        Strings.nestedListExampleRoute: (BuildContext context) =>
+            NestedList(Strings.nestedListTitle),
+        Strings.cupertinoTimerPickerRoute: (BuildContext context) =>
+            CupertinoTimerPickerExample(Strings.cupertinoTimerPickerTitle),
+        Strings.CupertinoActionSheetRoute: (BuildContext context) =>
+            CupertinoActionSheetExample(Strings.CupertinoActionSheetTitle),
+        Strings.CupertinoProgressIndicatorRoute: (BuildContext context) =>
+            CupertinoProgressIndicatorExample(
+                Strings.CupertinoProgressIndicatorTitle),
+        Strings.GridPaperRoute: (BuildContext context) =>
+            GridPaperExample(Strings.GridPaperTitle),
+        Strings.ChipsExampleRoute: (BuildContext context) =>
+            ChipsExample(Strings.ChipsExampleTitle),
+        Strings.ExpansionTileRoute: (BuildContext context) =>
+            ExpansionTileExample(Strings.ExpansionTileTitle),
+        Strings.RotationTransitionRoute: (BuildContext context) =>
+            RotationTransitionExample(Strings.RotationTransitionTitle),
+        Strings.FlowWidgetExampleRoute: (BuildContext context) =>
+            FlowWidgetExample(Strings.FlowWidgetExampleTitle),
+      },
+    );
   }
 }
 
@@ -227,4 +232,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.ChipsExampleTitle),
   ExampleNames(Strings.ExpansionTileTitle),
   ExampleNames(Strings.RotationTransitionTitle),
+  ExampleNames(Strings.FlowWidgetExampleTitle),
 ];
