@@ -13,6 +13,7 @@ import 'package:flutter_playground/ui/collapsibletoolbar/CollapsibleToolbar.dart
 import 'package:flutter_playground/ui/cupertino/CupertinoActionSheetExample.dart';
 import 'package:flutter_playground/ui/cupertino/CupertinoProgressIndicatorExample.dart';
 import 'package:flutter_playground/ui/cupertino/CupertinoTimerPickerExample.dart';
+import 'package:flutter_playground/ui/dismissible/DismissibleExample.dart';
 import 'package:flutter_playground/ui/dragdrop/ExampleDragDrop.dart';
 import 'package:flutter_playground/ui/drawer/NavigationDrawer.dart';
 import 'package:flutter_playground/ui/expansion_tile/ExpansionTileExample.dart';
@@ -79,8 +80,7 @@ class MyApp extends StatelessWidget {
       Strings.dragDropExampleRoute: (BuildContext context) =>
           DragAndDropExample(title: Strings.dragDropExampleTitle),
       Strings.animatedSwitcherExampleRoute: (BuildContext context) =>
-          AnimatedSwitcherExample(
-              title: Strings.animatedSwitcherExampleTitle),
+          AnimatedSwitcherExample(title: Strings.animatedSwitcherExampleTitle),
       Strings.textExampleExampleRoute: (BuildContext context) =>
           TextExamples(title: Strings.textExampleExampleTitle),
       Strings.textSpanExampleRoute: (BuildContext context) =>
@@ -114,6 +114,8 @@ class MyApp extends StatelessWidget {
           RotationTransitionExample(Strings.RotationTransitionTitle),
       Strings.FlowWidgetExampleRoute: (BuildContext context) =>
           FlowWidgetExample(Strings.FlowWidgetExampleTitle),
+      Strings.dismissibleExampleRoute: (BuildContext context) =>
+          DismissibleExample(Strings.dismissibleExampleTitle),
     };
   }
 }
@@ -238,4 +240,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.ExpansionTileTitle),
   ExampleNames(Strings.RotationTransitionTitle),
   ExampleNames(Strings.FlowWidgetExampleTitle),
+  ExampleNames(Strings.dismissibleExampleTitle),
 ];
