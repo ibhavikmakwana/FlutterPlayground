@@ -25,7 +25,7 @@ Contains list examples I have created.
 | ------------------ | ------------------ | ------------------ |
 | <img src="./preview/rotated_box.png" height="400" alt="Screenshot"/>  | <img src="./preview/GridPaper.jpg" height="400" alt="Screenshot"/>  | <img src="./preview/expansion_tile.png" height="400" alt="Screenshot"/>  |
 
-| Rotated Box |
+| BackdropFilter |
 | ------------------ |
 | <img src="./preview/backdrop_filter.png" height="400" alt="Screenshot"/>  |
 
