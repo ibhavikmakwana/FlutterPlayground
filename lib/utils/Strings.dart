@@ -45,8 +45,7 @@ class Strings {
   static const String RotationTransitionRoute = "/Rotation Transition Example";
   static const String FlowWidgetExampleRoute = "/Flow Widget Example";
   static const String dismissibleExampleRoute = "/Dismissible Example";
-
-
+  static const String BackdropFilterExampleRoute = "/BackdropFilter Example";
 
   ///Strings
   //Titles
@@ -87,4 +86,5 @@ class Strings {
   static const String textUnderlineExampleTitle = "Text Underline";
   static const String FlowWidgetExampleTitle = "Flow Widget Example";
   static const String dismissibleExampleTitle = "Dismissible Example";
+  static const String BackdropFilterExampleTitle = "BackdropFilter Example";
 }

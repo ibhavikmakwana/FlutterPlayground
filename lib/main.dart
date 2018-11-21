@@ -7,6 +7,7 @@ import 'package:flutter_playground/ui/animatedicons/AnimatedIcons.dart';
 import 'package:flutter_playground/ui/animatedsize/AnimatedSize.dart';
 import 'package:flutter_playground/ui/animatedswitcher/AnimatedSwitcherExample.dart';
 import 'package:flutter_playground/ui/app_bar/AppBarExample.dart';
+import 'package:flutter_playground/ui/backdrop_filter/BackdropFilterExample.dart';
 import 'package:flutter_playground/ui/bottomnavigation/BottomNavigation.dart';
 import 'package:flutter_playground/ui/chipsexample/ChipsExample.dart';
 import 'package:flutter_playground/ui/collapsibletoolbar/CollapsibleToolbar.dart';
@@ -116,6 +117,8 @@ class MyApp extends StatelessWidget {
           FlowWidgetExample(Strings.FlowWidgetExampleTitle),
       Strings.dismissibleExampleRoute: (BuildContext context) =>
           DismissibleExample(Strings.dismissibleExampleTitle),
+      Strings.BackdropFilterExampleRoute: (BuildContext context) =>
+          BackdropFilterExample(Strings.BackdropFilterExampleTitle),
     };
   }
 }
@@ -241,4 +244,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.RotationTransitionTitle),
   ExampleNames(Strings.FlowWidgetExampleTitle),
   ExampleNames(Strings.dismissibleExampleTitle),
+  ExampleNames(Strings.BackdropFilterExampleTitle),
 ];
