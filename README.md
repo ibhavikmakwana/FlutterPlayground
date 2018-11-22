@@ -72,6 +72,7 @@ Hit me on
 > If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee:
 >
 > - [PayPal](https://www.paypal.me/ibhavikmakwana)
+> - Google Pay **(bhavikmakwana43@okhdfcbank)**
 
 ## License
 
