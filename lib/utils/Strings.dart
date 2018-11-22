@@ -46,6 +46,9 @@ class Strings {
   static const String FlowWidgetExampleRoute = "/Flow Widget Example";
   static const String dismissibleExampleRoute = "/Dismissible Example";
   static const String BackdropFilterExampleRoute = "/BackdropFilter Example";
+  static const String googleMapsExampleRoute = "/Google Maps Example";
+
+
 
   ///Strings
   //Titles
@@ -87,4 +90,5 @@ class Strings {
   static const String FlowWidgetExampleTitle = "Flow Widget Example";
   static const String dismissibleExampleTitle = "Dismissible Example";
   static const String BackdropFilterExampleTitle = "BackdropFilter Example";
+  static const String googleMapsExampleTitle = "Google Maps Example";
 }

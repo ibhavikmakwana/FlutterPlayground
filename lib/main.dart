@@ -23,6 +23,7 @@ import 'package:flutter_playground/ui/gridpaper/GridPaperExample.dart';
 import 'package:flutter_playground/ui/hardwarekey/RawKeyboardDemo.dart';
 import 'package:flutter_playground/ui/lifecycle/Lifecycle.dart';
 import 'package:flutter_playground/ui/local_auth/LocalAuth.dart';
+import 'package:flutter_playground/ui/map/GoogleMapsExample.dart';
 import 'package:flutter_playground/ui/nestedlist/NestedList.dart';
 import 'package:flutter_playground/ui/progressbutton/ProgressButton.dart';
 import 'package:flutter_playground/ui/rotatedbox/RotatedBox.dart';
@@ -119,6 +120,8 @@ class MyApp extends StatelessWidget {
           DismissibleExample(Strings.dismissibleExampleTitle),
       Strings.BackdropFilterExampleRoute: (BuildContext context) =>
           BackdropFilterExample(Strings.BackdropFilterExampleTitle),
+      Strings.googleMapsExampleRoute: (BuildContext context) =>
+          GoogleMapsExample(Strings.googleMapsExampleTitle),
     };
   }
 }
@@ -245,4 +248,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.FlowWidgetExampleTitle),
   ExampleNames(Strings.dismissibleExampleTitle),
   ExampleNames(Strings.BackdropFilterExampleTitle),
+  ExampleNames(Strings.googleMapsExampleTitle),
 ];
