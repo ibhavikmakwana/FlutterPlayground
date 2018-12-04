@@ -9,6 +9,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   local_auth: ^0.2.1
+  webview_flutter:
   google_maps_flutter:
    git:
      url: git://github.com/flutter/plugins
