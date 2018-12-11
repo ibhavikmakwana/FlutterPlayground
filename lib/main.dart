@@ -34,6 +34,7 @@ import 'package:flutter_playground/ui/tabbar/TabBarExample.dart';
 import 'package:flutter_playground/ui/text/TextExamples.dart';
 import 'package:flutter_playground/ui/text/TextSpan.dart';
 import 'package:flutter_playground/ui/text/TextUnderline.dart';
+import 'package:flutter_playground/ui/tooltip/tooltip.dart';
 import 'package:flutter_playground/utils/Strings.dart';
 
 void main() => runApp(new MyApp());
@@ -122,6 +123,8 @@ class MyApp extends StatelessWidget {
           BackdropFilterExample(Strings.BackdropFilterExampleTitle),
       Strings.googleMapsExampleRoute: (BuildContext context) =>
           GoogleMapsExample(Strings.googleMapsExampleTitle),
+      Strings.toolTipExampleRoute: (BuildContext context) =>
+          ToolTipExample(Strings.toolTipExampleTitle),
     };
   }
 }
@@ -249,4 +252,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.dismissibleExampleTitle),
   ExampleNames(Strings.BackdropFilterExampleTitle),
   ExampleNames(Strings.googleMapsExampleTitle),
+  ExampleNames(Strings.toolTipExampleTitle),
 ];
