@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 class AppBarExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Default Appbar"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Default Appbar"),
         elevation: 0.0,
       ),
       body: ListView(
         children: <Widget>[
           ///App bar with background color
           Container(
-            child: new AppBar(
-              title: new Text("Title"),
+            child: AppBar(
+              title: Text("Title"),
               backgroundColor: Colors.orange,
               elevation: 4.0,
             ),
@@ -23,15 +23,15 @@ class AppBarExample extends StatelessWidget {
           ///App bar with Action items
           Container(
             margin: EdgeInsets.only(bottom: 16.0),
-            child: new AppBar(
-              title: new Text("Appbar actions"),
+            child: AppBar(
+              title: Text("Appbar actions"),
               actions: <Widget>[
-                new IconButton(
-                  icon: new Icon(Icons.search),
+                IconButton(
+                  icon: Icon(Icons.search),
                   onPressed: () {},
                 ),
-                new IconButton(
-                  icon: new Icon(Icons.settings),
+                IconButton(
+                  icon: Icon(Icons.settings),
                   onPressed: () {},
                 ),
               ],
@@ -41,8 +41,8 @@ class AppBarExample extends StatelessWidget {
           ///Center text
           Container(
             margin: EdgeInsets.only(bottom: 16.0),
-            child: new AppBar(
-              title: new Text("Center"),
+            child: AppBar(
+              title: Text("Center"),
               centerTitle: true,
             ),
           ),
@@ -50,15 +50,15 @@ class AppBarExample extends StatelessWidget {
           ///IconTheme for the app bar
           Container(
             margin: EdgeInsets.only(bottom: 16.0),
-            child: new AppBar(
-              title: new Text("Appbar Icon and Text Theme"),
+            child: AppBar(
+              title: Text("Appbar Icon and Text Theme"),
               actions: <Widget>[
-                new IconButton(
-                  icon: new Icon(Icons.search),
+                IconButton(
+                  icon: Icon(Icons.search),
                   onPressed: () {},
                 ),
-                new IconButton(
-                  icon: new Icon(Icons.settings),
+                IconButton(
+                  icon: Icon(Icons.settings),
                   onPressed: () {},
                 ),
               ],
@@ -76,17 +76,17 @@ class AppBarExample extends StatelessWidget {
           ///App bar with the title and subtitle
           Container(
             margin: EdgeInsets.only(bottom: 16.0),
-            child: new AppBar(
+            child: AppBar(
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  new Text(
+                  Text(
                     "Title",
                     style: TextStyle(fontSize: 18.0),
                   ),
-                  new Text(
+                  Text(
                     "subtitle",
                     style: TextStyle(fontSize: 14.0),
                   ),
@@ -98,16 +98,16 @@ class AppBarExample extends StatelessWidget {
           ///App bar with the title and and icon/image at start
           Container(
             margin: EdgeInsets.only(bottom: 16.0),
-            child: new AppBar(
+            child: AppBar(
               backgroundColor: Colors.orangeAccent,
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
-                  new FlutterLogo(),
+                  FlutterLogo(),
                   Padding(
                     padding: const EdgeInsets.only(left: 16.0),
-                    child: new Text(
+                    child: Text(
                       "Title with image",
                     ),
                   ),

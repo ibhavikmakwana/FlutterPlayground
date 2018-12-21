@@ -11,7 +11,7 @@ class TextSpanExample extends StatefulWidget {
 }
 
 class _TextSpanState extends State<TextSpanExample> {
-  final recognizer = new TapGestureRecognizer()
+  final recognizer = TapGestureRecognizer()
     ..onTap = () {
       
       print("You have tapped Flutter");
@@ -37,32 +37,32 @@ class _TextSpanState extends State<TextSpanExample> {
   }
 
   textSpan() {
-    return new RichText(
-      text: new TextSpan(
-        style: new TextStyle(
+    return RichText(
+      text: TextSpan(
+        style: TextStyle(
           fontWeight: FontWeight.w400,
           fontSize: 24.0,
           color: Colors.blue.shade500,
         ),
         children: <TextSpan>[
-          new TextSpan(
+          TextSpan(
             text: 'Hello, This is the ',
-            style: new TextStyle(
+            style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 24.0,
               color: Colors.blue.shade500,
             ),
           ),
-          new TextSpan(
+          TextSpan(
             recognizer: recognizer,
             text: 'Flutter ',
-            style: new TextStyle(
+            style: TextStyle(
               fontWeight: FontWeight.w900,
               fontSize: 24.0,
               color: Colors.blue.shade900,
             ),
           ),
-          new TextSpan(
+          TextSpan(
             text: 'Playground',
           ),
         ],

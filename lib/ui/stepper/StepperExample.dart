@@ -5,49 +5,49 @@ class StepperExample extends StatefulWidget {
   final String title;
 
   @override
-  _StepperExampleState createState() => new _StepperExampleState();
+  _StepperExampleState createState() => _StepperExampleState();
 }
 
 class _StepperExampleState extends State<StepperExample> {
   int stepCounter = 0;
   List<Step> steps = [
-    new Step(
-      title: new Text("Step One"),
-      content: new Text("This is the first step"),
+    Step(
+      title: Text("Step One"),
+      content: Text("This is the first step"),
       isActive: true,
     ),
-    new Step(
-      title: new Text("Step Two"),
-      content: new Text("This is the second step"),
+    Step(
+      title: Text("Step Two"),
+      content: Text("This is the second step"),
       isActive: true,
     ),
-    new Step(
-      title: new Text("Step Three"),
-      content: new Wrap(
+    Step(
+      title: Text("Step Three"),
+      content: Wrap(
         spacing: 8.0, // gap between adjacent chips
         runSpacing: 4.0, // gap between lines
         direction: Axis.horizontal, // main axis (rows or columns)
         children: <Widget>[
-          new Chip(label: new Text('Chips11')),
-          new Chip(label: new Text('Chips12')),
-          new Chip(label: new Text('Chips13')),
-          new Chip(label: new Text('Chips14')),
-          new Chip(label: new Text('Chips15')),
-          new Chip(label: new Text('Chips16'))
+          Chip(label: Text('Chips11')),
+          Chip(label: Text('Chips12')),
+          Chip(label: Text('Chips13')),
+          Chip(label: Text('Chips14')),
+          Chip(label: Text('Chips15')),
+          Chip(label: Text('Chips16'))
         ],
       ),
       isActive: true,
     ),
-    new Step(
-      title: new Text("Step Four"),
-      content: new Text("This is the fourth step"),
+    Step(
+      title: Text("Step Four"),
+      content: Text("This is the fourth step"),
       isActive: true,
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),
       ),

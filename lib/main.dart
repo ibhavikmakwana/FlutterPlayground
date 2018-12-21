@@ -37,14 +37,14 @@ import 'package:flutter_playground/ui/text/TextUnderline.dart';
 import 'package:flutter_playground/ui/tooltip/tooltip.dart';
 import 'package:flutter_playground/utils/Strings.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: Strings.appName,
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: Strings.fontRobotoRegular,
       ),
@@ -134,7 +134,7 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage>
@@ -144,7 +144,7 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   void initState() {
     super.initState();
-    _controller = new AnimationController(
+    _controller = AnimationController(
       duration: const Duration(milliseconds: 300),
       value: 1.0,
       vsync: this,
@@ -178,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage>
                 status = _status;
               });
             },
-            icon: new AnimatedIcon(
+            icon: AnimatedIcon(
               icon: AnimatedIcons.view_list,
               progress: _controller.view,
             ),
@@ -198,11 +198,12 @@ class _MyHomePageState extends State<MyHomePage>
   _buildExampleItemsWidget(bool status) {
     if (status) {
       return ListView.builder(
-        itemBuilder: (BuildContext context, int index) => new ExampleNameItem(
+        itemBuilder: (BuildContext context, int index) =>
+            ExampleNameItem(
               exampleNames: names[index],
             ),
         itemCount: names.length,
-        padding: new EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
+        padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
       );
     } else {
       return GridView.builder(
@@ -210,11 +211,12 @@ class _MyHomePageState extends State<MyHomePage>
           crossAxisCount: 2,
           childAspectRatio: 3.0,
         ),
-        itemBuilder: (BuildContext context, int index) => new ExampleNameItem(
+        itemBuilder: (BuildContext context, int index) =>
+            ExampleNameItem(
               exampleNames: names[index],
             ),
         itemCount: names.length,
-        padding: new EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
+        padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
       );
     }
   }

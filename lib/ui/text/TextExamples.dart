@@ -41,7 +41,7 @@ class _TextExamplesState extends State<TextExamples> {
   textButtons(String text, String route) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: new FlatButton(
+      child: FlatButton(
         child: Text(text),
         shape: RoundedRectangleBorder(),
         color: Colors.red,

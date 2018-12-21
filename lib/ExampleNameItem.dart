@@ -21,9 +21,9 @@ class ExampleNameItem extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.0)),
       elevation: 4.0,
       child: Container(
-        decoration: new BoxDecoration(
-          border: new Border(
-            left: new BorderSide(
+        decoration: BoxDecoration(
+          border: Border(
+            left: BorderSide(
               width: 4.0,
               color: Colors.lightGreen,
             ),
@@ -41,7 +41,7 @@ class ExampleNameItem extends StatelessWidget {
               Expanded(
                 child: Container(
                   margin: EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
-                  child: new Text(
+                  child: Text(
                     exampleNames.title,
                     softWrap: true,
                     maxLines: 2,
@@ -51,7 +51,7 @@ class ExampleNameItem extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: new Icon(
+                child: Icon(
                   Icons.chevron_right,
                 ),
               ),

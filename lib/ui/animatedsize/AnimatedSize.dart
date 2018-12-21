@@ -5,7 +5,7 @@ class AnimatedSizeDemo extends StatefulWidget {
   final String title;
 
   @override
-  _AnimatedSizeDemoState createState() => new _AnimatedSizeDemoState();
+  _AnimatedSizeDemoState createState() => _AnimatedSizeDemoState();
 }
 
 class _AnimatedSizeDemoState extends State<AnimatedSizeDemo>

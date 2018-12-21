@@ -3,7 +3,7 @@ import 'package:flutter_playground/utils/Strings.dart';
 
 class NavigationDrawer extends StatefulWidget {
   @override
-  _NavigationDrawerState createState() => new _NavigationDrawerState();
+  _NavigationDrawerState createState() => _NavigationDrawerState();
 }
 
 class _NavigationDrawerState extends State<NavigationDrawer> {
@@ -13,11 +13,11 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(),
       endDrawer: endDrawer(),
       drawer: startDrawer(),
-      body: Center(child: new Text(_title)),
+      body: Center(child: Text(_title)),
     );
   }
 
@@ -27,7 +27,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
   ///
   Widget endDrawer() {
     return Drawer(
-      child: new ListView(
+      child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
           UserAccountsDrawerHeader(
@@ -47,7 +47,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
           ),
           Offstage(
             offstage: _isVisible,
-            child: new Column(
+            child: Column(
               children: <Widget>[
                 createDrawerAccountListTiles(),
                 createDrawerAccountListTiles(),
@@ -58,7 +58,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
           ),
           Offstage(
             offstage: !_isVisible,
-            child: new Column(
+            child: Column(
               children: <Widget>[
                 createDrawerListTiles(
                   Icons.photo_camera,
@@ -67,7 +67,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
                 createDrawerListTiles(Icons.photo, "Gallery"),
                 createDrawerListTiles(Icons.slideshow, "Slideshow"),
                 createDrawerListTiles(Icons.build, "Tools"),
-                new Divider(),
+                Divider(),
                 createDrawerListTiles(Icons.share, "Share"),
                 createDrawerListTiles(Icons.send, "Send"),
               ],
@@ -83,23 +83,23 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
   ///
   Widget startDrawer() {
     return Drawer(
-      child: new ListView(
+      child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
             child: Column(
               children: <Widget>[
-                new FlutterLogo(
+                FlutterLogo(
                   size: 48.0,
                 ),
-                new Text(
+                Text(
                   "Flutter Example",
                   style: TextStyle(
                     fontFamily: Strings.fontRobotoRegular,
                     fontSize: 16.0,
                   ),
                 ),
-                new Text(
+                Text(
                   "flutterexample@gmail.com",
                   style: TextStyle(
                     fontFamily: Strings.fontRobotoRegular,
@@ -117,7 +117,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
           createDrawerListTiles(Icons.photo, "Gallery"),
           createDrawerListTiles(Icons.slideshow, "Slideshow"),
           createDrawerListTiles(Icons.build, "Tools"),
-          new Divider(),
+          Divider(),
           createDrawerListTiles(Icons.share, "Share"),
           createDrawerListTiles(Icons.send, "Send"),
         ],
@@ -129,10 +129,10 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
   /// Account list tile
   ///
   Widget createDrawerAccountListTiles() {
-    return new ListTile(
-      leading: new CircleAvatar(
+    return ListTile(
+      leading: CircleAvatar(
         backgroundColor: Colors.orangeAccent,
-        child: new FlutterLogo(),
+        child: FlutterLogo(),
       ),
       title: Text(
         "flutterexample@gmail.com",
@@ -149,8 +149,8 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
   /// [IconData]
   ///
   Widget createDrawerListTiles(IconData icon, String title) {
-    return new ListTile(
-      leading: new Icon(
+    return ListTile(
+      leading: Icon(
         icon,
       ),
       title: Text(
@@ -174,9 +174,9 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
   /// [CircleAvatar]
   ///
   Widget circularAvatars() {
-    return new CircleAvatar(
+    return CircleAvatar(
       backgroundColor: Colors.orangeAccent,
-      child: new FlutterLogo(),
+      child: FlutterLogo(),
     );
   }
 }
