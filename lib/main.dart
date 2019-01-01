@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_playground/ExampleNameItem.dart';
 import 'package:flutter_playground/models/ExapmleNames.dart';
 import 'package:flutter_playground/ui/aboutlisttile/AboutListTileExample.dart';
+import 'package:flutter_playground/ui/animated_crossfade/animated_cross_fade.dart';
 import 'package:flutter_playground/ui/animatedicons/AnimatedIcons.dart';
 import 'package:flutter_playground/ui/animatedsize/AnimatedSize.dart';
 import 'package:flutter_playground/ui/animatedswitcher/AnimatedSwitcherExample.dart';
@@ -125,6 +126,8 @@ class MyApp extends StatelessWidget {
           GoogleMapsExample(Strings.googleMapsExampleTitle),
       Strings.toolTipExampleRoute: (BuildContext context) =>
           ToolTipExample(Strings.toolTipExampleTitle),
+      Strings.animatedCrossFadeExampleRoute: (BuildContext context) =>
+          AnimatedCrossFadeExample(Strings.animatedCrossFadeExampleTitle),
     };
   }
 }
@@ -255,4 +258,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.BackdropFilterExampleTitle),
   ExampleNames(Strings.googleMapsExampleTitle),
   ExampleNames(Strings.toolTipExampleTitle),
+  ExampleNames(Strings.animatedCrossFadeExampleTitle),
 ];

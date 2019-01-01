@@ -48,6 +48,8 @@ class Strings {
   static const String BackdropFilterExampleRoute = "/BackdropFilter Example";
   static const String googleMapsExampleRoute = "/Google Maps Example";
   static const String toolTipExampleRoute = "/ToolTip Example";
+  static const String animatedCrossFadeExampleRoute =
+      "/AnimatedCrossFade Example";
 
   ///Strings
   //Titles
@@ -91,4 +93,6 @@ class Strings {
   static const String BackdropFilterExampleTitle = "BackdropFilter Example";
   static const String googleMapsExampleTitle = "Google Maps Example";
   static const String toolTipExampleTitle = "ToolTip Example";
+  static const String animatedCrossFadeExampleTitle =
+      "AnimatedCrossFade Example";
 }

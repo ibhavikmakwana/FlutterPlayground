@@ -31,6 +31,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
           ),
         ],
         controller: _pageController,
+        physics: BouncingScrollPhysics(),
         onPageChanged: onPageChanged,
       ),
       bottomNavigationBar: BottomNavigationBar(
