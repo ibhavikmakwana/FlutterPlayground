@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/ui/flare/flare_example.dart';
 
 import 'imports.dart';
 
@@ -10,7 +11,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: Strings.appName,
       theme: ThemeData(
-        primarySwatch: Colors.amber,
         fontFamily: Strings.fontRobotoRegular,
       ),
       debugShowCheckedModeBanner: false,
@@ -92,6 +92,8 @@ class MyApp extends StatelessWidget {
           ToolTipExample(Strings.toolTipExampleTitle),
       Strings.animatedCrossFadeExampleRoute: (BuildContext context) =>
           AnimatedCrossFadeExample(Strings.animatedCrossFadeExampleTitle),
+      Strings.flareRoute: (BuildContext context) =>
+          FlareExample(Strings.flareTitle),
     };
   }
 }
@@ -223,4 +225,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.googleMapsExampleTitle),
   ExampleNames(Strings.toolTipExampleTitle),
   ExampleNames(Strings.animatedCrossFadeExampleTitle),
+  ExampleNames(Strings.flareTitle),
 ];

@@ -4,9 +4,8 @@ class Strings {
 
   ///Assets
   //Fonts
-  static const String fontRobotoBold = "Roboto-Bold.ttf";
-  static const String fontRobotoMedium = "Roboto-Medium.ttf";
-  static const String fontRobotoRegular = "Roboto-Regular.ttf";
+  static const String fontRobotoBold = "MajorMonoDisplay-Regular.ttf";
+  static const String fontRobotoRegular = "MajorMonoDisplay-Regular.ttf";
 
   ///routes
   static const String defaultExampleRoute = "/Default Example";
@@ -50,6 +49,7 @@ class Strings {
   static const String toolTipExampleRoute = "/ToolTip Example";
   static const String animatedCrossFadeExampleRoute =
       "/AnimatedCrossFade Example";
+  static const String flareRoute = "/Flare Example";
 
   ///Strings
   //Titles
@@ -95,4 +95,6 @@ class Strings {
   static const String toolTipExampleTitle = "ToolTip Example";
   static const String animatedCrossFadeExampleTitle =
       "AnimatedCrossFade Example";
+
+  static const String flareTitle = "Flare Example";
 }

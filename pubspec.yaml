@@ -10,6 +10,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   local_auth: ^0.2.1
   webview_flutter:
+  flare_flutter:
   google_maps_flutter:
    git:
      url: git://github.com/flutter/plugins
@@ -31,8 +32,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-#  assets:
-#   - assets/images/
+  assets:
+   - assets/
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -46,12 +47,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+
   fonts:
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto-Medium.ttf
+        - asset: assets/fonts/MajorMonoDisplay-Regular.ttf
           style: normal
-        - asset: assets/fonts/Roboto-Regular.ttf
-          weight: 400
-        - asset: assets/fonts/Roboto-Bold.ttf
+        - asset: assets/fonts/MajorMonoDisplay-Regular.ttf
           weight: 700
