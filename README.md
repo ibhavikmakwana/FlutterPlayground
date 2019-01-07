@@ -47,9 +47,9 @@ Contains list examples I have created.
 | ------------------ | ------------------ | ------------------ |
 | <img src="./preview/AnimatedSwitcher.gif" height="400" alt="Screenshot"/>  | <img src="./preview/nested_list.gif" height="400" alt="Screenshot"/>  | <img src="./preview/RotationTransition.gif" height="400" alt="Screenshot"/>  |
 
-| Google Maps Example |
-| ------------------ |
-| <img src="./preview/google_maps_example.gif" height="400" alt="Screenshot"/>  |
+| Google Maps Example | Flare Example |
+| ------------------ | ------------------ |
+| <img src="./preview/google_maps_example.gif" height="400" alt="Screenshot"/> | <img src="./preview/flare.gif" height="400" alt="Screenshot"/> |
 
 ## Getting Started
 
