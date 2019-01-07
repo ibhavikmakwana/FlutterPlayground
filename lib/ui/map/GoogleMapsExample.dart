@@ -25,6 +25,12 @@ class GoogleMapsExampleState extends State<GoogleMapsExample> {
             width: double.infinity,
             height: double.infinity,
             child: GoogleMap(
+              initialCameraPosition: const CameraPosition(
+                bearing: 270.0,
+                target: LatLng(23.0225, 72.5714),
+                tilt: 30.0,
+                zoom: 17.0,
+              ),
               onMapCreated: _onMapCreated,
             ),
           ),
