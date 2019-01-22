@@ -1,3 +1,7 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -7,10 +11,10 @@ class StaggerAnimation extends StatelessWidget {
   StaggerAnimation({Key key, this.controller})
       :
 
-        // Each animation defined here transforms its value during the subset
-        // of the controller's duration defined by the animation's interval.
-        // For example the opacity animation transforms its value during
-        // the first 10% of the controller's duration.
+  // Each animation defined here transforms its value during the subset
+  // of the controller's duration defined by the animation's interval.
+  // For example the opacity animation transforms its value during
+  // the first 10% of the controller's duration.
 
         opacity = Tween<double>(
           begin: 0.0,

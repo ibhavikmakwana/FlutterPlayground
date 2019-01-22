@@ -1,3 +1,7 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 import 'package:flutter/material.dart';
 
 // The base class for the different types of items the List can contain
@@ -21,7 +25,7 @@ class MessageItem implements ListItem {
 class TabListExample extends StatefulWidget {
   final items = List<ListItem>.generate(
     20,
-    (i) => HeadingItem("Heading $i"),
+        (i) => HeadingItem("Heading $i"),
   );
 
   @override
@@ -37,7 +41,7 @@ class _NestedListExampleState extends State<TabListExample>
   @override
   void initState() {
     _tabController =
-        new TabController(length: widget.items.length, vsync: this);
+    new TabController(length: widget.items.length, vsync: this);
     _scrollController = ScrollController();
     _tabController.addListener(_handleTabSelection);
     super.initState();
@@ -66,7 +70,7 @@ class _NestedListExampleState extends State<TabListExample>
           isScrollable: true,
           tabs: List<Widget>.generate(
             widget.items.length,
-            (int index) {
+                (int index) {
               return new Tab(
                 text: "$index",
               );

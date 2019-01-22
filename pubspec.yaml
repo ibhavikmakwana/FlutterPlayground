@@ -11,6 +11,7 @@ dependencies:
   local_auth: ^0.2.1
   webview_flutter:
   flare_flutter:
+  square_in_app_payments:
   google_maps_flutter:
    git:
      url: git://github.com/flutter/plugins

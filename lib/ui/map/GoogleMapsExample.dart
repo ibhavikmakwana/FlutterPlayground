@@ -1,3 +1,7 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -42,16 +46,16 @@ class GoogleMapsExampleState extends State<GoogleMapsExample> {
                 onPressed: mapController == null
                     ? null
                     : () {
-                        mapController
-                            .animateCamera(CameraUpdate.newCameraPosition(
-                          const CameraPosition(
-                            bearing: 270.0,
-                            target: LatLng(23.0225, 72.5714),
-                            tilt: 30.0,
-                            zoom: 17.0,
-                          ),
-                        ));
-                      },
+                  mapController
+                      .animateCamera(CameraUpdate.newCameraPosition(
+                    const CameraPosition(
+                      bearing: 270.0,
+                      target: LatLng(23.0225, 72.5714),
+                      tilt: 30.0,
+                      zoom: 17.0,
+                    ),
+                  ));
+                },
                 mini: true,
                 child: Icon(Icons.my_location),
               ),

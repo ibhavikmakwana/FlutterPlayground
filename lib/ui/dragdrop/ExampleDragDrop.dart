@@ -1,3 +1,7 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 import 'package:flutter/material.dart';
 
 class DragAndDropExample extends StatefulWidget {
@@ -25,13 +29,13 @@ class DragAndDropAppState extends State<DragAndDropExample> {
         body: new Column(children: <Widget>[
           new Expanded(
               child: new Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              new MovableRect(1, position, moveRect),
-              new MovableRect(2, position, moveRect),
-              new MovableRect(3, position, moveRect),
-            ],
-          )),
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  new MovableRect(1, position, moveRect),
+                  new MovableRect(2, position, moveRect),
+                  new MovableRect(3, position, moveRect),
+                ],
+              )),
         ]));
   }
 }

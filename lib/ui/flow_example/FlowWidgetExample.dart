@@ -1,3 +1,7 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 import 'package:flutter/material.dart';
 
 class FlowWidgetExample extends StatefulWidget {
@@ -54,7 +58,7 @@ class FlowWidgetExampleState extends State<FlowWidgetExample>
             height: 50.0,
             color: red,
             child:
-                Center(child: Text('$i', textDirection: TextDirection.ltr))));
+            Center(child: Text('$i', textDirection: TextDirection.ltr))));
   }
 }
 
