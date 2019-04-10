@@ -1,4 +1,4 @@
-package com.ibhavikmakwana.sampleapp
+package com.ibhavikmakwana.flutterplayground
 
 import android.os.Bundle
 

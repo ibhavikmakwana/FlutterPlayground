@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/ui/datatable/data_table_example.dart';
 import 'package:flutter_playground/ui/flare/flare_example.dart';
 
 import 'imports.dart';
@@ -27,8 +28,7 @@ class MyApp extends StatelessWidget {
   Map<String, WidgetBuilder> routes() {
     return <String, WidgetBuilder>{
       Strings.appBarExampleRoute: (BuildContext context) => AppBarExample(),
-      Strings.tabBarExampleRoute: (BuildContext context) =>
-          TabBarExample(
+      Strings.tabBarExampleRoute: (BuildContext context) => TabBarExample(
             title: Strings.TabBarTitle,
           ),
       Strings.navigationDrawerExampleRoute: (BuildContext context) =>
@@ -98,6 +98,8 @@ class MyApp extends StatelessWidget {
           AnimatedCrossFadeExample(Strings.animatedCrossFadeExampleTitle),
       Strings.flareRoute: (BuildContext context) =>
           FlareExample(Strings.flareTitle),
+      Strings.dataClassExampleRoute: (BuildContext context) =>
+          DataClassExample(Strings.dataClassExampleTitle),
     };
   }
 }
@@ -171,8 +173,7 @@ class _MyHomePageState extends State<MyHomePage>
   _buildExampleItemsWidget(bool status) {
     if (status) {
       return ListView.builder(
-        itemBuilder: (BuildContext context, int index) =>
-            ExampleNameItem(
+        itemBuilder: (BuildContext context, int index) => ExampleNameItem(
               exampleNames: names[index],
             ),
         itemCount: names.length,
@@ -184,8 +185,7 @@ class _MyHomePageState extends State<MyHomePage>
           crossAxisCount: 2,
           childAspectRatio: 3.0,
         ),
-        itemBuilder: (BuildContext context, int index) =>
-            ExampleNameItem(
+        itemBuilder: (BuildContext context, int index) => ExampleNameItem(
               exampleNames: names[index],
             ),
         itemCount: names.length,
@@ -230,4 +230,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.toolTipExampleTitle),
   ExampleNames(Strings.animatedCrossFadeExampleTitle),
   ExampleNames(Strings.flareTitle),
+  ExampleNames(Strings.dataClassExampleTitle),
 ];
