@@ -5,7 +5,7 @@
 Playground app for Flutter.
 Contains list examples I have created.
 
-# Preview
+## Preview
 
 | Home | App bar | Navigation Drawer |
 | ------------------ | --------------------------- | ------------------ |
@@ -71,7 +71,7 @@ Hit me on
 <a href="https://medium.com/@ibhavikmakwana"><img src="./icons/medium-icon.png?raw=true" width="60"></a>
 <a href="https://www.linkedin.com/in/ibhavikmakwana/"><img src="./icons/linkedin-icon.png?raw=true" width="60"></a>
 
-# Donate
+## Donate
 
 > If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee:
 >
