@@ -1,5 +1,6 @@
 # Flutter Playground
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ae27cc3a3b32499cbf4c6d1614719c6f)](https://app.codacy.com/app/ibhavikmakwana/FlutterPlayground?utm_source=github.com&utm_medium=referral&utm_content=ibhavikmakwana/FlutterPlayground&utm_campaign=Badge_Grade_Dashboard)
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/ibhavikmakwana) 
 
 Playground app for Flutter.
