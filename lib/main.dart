@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/ui/datatable/data_table_example.dart';
+import 'package:flutter_playground/ui/expanded_example/expanded_example.dart';
 import 'package:flutter_playground/ui/flare/flare_example.dart';
 
 import 'imports.dart';
@@ -100,6 +101,8 @@ class MyApp extends StatelessWidget {
           FlareExample(Strings.flareTitle),
       Strings.dataClassExampleRoute: (BuildContext context) =>
           DataClassExample(Strings.dataClassExampleTitle),
+      Strings.expandedExampleRoute: (BuildContext context) =>
+          ExpandedExample(Strings.expandedExampleTitle),
     };
   }
 }
@@ -231,4 +234,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.animatedCrossFadeExampleTitle),
   ExampleNames(Strings.flareTitle),
   ExampleNames(Strings.dataClassExampleTitle),
+  ExampleNames(Strings.expandedExampleTitle),
 ];

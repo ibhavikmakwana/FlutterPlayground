@@ -56,6 +56,7 @@ class Strings {
       "/AnimatedCrossFade Example";
   static const String flareRoute = "/Flare Example";
   static const String dataClassExampleRoute = "/DataClass Example";
+  static const String expandedExampleRoute = "/Expanded Example";
 
   ///Strings
   //Titles
@@ -105,4 +106,5 @@ class Strings {
 
   static const String flareTitle = "Flare Example";
   static const String dataClassExampleTitle = "DataClass Example";
+  static const String expandedExampleTitle = "Expanded Example";
 }
