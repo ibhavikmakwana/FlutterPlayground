@@ -6,6 +6,8 @@
 Playground app for Flutter.
 Contains list examples I have created.
 
+[<img src="./icons/Google-Play-Store-Logo.png" height="100" alt="Screenshot"/>](https://play.google.com/store/apps/details?id=com.ibhavikmakwana.flutterplayground)
+
 ## Preview
 
 | Home | App bar | Navigation Drawer |
