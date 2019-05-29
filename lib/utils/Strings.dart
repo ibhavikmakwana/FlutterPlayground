@@ -34,7 +34,8 @@ class Strings {
   static const String rotatedBoxExampleRoute = "/RotatedBox Example";
   static const String textSpanExampleRoute = "/Text Span";
   static const String textUnderlineExampleRoute = "/Text Underline";
-  static const String localAuthExampleRoute = "/Local authentication Example";
+
+//  static const String localAuthExampleRoute = "/Local authentication Example";
   static const String nestedListExampleRoute = "/Nested Example";
   static const String cupertinoTimerPickerRoute =
       "/CupertinoTimerPicker Example";
@@ -75,7 +76,8 @@ class Strings {
   static const String textExampleExampleTitle = "Text Examples";
   static const String lifeCycleStateExampleTitle = "Lifecycle State";
   static const String aboutListTileExampleTitle = "AboutListTile";
-  static const String localAuthTitle = "Local authentication Example";
+
+//  static const String localAuthTitle = "Local authentication Example";
   static const String rotatedBoxTitle = "RotatedBox Example";
   static const String nestedListTitle = "Nested Example";
 

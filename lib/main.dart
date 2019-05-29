@@ -63,8 +63,8 @@ class MyApp extends StatelessWidget {
           AboutListTileExample(title: Strings.aboutListTileExampleTitle),
       Strings.lifeCycleStateExampleRoute: (BuildContext context) =>
           Lifecycle(title: Strings.lifeCycleStateExampleTitle),
-      Strings.localAuthExampleRoute: (BuildContext context) =>
-          LocalAuthExample(title: Strings.localAuthTitle),
+//      Strings.localAuthExampleRoute: (BuildContext context) =>
+//          LocalAuthExample(title: Strings.localAuthTitle),
       Strings.rotatedBoxExampleRoute: (BuildContext context) =>
           RotatedBoxExample(Strings.rotatedBoxTitle),
       Strings.nestedListExampleRoute: (BuildContext context) =>
@@ -213,7 +213,7 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.animatedSwitcherExampleTitle),
   ExampleNames(Strings.aboutListTileExampleTitle),
   ExampleNames(Strings.lifeCycleStateExampleTitle),
-  ExampleNames(Strings.localAuthTitle),
+//  ExampleNames(Strings.localAuthTitle),
   ExampleNames(Strings.rotatedBoxTitle),
   ExampleNames(Strings.nestedListTitle),
   ExampleNames(Strings.cupertinoTimerPickerTitle),

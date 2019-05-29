@@ -1,5 +1,5 @@
 name: flutter_playground
-description: A new Flutter application.
+description: A Flutter application contains a list of Flutter Examples.
 
 dependencies:
   flutter:
@@ -8,14 +8,12 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  local_auth: ^0.2.1
-  webview_flutter:
+  #  local_auth:
   flare_flutter:
-  google_maps_flutter: ^0.5.5
+  google_maps_flutter:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
