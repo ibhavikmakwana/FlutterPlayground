@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_playground/ui/datatable/data_table_example.dart';
 import 'package:flutter_playground/ui/expanded_example/expanded_example.dart';
 import 'package:flutter_playground/ui/flare/flare_example.dart';
+import 'package:flutter_playground/ui/wrap/wrap_example.dart';
 
 import 'imports.dart';
 
@@ -103,6 +104,8 @@ class MyApp extends StatelessWidget {
           DataClassExample(Strings.dataClassExampleTitle),
       Strings.expandedExampleRoute: (BuildContext context) =>
           ExpandedExample(Strings.expandedExampleTitle),
+      Strings.wrapExampleRoute: (BuildContext context) =>
+          WrapExample(Strings.wrapExampleTitle),
     };
   }
 }
@@ -235,4 +238,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.flareTitle),
   ExampleNames(Strings.dataClassExampleTitle),
   ExampleNames(Strings.expandedExampleTitle),
+  ExampleNames(Strings.wrapExampleTitle),
 ];
