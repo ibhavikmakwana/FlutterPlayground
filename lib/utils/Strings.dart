@@ -58,6 +58,8 @@ class Strings {
   static const String dataClassExampleRoute = "/DataClass Example";
   static const String expandedExampleRoute = "/Expanded Example";
   static const String wrapExampleRoute = "/Wrap Example";
+  static const String quickActionsRoute = "/QuickActions Example";
+
 
   ///Strings
   //Titles
@@ -78,11 +80,9 @@ class Strings {
   static const String textExampleExampleTitle = "Text Examples";
   static const String lifeCycleStateExampleTitle = "Lifecycle State";
   static const String aboutListTileExampleTitle = "AboutListTile";
-
 //  static const String localAuthTitle = "Local authentication Example";
   static const String rotatedBoxTitle = "RotatedBox Example";
   static const String nestedListTitle = "Nested Example";
-
   static const String cupertinoTimerPickerTitle =
       "CupertinoTimerPicker Example";
   static const String CupertinoActionSheetTitle =
@@ -109,4 +109,5 @@ class Strings {
   static const String dataClassExampleTitle = "DataClass Example";
   static const String expandedExampleTitle = "Expanded Example";
   static const String wrapExampleTitle = "Wrap Example";
+  static const String quickActionsTitle = "QuickActions Example";
 }

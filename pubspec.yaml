@@ -11,6 +11,8 @@ dependencies:
   #  local_auth:
   flare_flutter:
   google_maps_flutter:
+  quick_actions:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

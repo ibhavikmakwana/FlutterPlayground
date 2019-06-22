@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_playground/ui/datatable/data_table_example.dart';
 import 'package:flutter_playground/ui/expanded_example/expanded_example.dart';
 import 'package:flutter_playground/ui/flare/flare_example.dart';
+import 'package:flutter_playground/ui/quick_actions/QuickActionsExample.dart';
 import 'package:flutter_playground/ui/wrap/wrap_example.dart';
 
 import 'imports.dart';
@@ -106,6 +107,8 @@ class MyApp extends StatelessWidget {
           ExpandedExample(Strings.expandedExampleTitle),
       Strings.wrapExampleRoute: (BuildContext context) =>
           WrapExample(Strings.wrapExampleTitle),
+      Strings.quickActionsRoute: (BuildContext context) =>
+          QuickActionsExample(Strings.quickActionsTitle),
     };
   }
 }
@@ -180,8 +183,8 @@ class _MyHomePageState extends State<MyHomePage>
     if (status) {
       return ListView.builder(
         itemBuilder: (BuildContext context, int index) => ExampleNameItem(
-              exampleNames: names[index],
-            ),
+          exampleNames: names[index],
+        ),
         itemCount: names.length,
         padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
       );
@@ -192,8 +195,8 @@ class _MyHomePageState extends State<MyHomePage>
           childAspectRatio: 3.0,
         ),
         itemBuilder: (BuildContext context, int index) => ExampleNameItem(
-              exampleNames: names[index],
-            ),
+          exampleNames: names[index],
+        ),
         itemCount: names.length,
         padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
       );
@@ -239,4 +242,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.dataClassExampleTitle),
   ExampleNames(Strings.expandedExampleTitle),
   ExampleNames(Strings.wrapExampleTitle),
+  ExampleNames(Strings.quickActionsTitle),
 ];
