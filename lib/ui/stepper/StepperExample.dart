@@ -52,10 +52,10 @@ class _StepperExampleState extends State<StepperExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      body: new Stepper(
+      body: Stepper(
         currentStep: this.stepCounter,
         steps: steps,
         type: StepperType.vertical,

@@ -11,7 +11,7 @@ class FlareExample extends StatefulWidget {
 
   @override
   FlareExampleState createState() {
-    return new FlareExampleState();
+    return FlareExampleState();
   }
 }
 

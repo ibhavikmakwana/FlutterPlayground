@@ -10,26 +10,26 @@ class CollapsibleToolbar extends StatefulWidget {
   final String title;
 
   @override
-  _CollapsibleToolbarState createState() => new _CollapsibleToolbarState();
+  _CollapsibleToolbarState createState() => _CollapsibleToolbarState();
 }
 
 class _CollapsibleToolbarState extends State<CollapsibleToolbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: new CustomScrollView(
+      body: CustomScrollView(
         slivers: <Widget>[
-          new SliverAppBar(
+          SliverAppBar(
             expandedHeight: 200.0,
             floating: false,
             pinned: true,
-            flexibleSpace: new FlexibleSpaceBar(
-              title: new Text(widget.title),
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text(widget.title),
             ),
           ),
-          new SliverFixedExtentList(
-              delegate: new SliverChildBuilderDelegate(
-                    (context, index) => new Text("Flutter list items"),
+          SliverFixedExtentList(
+              delegate: SliverChildBuilderDelegate(
+                    (context, index) => Text("Flutter list items"),
               ),
               itemExtent: 24.0)
         ],

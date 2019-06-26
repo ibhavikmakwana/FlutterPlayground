@@ -21,7 +21,7 @@
 //  String _authorized = 'Not Authorized';
 //
 //  Future<Null> _authenticate() async {
-//    final LocalAuthentication auth = new LocalAuthentication();
+//    final LocalAuthentication auth = LocalAuthentication();
 //    bool authenticated = false;
 //    try {
 //      authenticated = await auth.authenticateWithBiometrics(
@@ -40,17 +40,17 @@
 //
 //  @override
 //  Widget build(BuildContext context) {
-//    return new Scaffold(
-//      appBar: new AppBar(
+//    return Scaffold(
+//      appBar: AppBar(
 //        title: Text(widget.title),
 //      ),
-//      body: new ConstrainedBox(
+//      body: ConstrainedBox(
 //        constraints: const BoxConstraints.expand(),
-//        child: new Column(
+//        child: Column(
 //          mainAxisAlignment: MainAxisAlignment.spaceAround,
 //          children: <Widget>[
-//            new Text('Current State: $_authorized\n'),
-//            new RaisedButton(
+//            Text('Current State: $_authorized\n'),
+//            RaisedButton(
 //              child: const Text('Authenticate'),
 //              onPressed: _authenticate,
 //            ),

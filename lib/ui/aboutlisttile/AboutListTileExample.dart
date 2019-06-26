@@ -10,14 +10,14 @@ class AboutListTileExample extends StatefulWidget {
   AboutListTileExample({Key key, this.title}) : super(key: key);
 
   @override
-  _AboutListTileState createState() => new _AboutListTileState();
+  _AboutListTileState createState() => _AboutListTileState();
 }
 
 class _AboutListTileState extends State<AboutListTileExample> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
+    return Scaffold(
+      appBar: AppBar(
         title: Text(widget.title),
       ),
       body: Container(

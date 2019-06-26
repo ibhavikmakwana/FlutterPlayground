@@ -41,7 +41,7 @@ class _NestedListExampleState extends State<TabListExample>
   @override
   void initState() {
     _tabController =
-    new TabController(length: widget.items.length, vsync: this);
+        TabController(length: widget.items.length, vsync: this);
     _scrollController = ScrollController();
     _tabController.addListener(_handleTabSelection);
     super.initState();
@@ -71,7 +71,7 @@ class _NestedListExampleState extends State<TabListExample>
           tabs: List<Widget>.generate(
             widget.items.length,
                 (int index) {
-              return new Tab(
+              return Tab(
                 text: "$index",
               );
             },

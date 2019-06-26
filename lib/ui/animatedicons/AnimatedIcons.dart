@@ -20,7 +20,7 @@ class AnimatedIconsDemo extends StatefulWidget {
   final String title;
 
   @override
-  _AnimatedIconsState createState() => new _AnimatedIconsState();
+  _AnimatedIconsState createState() => _AnimatedIconsState();
 }
 
 class _AnimatedIconsState extends State<AnimatedIconsDemo>
@@ -30,7 +30,7 @@ class _AnimatedIconsState extends State<AnimatedIconsDemo>
   @override
   void initState() {
     super.initState();
-    _controller = new AnimationController(
+    _controller = AnimationController(
       duration: const Duration(milliseconds: 300),
       value: 1.0,
       vsync: this,
@@ -51,10 +51,10 @@ class _AnimatedIconsState extends State<AnimatedIconsDemo>
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
+    return Scaffold(
+      appBar: AppBar(
         elevation: 0.0,
-        title: new Text(widget.title),
+        title: Text(widget.title),
       ),
       body: ListView(
         children: <Widget>[
@@ -83,16 +83,16 @@ class _AnimatedIconsState extends State<AnimatedIconsDemo>
       child: InkWell(
         child: Row(
           children: <Widget>[
-            new IconButton(
+            IconButton(
               onPressed: () {
                 _controller.fling(velocity: _status ? -2.0 : 2.0);
               },
-              icon: new AnimatedIcon(
+              icon: AnimatedIcon(
                 icon: iconData,
                 progress: _controller.view,
               ),
             ),
-            new Text(title),
+            Text(title),
           ],
         ),
       ),

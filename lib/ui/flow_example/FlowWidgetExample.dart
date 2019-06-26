@@ -11,7 +11,7 @@ class FlowWidgetExample extends StatefulWidget {
 
   @override
   FlowWidgetExampleState createState() {
-    return new FlowWidgetExampleState();
+    return FlowWidgetExampleState();
   }
 }
 

@@ -11,7 +11,7 @@ class ChipsExample extends StatefulWidget {
 
   @override
   ChipsExampleState createState() {
-    return new ChipsExampleState();
+    return ChipsExampleState();
   }
 }
 

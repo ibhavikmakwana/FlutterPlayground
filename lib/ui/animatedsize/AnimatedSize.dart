@@ -22,17 +22,17 @@ class _AnimatedSizeDemoState extends State<AnimatedSizeDemo>
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      body: new Center(
-        child: new Column(
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new AnimatedSize(
+            AnimatedSize(
               curve: Curves.bounceInOut,
-              child: new GestureDetector(
+              child: GestureDetector(
                 onTap: () {
                   setState(() {
                     if (_resized) {
@@ -48,14 +48,14 @@ class _AnimatedSizeDemoState extends State<AnimatedSizeDemo>
                     }
                   });
                 },
-                child: new Container(
+                child: Container(
                   width: _width,
                   height: _height,
                   color: _color,
                 ),
               ),
               vsync: this,
-              duration: new Duration(seconds: 1),
+              duration: Duration(seconds: 1),
             ),
           ],
         ),

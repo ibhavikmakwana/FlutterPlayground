@@ -12,7 +12,7 @@ class ProgressButton extends StatefulWidget {
   final String title;
 
   @override
-  _ProgressButtonState createState() => new _ProgressButtonState();
+  _ProgressButtonState createState() => _ProgressButtonState();
 }
 
 class _ProgressButtonState extends State<ProgressButton>
@@ -31,12 +31,12 @@ class _ProgressButtonState extends State<ProgressButton>
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      body: new Center(
-        child: new PhysicalModel(
+      body: Center(
+        child: PhysicalModel(
           elevation: 8.0,
           shadowColor: Colors.lightGreenAccent,
           color: Colors.lightGreen,
@@ -45,7 +45,7 @@ class _ProgressButtonState extends State<ProgressButton>
             key: _globalKey,
             height: 48.0,
             width: _width,
-            child: new RaisedButton(
+            child: RaisedButton(
               padding: EdgeInsets.all(0.0),
               child: setUpButtonChild(),
               onPressed: () {
@@ -69,7 +69,7 @@ class _ProgressButtonState extends State<ProgressButton>
   ///
   setUpButtonChild() {
     if (_state == 0) {
-      return new Text(
+      return Text(
         "Click Here",
         style: const TextStyle(
           color: Colors.white,

@@ -59,6 +59,7 @@ class Strings {
   static const String expandedExampleRoute = "/Expanded Example";
   static const String wrapExampleRoute = "/Wrap Example";
   static const String quickActionsRoute = "/QuickActions Example";
+  static const String bottomAppBarRoute = "/AppBar Bottom Example";
 
 
   ///Strings
@@ -110,4 +111,5 @@ class Strings {
   static const String expandedExampleTitle = "Expanded Example";
   static const String wrapExampleTitle = "Wrap Example";
   static const String quickActionsTitle = "QuickActions Example";
+  static const String bottomAppBarTitle = "AppBar Bottom Example";
 }

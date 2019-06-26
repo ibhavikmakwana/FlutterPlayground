@@ -10,7 +10,7 @@ class WrapExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List colors = [Colors.red, Colors.green, Colors.yellow];
-    Random random = new Random();
+    Random random = Random();
 
     return Scaffold(
       appBar: AppBar(

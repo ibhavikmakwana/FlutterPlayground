@@ -11,11 +11,11 @@ class RawKeyboardDemo extends StatefulWidget {
   RawKeyboardDemo({Key key, this.title}) : super(key: key);
 
   @override
-  _HardwareKeyDemoState createState() => new _HardwareKeyDemoState();
+  _HardwareKeyDemoState createState() => _HardwareKeyDemoState();
 }
 
 class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
-  final FocusNode _focusNode = new FocusNode();
+  final FocusNode _focusNode = FocusNode();
   RawKeyEvent _event;
 
   @override
@@ -34,27 +34,27 @@ class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
   Widget build(BuildContext context) {
     final TextTheme textTheme = Theme.of(context).textTheme;
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
       body: Center(
-        child: new RawKeyboardListener(
+        child: RawKeyboardListener(
           focusNode: _focusNode,
           onKey: _handleKeyEvent,
-          child: new AnimatedBuilder(
+          child: AnimatedBuilder(
             animation: _focusNode,
             builder: (BuildContext context, Widget child) {
               if (!_focusNode.hasFocus) {
-                return new GestureDetector(
+                return GestureDetector(
                   onTap: () {
                     FocusScope.of(context).requestFocus(_focusNode);
                   },
-                  child: new Text('Tap to focus', style: textTheme.display1),
+                  child: Text('Tap to focus', style: textTheme.display1),
                 );
               }
 
               if (_event == null)
-                return new Text('Press Volume key', style: textTheme.display1);
+                return Text('Press Volume key', style: textTheme.display1);
 
               int flags;
               int codePoint;
@@ -71,15 +71,15 @@ class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
                 metaState = data.metaState;
               }
 
-              return new Column(
+              return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new Text('${_event.runtimeType}', style: textTheme.subhead),
-                  new Text('flags: $flags', style: textTheme.subhead),
-                  new Text('codePoint: $codePoint', style: textTheme.subhead),
-                  new Text('keyCode: $keyCode', style: textTheme.subhead),
-                  new Text('scanCode: $scanCode', style: textTheme.subhead),
-                  new Text('metaState: $metaState', style: textTheme.subhead),
+                  Text('${_event.runtimeType}', style: textTheme.subhead),
+                  Text('flags: $flags', style: textTheme.subhead),
+                  Text('codePoint: $codePoint', style: textTheme.subhead),
+                  Text('keyCode: $keyCode', style: textTheme.subhead),
+                  Text('scanCode: $scanCode', style: textTheme.subhead),
+                  Text('metaState: $metaState', style: textTheme.subhead),
                 ],
               );
             },

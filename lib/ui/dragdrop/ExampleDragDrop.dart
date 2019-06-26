@@ -10,30 +10,30 @@ class DragAndDropExample extends StatefulWidget {
   DragAndDropExample({Key key, this.title}) : super(key: key);
 
   @override
-  DragAndDropAppState createState() => new DragAndDropAppState();
+  DragAndDropAppState createState() => DragAndDropAppState();
 }
 
 class DragAndDropAppState extends State<DragAndDropExample> {
   int position = 1;
 
-  void moveRect(int newPosition) {
+  void moveRect(int Position) {
     setState(() {
-      position = newPosition;
+      position = Position;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(title: Text(widget.title)),
-        body: new Column(children: <Widget>[
-          new Expanded(
-              child: new Row(
+    return Scaffold(
+        appBar: AppBar(title: Text(widget.title)),
+        body: Column(children: <Widget>[
+          Expanded(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  new MovableRect(1, position, moveRect),
-                  new MovableRect(2, position, moveRect),
-                  new MovableRect(3, position, moveRect),
+                  MovableRect(1, position, moveRect),
+                  MovableRect(2, position, moveRect),
+                  MovableRect(3, position, moveRect),
                 ],
               )),
         ]));
@@ -48,18 +48,18 @@ class Dot extends StatefulWidget {
   final Widget child;
 
   @override
-  DotState createState() => new DotState();
+  DotState createState() => DotState();
 }
 
 class DotState extends State<Dot> {
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
         width: widget.size,
         height: widget.size,
-        decoration: new BoxDecoration(
+        decoration: BoxDecoration(
             color: widget.color,
-            border: new Border.all(width: 0.0),
+            border: Border.all(width: 0.0),
             shape: BoxShape.rectangle),
         child: widget.child);
   }
@@ -70,10 +70,10 @@ class OutlineRectPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final Paint paint = new Paint()
+    final Paint paint = Paint()
       ..color = const Color(0xFF000000)
       ..style = PaintingStyle.stroke;
-    final Path path = new Path();
+    final Path path = Path();
     final Rect box = Offset.zero & size;
 
     path.addRect(box);
@@ -91,29 +91,29 @@ class MovableRect extends StatelessWidget {
   final int rectPosition;
   final ValueChanged<int> callback;
 
-  static final GlobalKey kRectKey = new GlobalKey();
+  static final GlobalKey kRectKey = GlobalKey();
   static const double kRectSize = 50.0;
 
   @override
   Widget build(BuildContext context) {
-    final Widget rect = new Dot(
+    final Widget rect = Dot(
       key: kRectKey,
       color: Colors.blue.shade700,
       size: kRectSize,
     );
-    final Widget outlineRect = new Container(
+    final Widget outlineRect = Container(
         width: kRectSize,
         height: kRectSize,
         child: const CustomPaint(painter: const OutlineRectPainter()));
     if (position == rectPosition) {
-      return new Draggable<bool>(
+      return Draggable<bool>(
           data: true,
           child: rect,
           childWhenDragging: outlineRect,
           feedback: rect,
           maxSimultaneousDrags: 2);
     } else {
-      return new DragTarget<bool>(onAccept: (bool data) {
+      return DragTarget<bool>(onAccept: (bool data) {
         callback(position);
       }, builder:
           (BuildContext context, List<bool> accepted, List<dynamic> rejected) {

@@ -10,7 +10,7 @@ class BottomNavigation extends StatefulWidget {
   final String title;
 
   @override
-  _BottomNavigationState createState() => new _BottomNavigationState();
+  _BottomNavigationState createState() => _BottomNavigationState();
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
@@ -19,9 +19,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: new Text(widget.title),
+        title: Text(widget.title),
       ),
       body: PageView(
         children: <Widget>[
@@ -80,7 +80,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   @override
   void initState() {
     super.initState();
-    _pageController = new PageController();
+    _pageController = PageController();
   }
 
   @override

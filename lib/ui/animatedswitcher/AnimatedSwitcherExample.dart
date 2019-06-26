@@ -12,7 +12,7 @@ class AnimatedSwitcherExample extends StatefulWidget {
 
   @override
   _AnimatedSwitcherExampleState createState() =>
-      new _AnimatedSwitcherExampleState();
+      _AnimatedSwitcherExampleState();
 }
 
 class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
@@ -26,31 +26,31 @@ class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      body: new Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Column(
               children: <Widget>[
-                new Text(
+                Text(
                   'You have pushed the button this many times:',
                 ),
                 AnimatedSwitcher(
                   duration: const Duration(milliseconds: 500),
                   transitionBuilder:
                       (Widget child, Animation<double> animation) {
-                    return new ScaleTransition(child: child, scale: animation);
+                    return ScaleTransition(child: child, scale: animation);
                   },
-                  child: new Text(
+                  child: Text(
                     '$_counter',
-                    // This key causes the AnimatedSwitcher to interpret this as a "new"
+                    // This key causes the AnimatedSwitcher to interpret this as a ""
                     // child each time the count changes, so that it will begin its animation
                     // when the count changes.
-                    key: new ValueKey<int>(_counter),
+                    key: ValueKey<int>(_counter),
                     style: Theme.of(context).textTheme.display1,
                   ),
                 ),
@@ -59,10 +59,10 @@ class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
           ],
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
+      floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: new Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
     );
   }

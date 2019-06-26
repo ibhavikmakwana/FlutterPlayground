@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/ui/app_bar_bottom/appbar_bottom.dart';
 import 'package:flutter_playground/ui/datatable/data_table_example.dart';
 import 'package:flutter_playground/ui/expanded_example/expanded_example.dart';
 import 'package:flutter_playground/ui/flare/flare_example.dart';
@@ -93,8 +94,6 @@ class MyApp extends StatelessWidget {
           DismissibleExample(Strings.dismissibleExampleTitle),
       Strings.BackdropFilterExampleRoute: (BuildContext context) =>
           BackdropFilterExample(Strings.BackdropFilterExampleTitle),
-      Strings.googleMapsExampleRoute: (BuildContext context) =>
-          GoogleMapsExample(Strings.googleMapsExampleTitle),
       Strings.toolTipExampleRoute: (BuildContext context) =>
           ToolTipExample(Strings.toolTipExampleTitle),
       Strings.animatedCrossFadeExampleRoute: (BuildContext context) =>
@@ -103,12 +102,16 @@ class MyApp extends StatelessWidget {
           FlareExample(Strings.flareTitle),
       Strings.dataClassExampleRoute: (BuildContext context) =>
           DataClassExample(Strings.dataClassExampleTitle),
+//      Strings.googleMapsExampleRoute: (BuildContext context) =>
+//          GoogleMapsExample(Strings.googleMapsExampleTitle),
       Strings.expandedExampleRoute: (BuildContext context) =>
           ExpandedExample(Strings.expandedExampleTitle),
       Strings.wrapExampleRoute: (BuildContext context) =>
           WrapExample(Strings.wrapExampleTitle),
       Strings.quickActionsRoute: (BuildContext context) =>
           QuickActionsExample(Strings.quickActionsTitle),
+      Strings.bottomAppBarRoute: (BuildContext context) =>
+          AppBarBottom(Strings.bottomAppBarTitle),
     };
   }
 }
@@ -235,7 +238,7 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.FlowWidgetExampleTitle),
   ExampleNames(Strings.dismissibleExampleTitle),
   ExampleNames(Strings.BackdropFilterExampleTitle),
-  ExampleNames(Strings.googleMapsExampleTitle),
+//  ExampleNames(Strings.googleMapsExampleTitle),
   ExampleNames(Strings.toolTipExampleTitle),
   ExampleNames(Strings.animatedCrossFadeExampleTitle),
   ExampleNames(Strings.flareTitle),
@@ -243,4 +246,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.expandedExampleTitle),
   ExampleNames(Strings.wrapExampleTitle),
   ExampleNames(Strings.quickActionsTitle),
+  ExampleNames(Strings.bottomAppBarTitle),
 ];
