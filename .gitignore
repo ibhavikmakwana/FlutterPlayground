@@ -19,3 +19,4 @@ build/
 /lib/ui/sample.dart
 /lib/ui/widgetapp/
 /.flutter-plugins
+/android/app/google-services.json

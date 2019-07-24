@@ -34,6 +34,7 @@ class Strings {
   static const String rotatedBoxExampleRoute = "/RotatedBox Example";
   static const String textSpanExampleRoute = "/Text Span";
   static const String textUnderlineExampleRoute = "/Text Underline";
+  static const String admobPluginRoute = "/AdMob Plugin Example";
 
 //  static const String localAuthExampleRoute = "/Local authentication Example";
   static const String nestedListExampleRoute = "/Nested Example";
@@ -114,4 +115,5 @@ class Strings {
   static const String quickActionsTitle = "QuickActions Example";
   static const String bottomAppBarTitle = "AppBar Bottom Example";
   static const String TransformExampleTitle = "Transform Example";
+  static const String admobPluginExample = "AdMob Plugin Example";
 }
