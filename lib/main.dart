@@ -8,6 +8,7 @@ import 'package:flutter_playground/ui/datatable/data_table_example.dart';
 import 'package:flutter_playground/ui/expanded_example/expanded_example.dart';
 import 'package:flutter_playground/ui/flare/flare_example.dart';
 import 'package:flutter_playground/ui/quick_actions/QuickActionsExample.dart';
+import 'package:flutter_playground/ui/transform/transform_example.dart';
 import 'package:flutter_playground/ui/wrap/wrap_example.dart';
 
 import 'imports.dart';
@@ -112,6 +113,8 @@ class MyApp extends StatelessWidget {
           QuickActionsExample(Strings.quickActionsTitle),
       Strings.bottomAppBarRoute: (BuildContext context) =>
           AppBarBottom(Strings.bottomAppBarTitle),
+      Strings.TransformExampleRoute: (BuildContext context) =>
+          TransformExample(Strings.TransformExampleTitle),
     };
   }
 }
@@ -247,4 +250,5 @@ final List<ExampleNames> names = <ExampleNames>[
   ExampleNames(Strings.wrapExampleTitle),
   ExampleNames(Strings.quickActionsTitle),
   ExampleNames(Strings.bottomAppBarTitle),
+  ExampleNames(Strings.TransformExampleTitle),
 ];

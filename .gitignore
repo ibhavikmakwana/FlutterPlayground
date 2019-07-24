@@ -18,3 +18,4 @@ build/
 **/ios/Runner/GeneratedPluginRegistrant.*
 /lib/ui/sample.dart
 /lib/ui/widgetapp/
+/.flutter-plugins
