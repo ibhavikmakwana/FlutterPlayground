@@ -14,7 +14,7 @@ class _MyHomePageState extends State<QuickActionsExample> {
   @override
   void initState() {
     super.initState();
-    final QuickActions quickActions = const QuickActions();
+    final QuickActions quickActions = QuickActions();
     quickActions.initialize((String shortcutType) {
       if (shortcutType == 'flutter_playground') {
         print('Hey. There Welcome to the Flutter Playground app');
