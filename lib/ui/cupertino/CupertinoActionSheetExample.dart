@@ -24,7 +24,7 @@ class CupertinoActionSheetExample extends StatelessWidget {
             Center(child: Text("First Action")),
             Center(child: Text("Second Action")),
           ],
-          cancelButton: Center(child: Text("Cancle")),
+          cancelButton: Center(child: Text("Cancel")),
         ),
       ),
     );
