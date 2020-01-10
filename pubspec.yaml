@@ -1,5 +1,6 @@
 name: flutter_playground
 description: A Flutter application contains a list of Flutter Examples.
+version: 1.2.1+4
 
 dependencies:
   flutter:
