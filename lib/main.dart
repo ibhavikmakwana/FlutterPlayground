@@ -3,6 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:flutter_playground/store/theme_store.dart';
 import 'package:flutter_playground/ui/app_bar_bottom/appbar_bottom.dart';
 import 'package:flutter_playground/ui/datatable/data_table_example.dart';
 import 'package:flutter_playground/ui/expanded_example/expanded_example.dart';
@@ -10,18 +12,38 @@ import 'package:flutter_playground/ui/flare/flare_example.dart';
 import 'package:flutter_playground/ui/quick_actions/QuickActionsExample.dart';
 import 'package:flutter_playground/ui/transform/transform_example.dart';
 import 'package:flutter_playground/ui/wrap/wrap_example.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 import 'imports.dart';
 
-void main() => runApp(MyApp());
+void main() =>
+    runApp(
+      Provider(
+        create: (_) => ThemeStore(),
+        child: MyApp(),
+      ),
+    );
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessObserverWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: Strings.appName,
       theme: ThemeData(
-        fontFamily: Strings.fontRobotoRegular,
+        brightness: Brightness.light,
+        fontFamily: GoogleFonts
+            .poppins()
+            .fontFamily,
+      ),
+      themeMode: Provider
+          .of<ThemeStore>(context)
+          .themeMode,
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: GoogleFonts
+            .poppins()
+            .fontFamily,
       ),
       debugShowCheckedModeBanner: false,
       home: MyHomePage(title: Strings.appName),
@@ -160,6 +182,10 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: onFabPressed,
+        child: Icon(Icons.lightbulb_outline),
+      ),
       appBar: AppBar(
         title: Text(widget.title),
         actions: <Widget>[
@@ -210,6 +236,9 @@ class _MyHomePageState extends State<MyHomePage>
       );
     }
   }
+
+  void onFabPressed() =>
+      Provider.of<ThemeStore>(context, listen: false).changeTheme();
 }
 
 // The list displayed by this app.

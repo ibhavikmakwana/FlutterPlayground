@@ -1,6 +1,20 @@
 name: flutter_playground
 description: A Flutter application contains a list of Flutter Examples.
-version: 1.2.1+4
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.2.2+5
+
+environment:
+  sdk: ">=2.7.0-dev.2.1 <3.0.0"
 
 dependencies:
   flutter:
@@ -13,10 +27,16 @@ dependencies:
   flare_flutter:
   #  firebase_admob: ^0.9.0+3
   quick_actions:
+  google_fonts: ^0.3.2
+  mobx: ^0.3.6
+  flutter_mobx: 0.3.4
+  provider: ^4.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: 1.3.1
+  mobx_codegen: ^0.3.5
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
@@ -32,9 +52,3 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/
-
-  fonts:
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
-          style: normal
