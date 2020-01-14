@@ -203,12 +203,31 @@ class _MyHomePageState extends State<MyHomePage>
           ),
         ],
       ),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            child: _buildExampleItemsWidget(_status),
-          ),
-        ],
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Flexible(
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(16)),
+                child: Container(
+                  margin: const EdgeInsets.all(16),
+                  child: Image.asset(
+                    'assets/images/feature-graphic.png',
+                    height: 150,
+                    width: double.maxFinite,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            Flexible(
+              fit: FlexFit.loose,
+              child: _buildExampleItemsWidget(_status),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -216,6 +235,8 @@ class _MyHomePageState extends State<MyHomePage>
   _buildExampleItemsWidget(bool status) {
     if (status) {
       return ListView.builder(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
         itemBuilder: (BuildContext context, int index) => ExampleNameItem(
           exampleNames: names[index],
         ),
@@ -224,6 +245,8 @@ class _MyHomePageState extends State<MyHomePage>
       );
     } else {
       return GridView.builder(
+        physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 3.0,
