@@ -16,9 +16,9 @@ class DragAndDropExample extends StatefulWidget {
 class DragAndDropAppState extends State<DragAndDropExample> {
   int position = 1;
 
-  void moveRect(int Position) {
+  void moveRect(int pos) {
     setState(() {
-      position = Position;
+      position = pos;
     });
   }
 

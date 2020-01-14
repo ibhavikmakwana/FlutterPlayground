@@ -7,7 +7,6 @@ import 'package:flutter_playground/ui/app_bar_bottom/appbar_bottom.dart';
 import 'package:flutter_playground/ui/datatable/data_table_example.dart';
 import 'package:flutter_playground/ui/expanded_example/expanded_example.dart';
 import 'package:flutter_playground/ui/flare/flare_example.dart';
-import 'package:flutter_playground/ui/flutter_admob/admob_example.dart';
 import 'package:flutter_playground/ui/quick_actions/QuickActionsExample.dart';
 import 'package:flutter_playground/ui/transform/transform_example.dart';
 import 'package:flutter_playground/ui/wrap/wrap_example.dart';
@@ -116,8 +115,8 @@ class MyApp extends StatelessWidget {
           AppBarBottom(Strings.bottomAppBarTitle),
       Strings.TransformExampleRoute: (BuildContext context) =>
           TransformExample(Strings.TransformExampleTitle),
-      Strings.admobPluginRoute: (BuildContext context) =>
-          AdMobExample(Strings.admobPluginExample),
+//      Strings.admobPluginRoute: (BuildContext context) =>
+//          AdMobExample(Strings.admobPluginExample),
     };
   }
 }
