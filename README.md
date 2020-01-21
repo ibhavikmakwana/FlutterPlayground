@@ -5,7 +5,8 @@
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/ibhavikmakwana) 
 
 Playground app for Flutter.
-Contains list examples I have created.
+Contains examples to quickly learn and tinker around with various features.
+Consider Contributing if you find this project helpful.
 
 [<img src="./icons/Google-Play-Store-Logo.png" height="100" alt="Screenshot"/>](https://play.google.com/store/apps/details?id=com.ibhavikmakwana.flutterplayground)
 
