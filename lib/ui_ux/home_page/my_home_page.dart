@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/store/theme_store.dart';
+import 'package:flutter_playground/ui_ux/open_source_licenses.dart';
 import 'package:flutter_playground/values/assets.dart';
 import 'package:flutter_playground/values/imports.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'my_home_page_store.dart';
 
@@ -50,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             IconButton(
               icon: Icon(Icons.menu),
-              onPressed: () {},
+              onPressed: () => openMenuBottomSheet(context),
             ),
             IconButton(
               icon: Icon(Icons.search),
@@ -111,6 +113,70 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  //Change Dark/Light Theme
   void onFabPressed() =>
       Provider.of<ThemeStore>(context, listen: false).changeTheme();
+
+  //Open Menu Bottom Sheet
+  openMenuBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      builder: (context) {
+        return Material(
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(8)),
+          ),
+          child: Wrap(
+            children: <Widget>[
+              ListTile(
+                title: Text('About'),
+                onTap: () => openAboutDialog(context),
+              ),
+              Divider(),
+              ListTile(
+                title: Text('Open-source licenses'),
+                onTap: () => navigateToOpnSourceLicence(),
+              ),
+              Divider(),
+              ListTile(
+                title: Text('Privacy Policy'),
+                onTap: _launchURL,
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  openAboutDialog(BuildContext context) {
+    showAboutDialog(
+      context: context,
+      applicationLegalese:
+      'Playground app for Flutter. Contains examples to quickly learn and tinker around with various features. Consider Contributing if you find this project helpful.',
+      applicationIcon: Image.asset(
+        Assets.appIcon,
+        height: 24,
+        width: 24,
+      ),
+    );
+  }
+
+  void _launchURL() async {
+    const url = 'https://flutter-playground.flycricket.io/privacy.html';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  void navigateToOpnSourceLicence() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => OpenSourceLicenses(),
+      ),
+    );
+  }
 }
