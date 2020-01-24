@@ -12,14 +12,14 @@ mixin _$MyHomePageStore on _MyHomePageStore, Store {
   final _$exampleListAtom = Atom(name: '_MyHomePageStore.exampleList');
 
   @override
-  ObservableList get exampleList {
+  ObservableList<ExampleNames> get exampleList {
     _$exampleListAtom.context.enforceReadPolicy(_$exampleListAtom);
     _$exampleListAtom.reportObserved();
     return super.exampleList;
   }
 
   @override
-  set exampleList(ObservableList value) {
+  set exampleList(ObservableList<ExampleNames> value) {
     _$exampleListAtom.context.conditionallyRunInAction(() {
       super.exampleList = value;
       _$exampleListAtom.reportChanged();

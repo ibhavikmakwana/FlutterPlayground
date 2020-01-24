@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/store/theme_store.dart';
 import 'package:flutter_playground/ui_ux/open_source_licenses.dart';
+import 'package:flutter_playground/ui_ux/search_widget.dart';
 import 'package:flutter_playground/values/assets.dart';
 import 'package:flutter_playground/values/imports.dart';
 import 'package:provider/provider.dart';
@@ -56,7 +57,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             IconButton(
               icon: Icon(Icons.search),
-              onPressed: () {},
+              onPressed: () =>
+                  showSearch(
+                    context: context,
+                    delegate: CustomSearchDelegate(store),
+                  ),
             ),
           ],
         ),

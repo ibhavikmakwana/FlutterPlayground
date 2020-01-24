@@ -7,7 +7,18 @@ class MyHomePageStore = _MyHomePageStore with _$MyHomePageStore;
 
 abstract class _MyHomePageStore with Store {
   @observable
-  ObservableList exampleList = ObservableList();
+  ObservableList<ExampleNames> exampleList = ObservableList<ExampleNames>();
+
+  @observable
+  ObservableList<ExampleNames> searchResult = ObservableList<ExampleNames>();
+
+  @action
+  void search(String query) {
+    exampleList.forEach((ExampleNames example) {
+      if (example.title.toLowerCase().contains(
+          query.toLowerCase())) searchResult.add(example);
+    });
+  }
 
   @action
   void initList() {

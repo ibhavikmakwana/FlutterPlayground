@@ -2,7 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
 import 'package:flutter/material.dart';
 
 class AppBarExample extends StatelessWidget {
@@ -15,7 +14,6 @@ class AppBarExample extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-
           ///App bar with background color
           Container(
             child: AppBar(
@@ -127,12 +125,15 @@ class AppBarExample extends StatelessWidget {
             margin: EdgeInsets.only(bottom: 16.0),
             child: AppBar(
               backgroundColor: Colors.transparent,
-              title: Text("Transparent AppBar"),
+              elevation: 0,
+              iconTheme: IconThemeData(color: Colors.black),
+              title: Text(
+                "Transparent AppBar",
+                style: TextStyle(color: Colors.black),
+              ),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(
-                    Icons.search,
-                  ),
+                  icon: Icon(Icons.search),
                   onPressed: () {},
                 )
               ],
