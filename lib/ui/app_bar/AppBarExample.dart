@@ -127,11 +127,14 @@ class AppBarExample extends StatelessWidget {
             margin: EdgeInsets.only(bottom: 16.0),
             child: AppBar(
               backgroundColor: Colors.transparent,
-              title: Text("Transparent AppBar"),
+              elevation: 0,
+              iconTheme: IconThemeData(color: Colors.black),
+              title: Text(
+                "Transparent AppBar", style: TextStyle(color: Colors.black),),
               actions: <Widget>[
                 IconButton(
                   icon: Icon(
-                    Icons.search,
+                      Icons.search
                   ),
                   onPressed: () {},
                 )
