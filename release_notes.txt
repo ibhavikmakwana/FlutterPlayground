@@ -1,2 +1,3 @@
-- Dark Mode
+- You can now search in the application
+- Some UI/UX Tweaks
 - Minor bug fixes
