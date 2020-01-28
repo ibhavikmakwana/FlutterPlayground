@@ -2,8 +2,10 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/models/ExapmleNames.dart';
+import 'package:flutter_playground/values/imports.dart';
 import 'package:meta/meta.dart';
 
 /// A [ExampleNameItem] to display a [ExampleNames].
@@ -42,6 +44,7 @@ class ExampleNameItem extends StatelessWidget {
           child: InkWell(
             onTap: () {
               Navigator.pushNamed(context, "/${exampleNames.title}");
+                 FirebaseAnalytics().setCurrentScreen(screenName: exampleNames.title);
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
