@@ -33,7 +33,9 @@ dependencies:
   provider: ^4.0.1
   url_launcher: ^5.4.1
   webview_flutter: 0.3.19+5
-  firebase_analytics: ^5.0.9
+  firebase_analytics: ^5.0.10
+  firebase_core: ^0.4.3+2
+  
 
 dev_dependencies:
   flutter_test:
