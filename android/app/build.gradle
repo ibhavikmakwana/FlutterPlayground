@@ -24,7 +24,7 @@ if (flutterVersionName == null) {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
-apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+
 def keystoreProperties = new Properties()
 def keystorePropertiesFile = rootProject.file('key.properties')
 if (keystorePropertiesFile.exists()) {
@@ -49,6 +49,7 @@ android {
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -62,8 +63,8 @@ android {
     }
     buildTypes {
         release {
+            multiDexEnabled true
             signingConfig signingConfigs.release
-
         }
     }
 }
@@ -79,3 +80,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha03'
     implementation 'com.google.firebase:firebase-analytics:17.2.0'
 }
+apply plugin: 'com.google.gms.google-services'  // Google Services plugin
