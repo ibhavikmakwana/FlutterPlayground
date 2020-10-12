@@ -15,8 +15,8 @@ abstract class _MyHomePageStore with Store {
   @action
   void search(String query) {
     exampleList.forEach((ExampleNames example) {
-      if (example.title.toLowerCase().contains(
-          query.toLowerCase())) searchResult.add(example);
+      if (example.title.toLowerCase().contains(query.toLowerCase()))
+        searchResult.add(example);
     });
   }
 
@@ -63,6 +63,7 @@ abstract class _MyHomePageStore with Store {
       ExampleNames(Strings.bottomAppBarTitle),
       ExampleNames(Strings.TransformExampleTitle),
       ExampleNames(Strings.admobPluginExample),
+      ExampleNames(Strings.bottomSheetTitle)
     ]);
   }
 }

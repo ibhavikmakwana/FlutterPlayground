@@ -17,8 +17,7 @@ class ExampleNameItem extends StatelessWidget {
     Key key,
     @required this.exampleNames,
     this.onTap,
-  })
-      : assert(exampleNames != null),
+  })  : assert(exampleNames != null),
         super(key: key);
 
   @override
@@ -28,23 +27,20 @@ class ExampleNameItem extends StatelessWidget {
       child: Card(
         elevation: 4.0,
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(0.0)),
+          borderRadius: BorderRadius.all(Radius.circular(5.0)),
         ),
         child: Container(
           decoration: BoxDecoration(
             border: Border(
-              left: BorderSide(
-                width: 4.0,
-                color: Theme
-                    .of(context)
-                    .accentColor,
-              ),
+              left:
+                  BorderSide(width: 4.0, color: Theme.of(context).accentColor),
             ),
           ),
           child: InkWell(
             onTap: () {
               Navigator.pushNamed(context, "/${exampleNames.title}");
-                 FirebaseAnalytics().setCurrentScreen(screenName: exampleNames.title);
+              FirebaseAnalytics()
+                  .setCurrentScreen(screenName: exampleNames.title);
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +50,7 @@ class ExampleNameItem extends StatelessWidget {
                 Expanded(
                   child: Container(
                     margin:
-                    EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
+                        EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
                     child: Text(
                       exampleNames.title,
                       softWrap: true,

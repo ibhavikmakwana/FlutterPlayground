@@ -2,7 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
 import 'package:flutter/material.dart';
 
 class AnimatedIconsDemo extends StatefulWidget {
@@ -31,10 +30,7 @@ class _AnimatedIconsState extends State<AnimatedIconsDemo>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 300),
-      value: 1.0,
-      vsync: this,
-    );
+        duration: const Duration(milliseconds: 300), value: 1.0, vsync: this);
   }
 
   @override

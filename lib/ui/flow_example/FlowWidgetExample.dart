@@ -58,7 +58,7 @@ class FlowWidgetExampleState extends State<FlowWidgetExample>
             height: 50.0,
             color: red,
             child:
-            Center(child: Text('$i', textDirection: TextDirection.ltr))));
+                Center(child: Text('$i', textDirection: TextDirection.ltr))));
   }
 }
 
