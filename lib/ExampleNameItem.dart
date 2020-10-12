@@ -27,7 +27,7 @@ class ExampleNameItem extends StatelessWidget {
       child: Card(
         elevation: 4.0,
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+          borderRadius: BorderRadius.all(Radius.circular(0.0)),
         ),
         child: Container(
           decoration: BoxDecoration(
