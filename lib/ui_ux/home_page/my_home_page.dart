@@ -57,11 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             IconButton(
               icon: Icon(Icons.search),
-              onPressed: () =>
-                  showSearch(
-                    context: context,
-                    delegate: CustomSearchDelegate(store),
-                  ),
+              onPressed: () => showSearch(
+                context: context,
+                delegate: CustomSearchDelegate(store),
+              ),
             ),
           ],
         ),
@@ -78,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 margin: const EdgeInsets.all(16),
                 child: Text(
                   widget.title,
-                  style: Theme.of(context).textTheme.title,
+                  style: Theme.of(context).textTheme.headline6,
                 ),
               ),
             ),
@@ -159,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
     showAboutDialog(
       context: context,
       applicationLegalese:
-      'Playground app for Flutter. Contains examples to quickly learn and tinker around with various features. Consider Contributing if you find this project helpful.',
+          'Playground app for Flutter. Contains examples to quickly learn and tinker around with various features. Consider Contributing if you find this project helpful.',
       applicationIcon: Image.asset(
         Assets.appIcon,
         height: 24,
