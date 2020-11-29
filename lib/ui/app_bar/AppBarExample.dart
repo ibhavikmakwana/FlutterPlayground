@@ -70,7 +70,7 @@ class AppBarExample extends StatelessWidget {
                 color: Colors.black,
               ),
               textTheme: TextTheme(
-                title: TextStyle(
+                headline6: TextStyle(
                   color: Colors.black,
                 ),
               ),

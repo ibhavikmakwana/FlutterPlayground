@@ -2,7 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
 import 'package:flutter/material.dart';
 
 class AnimatedSwitcherExample extends StatefulWidget {
@@ -51,7 +50,7 @@ class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
                     // child each time the count changes, so that it will begin its animation
                     // when the count changes.
                     key: ValueKey<int>(_counter),
-                    style: Theme.of(context).textTheme.display1,
+                    style: Theme.of(context).textTheme.headline4,
                   ),
                 ),
               ],
