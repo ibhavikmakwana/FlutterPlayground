@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/ui/grid_view/grid_view_example.dart';
 import 'package:flutter_playground/utils/Strings.dart';
 
 import 'imports.dart';
@@ -90,6 +91,8 @@ class DefaultRoutes {
           AppBarBottom(Strings.bottomAppBarTitle),
       Strings.TransformExampleRoute: (BuildContext context) =>
           TransformExample(Strings.TransformExampleTitle),
+      Strings.GridViewExampleRoute: (BuildContext context) =>
+          GridViewExample(Strings.GridViewExampleTitle),
 //      Strings.admobPluginRoute: (BuildContext context) =>
 //          AdMobExample(Strings.admobPluginExample),
     };

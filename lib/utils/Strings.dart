@@ -62,7 +62,7 @@ class Strings {
   static const String quickActionsRoute = "/QuickActions Example";
   static const String bottomAppBarRoute = "/AppBar Bottom Example";
   static const String TransformExampleRoute = "/Transform Example";
-
+  static const String GridViewExampleRoute = "/Grid View Example";
 
   ///Strings
   //Titles
@@ -116,4 +116,5 @@ class Strings {
   static const String bottomAppBarTitle = "AppBar Bottom Example";
   static const String TransformExampleTitle = "Transform Example";
   static const String admobPluginExample = "AdMob Plugin Example";
+  static const String GridViewExampleTitle = "Grid View Example";
 }
