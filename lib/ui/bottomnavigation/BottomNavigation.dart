@@ -2,7 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
 import 'package:flutter/material.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -43,15 +42,15 @@ class _BottomNavigationState extends State<BottomNavigation> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.photo),
-            title: Text("Photo"),
+            label: "Photo",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.map),
-            title: Text("Map"),
+            label: "Map",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            title: Text("Favorite"),
+            label: "Favorite",
           ),
         ],
         onTap: navigationTapped,
