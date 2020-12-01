@@ -92,6 +92,9 @@ class DefaultRoutes {
           TransformExample(Strings.TransformExampleTitle),
 //      Strings.admobPluginRoute: (BuildContext context) =>
 //          AdMobExample(Strings.admobPluginExample),
+      Strings.bottomSheetRoute: (BuildContext context) => BottomSheetExample(
+            title: Strings.bottomSheetTitle,
+          ),
     };
   }
 }

@@ -22,9 +22,8 @@ class _RotationTransitionExampleState extends State<RotationTransitionExample>
   void initState() {
     super.initState();
     _animation = AnimationController(
-      duration: const Duration(milliseconds: 3600),
-      vsync: this,
-    )..repeat();
+        duration: const Duration(milliseconds: 3600), vsync: this)
+      ..repeat();
   }
 
   @override

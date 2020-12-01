@@ -47,3 +47,4 @@ export 'package:flutter_playground/ui/tooltip/tooltip.dart';
 export 'package:flutter_playground/ui/transform/transform_example.dart';
 export 'package:flutter_playground/ui/wrap/wrap_example.dart';
 export 'package:flutter_playground/utils/Strings.dart';
+export 'package:flutter_playground/ui/bottomsheet/BottomSheet.dart';
