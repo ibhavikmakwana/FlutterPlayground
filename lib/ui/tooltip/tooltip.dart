@@ -26,7 +26,7 @@ class ToolTipExample extends StatelessWidget {
           ),
           Tooltip(
             message: "This is Raised Button",
-            child: RaisedButton(
+            child: ElevatedButton(
               onPressed: () {},
               child: Text("This is Button"),
             ),

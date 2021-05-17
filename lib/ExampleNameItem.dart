@@ -6,20 +6,17 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/models/ExapmleNames.dart';
 import 'package:flutter_playground/values/imports.dart';
-import 'package:meta/meta.dart';
 
 /// A [ExampleNameItem] to display a [ExampleNames].
 class ExampleNameItem extends StatelessWidget {
   final ExampleNames exampleNames;
-  final ValueChanged<ExampleNames> onTap;
+  final ValueChanged<ExampleNames>? onTap;
 
   const ExampleNameItem({
-    Key key,
-    @required this.exampleNames,
+    Key? key,
+    required this.exampleNames,
     this.onTap,
-  })
-      : assert(exampleNames != null),
-        super(key: key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,16 +32,15 @@ class ExampleNameItem extends StatelessWidget {
             border: Border(
               left: BorderSide(
                 width: 4.0,
-                color: Theme
-                    .of(context)
-                    .accentColor,
+                color: Theme.of(context).accentColor,
               ),
             ),
           ),
           child: InkWell(
             onTap: () {
               Navigator.pushNamed(context, "/${exampleNames.title}");
-                 FirebaseAnalytics().setCurrentScreen(screenName: exampleNames.title);
+              FirebaseAnalytics()
+                  .setCurrentScreen(screenName: exampleNames.title);
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +50,7 @@ class ExampleNameItem extends StatelessWidget {
                 Expanded(
                   child: Container(
                     margin:
-                    EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
+                        EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
                     child: Text(
                       exampleNames.title,
                       softWrap: true,

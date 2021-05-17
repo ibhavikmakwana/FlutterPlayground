@@ -8,7 +8,7 @@ import 'package:flutter_playground/utils/Strings.dart';
 class TextExamples extends StatefulWidget {
   final String title;
 
-  TextExamples({Key key, this.title}) : super(key: key);
+  TextExamples({Key? key, required this.title}) : super(key: key);
 
   @override
   _TextExamplesState createState() => _TextExamplesState();
@@ -45,11 +45,13 @@ class _TextExamplesState extends State<TextExamples> {
   textButtons(String text, String route) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: FlatButton(
+      child: TextButton(
         child: Text(text),
-        shape: RoundedRectangleBorder(),
-        color: Colors.red,
-        textColor: Colors.white,
+        style: TextButton.styleFrom(
+          shape: RoundedRectangleBorder(),
+          primary: Colors.red,
+          onSurface: Colors.white,
+        ),
         onPressed: () {
           Navigator.pushNamed(context, route);
         },

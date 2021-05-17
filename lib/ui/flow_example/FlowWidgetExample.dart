@@ -17,7 +17,7 @@ class FlowWidgetExample extends StatefulWidget {
 
 class FlowWidgetExampleState extends State<FlowWidgetExample>
     with TickerProviderStateMixin {
-  AnimationController start;
+  AnimationController? start;
 
   @override
   void initState() {
@@ -66,8 +66,8 @@ class ExampleFlowDelegate extends FlowDelegate {
   ExampleFlowDelegate({this.opacity, this.startOffset})
       : super(repaint: startOffset);
 
-  double opacity;
-  Animation<double> startOffset;
+  double? opacity;
+  Animation<double>? startOffset;
 
   @override
   BoxConstraints getConstraintsForChild(int i, BoxConstraints constraints) {
@@ -76,12 +76,12 @@ class ExampleFlowDelegate extends FlowDelegate {
 
   @override
   void paintChildren(FlowPaintingContext context) {
-    double dy = startOffset.value;
+    double dy = startOffset!.value;
 
     for (int i = 0; i < context.childCount; ++i) {
       context.paintChild(i,
-          opacity: opacity, transform: Matrix4.translationValues(0.0, dy, 0.0));
-      dy += 0.65 * context.getChildSize(i).height;
+          opacity: opacity!, transform: Matrix4.translationValues(0.0, dy, 0.0));
+      dy += 0.65 * context.getChildSize(i)!.height;
     }
   }
 

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class TabBarExample extends StatefulWidget {
   final String title;
 
-  TabBarExample({Key key, this.title}) : super(key: key);
+  TabBarExample({Key? key, required this.title}) : super(key: key);
 
   @override
   _TabBarExampleState createState() => _TabBarExampleState();
@@ -15,7 +15,7 @@ class TabBarExample extends StatefulWidget {
 
 class _TabBarExampleState extends State<TabBarExample>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  TabController? _tabController;
 
   @override
   void initState() {
@@ -62,7 +62,7 @@ class _TabBarExampleState extends State<TabBarExample>
 
   @override
   void dispose() {
-    _tabController.dispose();
+    _tabController!.dispose();
     super.dispose();
   }
 }

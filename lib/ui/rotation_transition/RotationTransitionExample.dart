@@ -16,7 +16,7 @@ class RotationTransitionExample extends StatefulWidget {
 
 class _RotationTransitionExampleState extends State<RotationTransitionExample>
     with SingleTickerProviderStateMixin {
-  AnimationController _animation;
+  late AnimationController _animation;
 
   @override
   void initState() {

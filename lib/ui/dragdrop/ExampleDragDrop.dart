@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class DragAndDropExample extends StatefulWidget {
   final String title;
 
-  DragAndDropExample({Key key, this.title}) : super(key: key);
+  DragAndDropExample({Key? key, required this.title}) : super(key: key);
 
   @override
   DragAndDropAppState createState() => DragAndDropAppState();
@@ -29,23 +29,23 @@ class DragAndDropAppState extends State<DragAndDropExample> {
         body: Column(children: <Widget>[
           Expanded(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  MovableRect(1, position, moveRect),
-                  MovableRect(2, position, moveRect),
-                  MovableRect(3, position, moveRect),
-                ],
-              )),
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              MovableRect(1, position, moveRect),
+              MovableRect(2, position, moveRect),
+              MovableRect(3, position, moveRect),
+            ],
+          )),
         ]));
   }
 }
 
 class Dot extends StatefulWidget {
-  const Dot({Key key, this.color, this.size, this.child}) : super(key: key);
+  const Dot({Key? key, this.color, this.size, this.child}) : super(key: key);
 
-  final Color color;
-  final double size;
-  final Widget child;
+  final Color? color;
+  final double? size;
+  final Widget? child;
 
   @override
   DotState createState() => DotState();
@@ -116,7 +116,7 @@ class MovableRect extends StatelessWidget {
       return DragTarget<bool>(onAccept: (bool data) {
         callback(position);
       }, builder:
-          (BuildContext context, List<bool> accepted, List<dynamic> rejected) {
+          (BuildContext context, List<bool?> accepted, List<dynamic> rejected) {
         return outlineRect;
       });
     }

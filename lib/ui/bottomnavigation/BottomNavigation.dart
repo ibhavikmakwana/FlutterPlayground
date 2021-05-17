@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class BottomNavigation extends StatefulWidget {
-  BottomNavigation({Key key, this.title}) : super(key: key);
+  BottomNavigation({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -13,7 +13,7 @@ class BottomNavigation extends StatefulWidget {
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
-  PageController _pageController;
+  PageController? _pageController;
   var _page = 0;
 
   @override
@@ -63,7 +63,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   /// Bottom Navigation tap listener
   ///
   void navigationTapped(int page) {
-    _pageController.animateToPage(
+    _pageController!.animateToPage(
       page,
       duration: Duration(milliseconds: 300),
       curve: Curves.easeIn,
@@ -85,6 +85,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
   @override
   void dispose() {
     super.dispose();
-    _pageController.dispose();
+    _pageController!.dispose();
   }
 }

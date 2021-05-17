@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class ProgressButton extends StatefulWidget {
-  ProgressButton({Key key, this.title}) : super(key: key);
+  ProgressButton({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -18,8 +18,8 @@ class ProgressButton extends StatefulWidget {
 class _ProgressButtonState extends State<ProgressButton>
     with TickerProviderStateMixin {
   int _state = 0;
-  Animation _animation;
-  AnimationController _controller;
+  late Animation _animation;
+  late AnimationController _controller;
   GlobalKey _globalKey = GlobalKey();
   double _width = double.infinity;
 
@@ -45,8 +45,12 @@ class _ProgressButtonState extends State<ProgressButton>
             key: _globalKey,
             height: 48.0,
             width: _width,
-            child: RaisedButton(
-              padding: EdgeInsets.all(0.0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.all(0.0),
+                elevation: 4.0,
+                primary: Colors.lightGreen,
+              ),
               child: setUpButtonChild(),
               onPressed: () {
                 setState(() {
@@ -55,8 +59,6 @@ class _ProgressButtonState extends State<ProgressButton>
                   }
                 });
               },
-              elevation: 4.0,
-              color: Colors.lightGreen,
             ),
           ),
         ),
@@ -87,7 +89,7 @@ class _ProgressButtonState extends State<ProgressButton>
   }
 
   void animateButton() {
-    double initialWidth = _globalKey.currentContext.size.width;
+    double initialWidth = _globalKey.currentContext!.size!.width;
 
     _controller =
         AnimationController(duration: Duration(milliseconds: 300), vsync: this);

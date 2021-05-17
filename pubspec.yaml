@@ -14,7 +14,7 @@ description: A Flutter application contains a list of Flutter Examples.
 version: 1.2.7+10
 
 environment:
-  sdk: ">=2.7.0-dev.2.1 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -22,33 +22,30 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^1.0.3
   #  local_auth:
-  flare_flutter:
+  flare_flutter: ^3.0.0
   #  firebase_admob: ^0.9.0+3
-  quick_actions:
-  google_fonts: ^0.3.2
-  mobx: ^0.3.6
-  flutter_mobx: 0.3.4
-  provider: ^4.0.1
-  url_launcher: ^5.4.1
-  webview_flutter: 0.3.19+5
-  firebase_analytics: ^5.0.10
-  firebase_core: ^0.4.3+2
-  
+  quick_actions: ^0.6.0+1
+  google_fonts: ^2.1.0
+  mobx: ^2.0.1
+  flutter_mobx: ^2.0.0
+  provider: ^5.0.0
+  url_launcher: ^6.0.3
+  webview_flutter: ^2.0.4
+  firebase_analytics: ^8.0.4
+  firebase_core: ^1.1.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: 1.3.1
-  mobx_codegen: ^0.3.5
-
+  build_runner: ^2.0.3
+  mobx_codegen: ^2.0.1+3
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -56,5 +53,5 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-   - assets/
-   - assets/images/
+    - assets/
+    - assets/images/
