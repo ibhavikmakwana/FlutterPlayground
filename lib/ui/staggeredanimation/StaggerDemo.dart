@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
 class StaggerAnimation extends StatelessWidget {
-  StaggerAnimation({Key key, this.controller})
+  StaggerAnimation({Key? key, required this.controller})
       :
 
   // Each animation defined here transforms its value during the subset
@@ -102,12 +102,12 @@ class StaggerAnimation extends StatelessWidget {
   final Animation<double> height;
   final Animation<EdgeInsets> padding;
   final Animation<BorderRadius> borderRadius;
-  final Animation<Color> color;
+  final Animation<Color?> color;
 
   // This function is called each time the controller "ticks" a  frame.
   // When it runs, all of the animation's values will have been
   // updated to reflect the controller's current value.
-  Widget _buildAnimation(BuildContext context, Widget child) {
+  Widget _buildAnimation(BuildContext context, Widget? child) {
     return Container(
       padding: padding.value,
       alignment: Alignment.bottomCenter,
@@ -119,7 +119,7 @@ class StaggerAnimation extends StatelessWidget {
           decoration: BoxDecoration(
             color: color.value,
             border: Border.all(
-              color: Colors.indigo[300],
+              color: Colors.indigo[300]!,
               width: 3.0,
             ),
             borderRadius: borderRadius.value,
@@ -139,9 +139,9 @@ class StaggerAnimation extends StatelessWidget {
 }
 
 class StaggerDemo extends StatefulWidget {
-  StaggerDemo({Key key, this.title}) : super(key: key);
+  StaggerDemo({Key? key, this.title}) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _StaggerDemoState createState() => _StaggerDemoState();
@@ -149,7 +149,7 @@ class StaggerDemo extends StatefulWidget {
 
 class _StaggerDemoState extends State<StaggerDemo>
     with TickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -179,7 +179,7 @@ class _StaggerDemoState extends State<StaggerDemo>
     timeDilation = 1.0; // 1.0 is normal animation speed.
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(widget.title!),
       ),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,

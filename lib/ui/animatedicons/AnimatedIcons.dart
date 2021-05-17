@@ -2,11 +2,10 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
 import 'package:flutter/material.dart';
 
 class AnimatedIconsDemo extends StatefulWidget {
-  AnimatedIconsDemo({Key key, this.title}) : super(key: key);
+  AnimatedIconsDemo({Key? key, required this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -25,7 +24,7 @@ class AnimatedIconsDemo extends StatefulWidget {
 
 class _AnimatedIconsState extends State<AnimatedIconsDemo>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {

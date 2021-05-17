@@ -11,7 +11,7 @@ class AppBarBottom extends StatefulWidget {
 
 class _AppBarBottomState extends State<AppBarBottom>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  TabController? _tabController;
 
   @override
   void initState() {
@@ -21,7 +21,7 @@ class _AppBarBottomState extends State<AppBarBottom>
 
   @override
   void dispose() {
-    _tabController.dispose();
+    _tabController!.dispose();
     super.dispose();
   }
 

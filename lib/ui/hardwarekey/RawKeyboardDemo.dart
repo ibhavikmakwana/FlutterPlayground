@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 class RawKeyboardDemo extends StatefulWidget {
   final String title;
 
-  RawKeyboardDemo({Key key, this.title}) : super(key: key);
+  RawKeyboardDemo({Key? key, required this.title}) : super(key: key);
 
   @override
   _HardwareKeyDemoState createState() => _HardwareKeyDemoState();
@@ -16,7 +16,7 @@ class RawKeyboardDemo extends StatefulWidget {
 
 class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
   final FocusNode _focusNode = FocusNode();
-  RawKeyEvent _event;
+  RawKeyEvent? _event;
 
   @override
   void dispose() {
@@ -43,7 +43,7 @@ class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
           onKey: _handleKeyEvent,
           child: AnimatedBuilder(
             animation: _focusNode,
-            builder: (BuildContext context, Widget child) {
+            builder: (BuildContext context, Widget? child) {
               if (!_focusNode.hasFocus) {
                 return GestureDetector(
                   onTap: () {
@@ -56,12 +56,12 @@ class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
               if (_event == null)
                 return Text('Press Volume key', style: textTheme.headline4);
 
-              int flags;
-              int codePoint;
-              int keyCode;
-              int scanCode;
-              int metaState;
-              final RawKeyEventData data = _event.data;
+              int? flags;
+              int? codePoint;
+              int? keyCode;
+              int? scanCode;
+              int? metaState;
+              final RawKeyEventData data = _event!.data;
 
               if (data is RawKeyEventDataAndroid) {
                 flags = data.flags;

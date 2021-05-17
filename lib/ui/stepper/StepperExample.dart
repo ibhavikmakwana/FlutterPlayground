@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class StepperExample extends StatefulWidget {
-  StepperExample({Key key, this.title}) : super(key: key);
+  StepperExample({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override

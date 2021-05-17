@@ -8,25 +8,25 @@ import 'package:flutter/widgets.dart';
 class Lifecycle extends StatefulWidget {
   final String title;
 
-  Lifecycle({Key key, this.title}) : super(key: key);
+  Lifecycle({Key? key, required this.title}) : super(key: key);
 
   @override
   _LifecycleState createState() => _LifecycleState();
 }
 
 class _LifecycleState extends State<Lifecycle> with WidgetsBindingObserver {
-  List<AppLifecycleState> _appLifecycleState = List();
+  List<AppLifecycleState> _appLifecycleState = [];
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance!.addObserver(this);
   }
 
   @override
   void dispose() {
     super.dispose();
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance!.removeObserver(this);
   }
 
   @override
@@ -38,15 +38,9 @@ class _LifecycleState extends State<Lifecycle> with WidgetsBindingObserver {
   }
 
   List<Widget> _stateString() {
-    if (_appLifecycleState != null) {
-      return List<Widget>.generate(_appLifecycleState.length, (int index) {
-        return Text('lifecycle state : $_appLifecycleState,');
-      });
-    } else {
-      return List<Widget>.generate(1, (int index) {
-        return Text('App started');
-      });
-    }
+    return List<Widget>.generate(_appLifecycleState.length, (int index) {
+      return Text('lifecycle state : $_appLifecycleState,');
+    });
   }
 
   @override

@@ -10,7 +10,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'my_home_page_store.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -18,7 +18,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  MyHomePageStore store;
+  MyHomePageStore? store;
 
   @override
   void initState() {
@@ -110,9 +110,9 @@ class _MyHomePageState extends State<MyHomePage> {
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
       itemBuilder: (BuildContext context, int index) => ExampleNameItem(
-        exampleNames: store.exampleList[index],
+        exampleNames: store!.exampleList[index],
       ),
-      itemCount: store.exampleList.length,
+      itemCount: store!.exampleList.length,
       padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
     );
   }

@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedSwitcherExample extends StatefulWidget {
-  AnimatedSwitcherExample({Key key, this.title}) : super(key: key);
+  AnimatedSwitcherExample({Key? key, required this.title}) : super(key: key);
 
   final String title;
 

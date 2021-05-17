@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class TextUnderline extends StatefulWidget {
   final String title;
 
-  TextUnderline({Key key, this.title}) : super(key: key);
+  TextUnderline({Key? key, required this.title}) : super(key: key);
 
   @override
   _TextUnderlineState createState() => _TextUnderlineState();

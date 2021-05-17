@@ -2,11 +2,10 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
 import 'package:flutter/material.dart';
 
 class AnimatedSizeDemo extends StatefulWidget {
-  AnimatedSizeDemo({Key key, this.title}) : super(key: key);
+  AnimatedSizeDemo({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override

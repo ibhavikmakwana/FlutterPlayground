@@ -61,9 +61,9 @@ class OpenSourceLicenses extends StatelessWidget {
 }
 
 class LicenseDetail extends StatefulWidget {
-  final OpenSource licence;
+  final OpenSource? licence;
 
-  const LicenseDetail({Key key, this.licence}) : super(key: key);
+  const LicenseDetail({Key? key, this.licence}) : super(key: key);
 
   @override
   _LicenseDetailState createState() => _LicenseDetailState();
@@ -77,11 +77,11 @@ class _LicenseDetailState extends State<LicenseDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.licence.name),
+        title: Text(widget.licence!.name),
       ),
       body: Builder(
         builder: (BuildContext context) => WebView(
-          initialUrl: widget.licence.link,
+          initialUrl: widget.licence!.link,
           onWebViewCreated: (WebViewController webViewController) {
             _controller.complete(webViewController);
           },

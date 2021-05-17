@@ -27,7 +27,7 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
         child: Center(
           child: Column(
             children: <Widget>[
-              FlatButton(
+              TextButton(
                   onPressed: () {
                     setState(() {
                       _first = !_first;

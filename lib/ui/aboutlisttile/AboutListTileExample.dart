@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class AboutListTileExample extends StatefulWidget {
   final String title;
 
-  AboutListTileExample({Key key, this.title}) : super(key: key);
+  AboutListTileExample({Key? key, required this.title}) : super(key: key);
 
   @override
   _AboutListTileState createState() => _AboutListTileState();
