@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class CupertinoTimerPickerExample extends StatelessWidget {
   final String title;
 
-  CupertinoTimerPickerExample(this.title);
+  const CupertinoTimerPickerExample(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +19,7 @@ class CupertinoTimerPickerExample extends StatelessWidget {
       ),
       body: Center(
         child: CupertinoTimerPicker(
-          mode: CupertinoTimerPickerMode.hms,
-          initialTimerDuration: Duration(hours: 1),
+          initialTimerDuration: const Duration(hours: 1),
           onTimerDurationChanged: (Duration value) {},
           minuteInterval: 5,
           secondInterval: 60,

@@ -40,17 +40,17 @@ class Strings {
   static const String nestedListExampleRoute = "/Nested Example";
   static const String cupertinoTimerPickerRoute =
       "/CupertinoTimerPicker Example";
-  static const String CupertinoActionSheetRoute =
+  static const String cupertinoActionSheetRoute =
       "/CupertinoActionSheet Example";
-  static const String CupertinoProgressIndicatorRoute =
+  static const String cupertinoProgressIndicatorRoute =
       "/CupertinoProgressIndicator Example";
-  static const String GridPaperRoute = "/GridPaper Example";
-  static const String ChipsExampleRoute = "/Chips Example";
-  static const String ExpansionTileRoute = "/Expansion Tile Example";
-  static const String RotationTransitionRoute = "/Rotation Transition Example";
-  static const String FlowWidgetExampleRoute = "/Flow Widget Example";
+  static const String gridPaperRoute = "/GridPaper Example";
+  static const String chipsExampleRoute = "/Chips Example";
+  static const String expansionTileRoute = "/Expansion Tile Example";
+  static const String rotationTransitionRoute = "/Rotation Transition Example";
+  static const String flowWidgetExampleRoute = "/Flow Widget Example";
   static const String dismissibleExampleRoute = "/Dismissible Example";
-  static const String BackdropFilterExampleRoute = "/BackdropFilter Example";
+  static const String backdropFilterExampleRoute = "/BackdropFilter Example";
   static const String googleMapsExampleRoute = "/Google Maps Example";
   static const String toolTipExampleRoute = "/ToolTip Example";
   static const String animatedCrossFadeExampleRoute =
@@ -61,13 +61,13 @@ class Strings {
   static const String wrapExampleRoute = "/Wrap Example";
   static const String quickActionsRoute = "/QuickActions Example";
   static const String bottomAppBarRoute = "/AppBar Bottom Example";
-  static const String TransformExampleRoute = "/Transform Example";
-  static const String GridViewExampleRoute = "/Grid View Example";
+  static const String transformExampleRoute = "/Transform Example";
+  static const String gridViewExampleRoute = "/Grid View Example";
 
   ///Strings
   //Titles
   static const String appBarTitle = "App Bar";
-  static const String TabBarTitle = "Tab Bar with Tab Bar View";
+  static const String tabBarTitle = "Tab Bar with Tab Bar View";
   static const String bottomNavigationTitle = "Bottom Navigation with PageView";
   static const String buttonsTitle = "Buttons";
   static const String animatedIconsTitle = "Animated Icons";
@@ -88,21 +88,21 @@ class Strings {
   static const String nestedListTitle = "Nested Example";
   static const String cupertinoTimerPickerTitle =
       "CupertinoTimerPicker Example";
-  static const String CupertinoActionSheetTitle =
+  static const String cupertinoActionSheetTitle =
       "CupertinoActionSheet Example";
-  static const String CupertinoProgressIndicatorTitle =
+  static const String cupertinoProgressIndicatorTitle =
       "CupertinoProgressIndicator Example";
-  static const String GridPaperTitle = "GridPaper Example";
-  static const String ChipsExampleTitle = "Chips Example";
-  static const String ExpansionTileTitle = "Expansion Tile Example";
+  static const String gridPaperTitle = "GridPaper Example";
+  static const String chipsExampleTitle = "Chips Example";
+  static const String expansionTileTitle = "Expansion Tile Example";
 
-  static const String RotationTransitionTitle = "Rotation Transition Example";
+  static const String rotationTransitionTitle = "Rotation Transition Example";
 
   static const String textSpanExampleTitle = "Text Span";
   static const String textUnderlineExampleTitle = "Text Underline";
-  static const String FlowWidgetExampleTitle = "Flow Widget Example";
+  static const String flowWidgetExampleTitle = "Flow Widget Example";
   static const String dismissibleExampleTitle = "Dismissible Example";
-  static const String BackdropFilterExampleTitle = "BackdropFilter Example";
+  static const String backdropFilterExampleTitle = "BackdropFilter Example";
   static const String googleMapsExampleTitle = "Google Maps Example";
   static const String toolTipExampleTitle = "ToolTip Example";
   static const String animatedCrossFadeExampleTitle =
@@ -114,7 +114,7 @@ class Strings {
   static const String wrapExampleTitle = "Wrap Example";
   static const String quickActionsTitle = "QuickActions Example";
   static const String bottomAppBarTitle = "AppBar Bottom Example";
-  static const String TransformExampleTitle = "Transform Example";
+  static const String transformExampleTitle = "Transform Example";
   static const String admobPluginExample = "AdMob Plugin Example";
-  static const String GridViewExampleTitle = "Grid View Example";
+  static const String gridViewExampleTitle = "Grid View Example";
 }

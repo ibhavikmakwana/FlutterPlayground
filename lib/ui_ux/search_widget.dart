@@ -12,7 +12,7 @@ class CustomSearchDelegate extends SearchDelegate {
   List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
-        icon: Icon(Icons.clear),
+        icon: const Icon(Icons.clear),
         onPressed: () {
           query = '';
           store!.searchResult.clear();
@@ -24,7 +24,7 @@ class CustomSearchDelegate extends SearchDelegate {
   @override
   Widget buildLeading(BuildContext context) {
     return IconButton(
-      icon: Icon(Icons.arrow_back),
+      icon: const Icon(Icons.arrow_back),
       onPressed: () => close(context, null),
     );
   }
@@ -33,16 +33,17 @@ class CustomSearchDelegate extends SearchDelegate {
   Widget buildResults(BuildContext context) => buildListView();
 
   Observer buildListView() {
-    if (query.isNotEmpty)
+    if (query.isNotEmpty) {
       store!.search(query);
-    else
+    } else {
       store!.searchResult.clear();
+    }
     return Observer(
-      builder: (context) => store!.searchResult.length > 0
+      builder: (context) => store!.searchResult.isNotEmpty
           ? ListView.builder(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
               itemCount: store!.searchResult.length,
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               itemBuilder: (BuildContext context, int index) => ExampleNameItem(
                 exampleNames: store!.searchResult[index],
               ),

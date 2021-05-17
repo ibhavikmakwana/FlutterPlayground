@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class ChipsExample extends StatefulWidget {
   final String title;
 
-  ChipsExample(this.title);
+  const ChipsExample(this.title);
 
   @override
   ChipsExampleState createState() {
@@ -25,19 +25,19 @@ class ChipsExampleState extends State<ChipsExample> {
       body: Column(
         children: <Widget>[
           Chip(
-            label: Text("Simple Chip"),
+            label: const Text("Simple Chip"),
             //This mode has anti-aliased clipping edges to achieve a smoother look.
             clipBehavior: Clip.antiAlias,
-            deleteIcon: Icon(Icons.remove),
+            deleteIcon: const Icon(Icons.remove),
             onDeleted: () {},
             materialTapTargetSize: MaterialTapTargetSize.padded,
-            avatar: CircleAvatar(child: FlutterLogo()),
+            avatar: const CircleAvatar(child: FlutterLogo()),
           ),
           ActionChip(
-            label: Text("Action Chip"),
+            label: const Text("Action Chip"),
             onPressed: () {},
             pressElevation: 4.0,
-            avatar: CircleAvatar(child: FlutterLogo()),
+            avatar: const CircleAvatar(child: FlutterLogo()),
           )
         ],
       ),

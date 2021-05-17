@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class ToolTipExample extends StatelessWidget {
   final String title;
 
-  ToolTipExample(this.title);
+  const ToolTipExample(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -18,22 +18,21 @@ class ToolTipExample extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Tooltip(
-            child: FlutterLogo(),
+          const Tooltip(
             message: "This is Flutter Logo",
+            child: FlutterLogo(),
           ),
           Tooltip(
             message: "This is Raised Button",
             child: ElevatedButton(
               onPressed: () {},
-              child: Text("This is Button"),
+              child: const Text("This is Button"),
             ),
           ),
-          Tooltip(
-            child: Icon(Icons.camera),
+          const Tooltip(
             message: "This is camera Icon",
+            child: Icon(Icons.camera),
           )
         ],
       ),

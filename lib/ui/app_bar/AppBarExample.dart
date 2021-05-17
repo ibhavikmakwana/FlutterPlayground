@@ -9,33 +9,33 @@ class AppBarExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Default Appbar"),
+        title: const Text("Default Appbar"),
         elevation: 0.0,
       ),
       body: ListView(
         children: <Widget>[
           ///App bar with background color
           Container(
+            margin: const EdgeInsets.only(top: 16.0, bottom: 16.0),
             child: AppBar(
-              title: Text("Title"),
+              title: const Text("Title"),
               backgroundColor: Colors.orange,
               elevation: 4.0,
             ),
-            margin: EdgeInsets.only(top: 16.0, bottom: 16.0),
           ),
 
           ///App bar with Action items
           Container(
-            margin: EdgeInsets.only(bottom: 16.0),
+            margin: const EdgeInsets.only(bottom: 16.0),
             child: AppBar(
-              title: Text("Appbar actions"),
+              title: const Text("Appbar actions"),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   onPressed: () {},
                 ),
                 IconButton(
-                  icon: Icon(Icons.settings),
+                  icon: const Icon(Icons.settings),
                   onPressed: () {},
                 ),
               ],
@@ -44,32 +44,32 @@ class AppBarExample extends StatelessWidget {
 
           ///Center text
           Container(
-            margin: EdgeInsets.only(bottom: 16.0),
+            margin: const EdgeInsets.only(bottom: 16.0),
             child: AppBar(
-              title: Text("Center"),
+              title: const Text("Center"),
               centerTitle: true,
             ),
           ),
 
           ///IconTheme for the app bar
           Container(
-            margin: EdgeInsets.only(bottom: 16.0),
+            margin: const EdgeInsets.only(bottom: 16.0),
             child: AppBar(
-              title: Text("Appbar Icon and Text Theme"),
+              title: const Text("Appbar Icon and Text Theme"),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   onPressed: () {},
                 ),
                 IconButton(
-                  icon: Icon(Icons.settings),
+                  icon: const Icon(Icons.settings),
                   onPressed: () {},
                 ),
               ],
-              iconTheme: IconThemeData(
+              iconTheme: const IconThemeData(
                 color: Colors.black,
               ),
-              textTheme: TextTheme(
+              textTheme: const TextTheme(
                 headline6: TextStyle(
                   color: Colors.black,
                 ),
@@ -79,13 +79,12 @@ class AppBarExample extends StatelessWidget {
 
           ///App bar with the title and subtitle
           Container(
-            margin: EdgeInsets.only(bottom: 16.0),
+            margin: const EdgeInsets.only(bottom: 16.0),
             child: AppBar(
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
+                children: const <Widget>[
                   Text(
                     "Title",
                     style: TextStyle(fontSize: 18.0),
@@ -101,16 +100,14 @@ class AppBarExample extends StatelessWidget {
 
           ///App bar with the title and and icon/image at start
           Container(
-            margin: EdgeInsets.only(bottom: 16.0),
+            margin: const EdgeInsets.only(bottom: 16.0),
             child: AppBar(
               backgroundColor: Colors.orangeAccent,
               title: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
-                children: <Widget>[
+                children: const <Widget>[
                   FlutterLogo(),
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0),
+                    padding: EdgeInsets.only(left: 16.0),
                     child: Text(
                       "Title with image",
                     ),
@@ -122,18 +119,18 @@ class AppBarExample extends StatelessWidget {
 
           ///App Bar with transparent background
           Container(
-            margin: EdgeInsets.only(bottom: 16.0),
+            margin: const EdgeInsets.only(bottom: 16.0),
             child: AppBar(
               backgroundColor: Colors.transparent,
               elevation: 0,
-              iconTheme: IconThemeData(color: Colors.black),
-              title: Text(
+              iconTheme: const IconThemeData(color: Colors.black),
+              title: const Text(
                 "Transparent AppBar",
                 style: TextStyle(color: Colors.black),
               ),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   onPressed: () {},
                 )
               ],

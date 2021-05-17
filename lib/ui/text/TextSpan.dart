@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class TextSpanExample extends StatefulWidget {
   final String title;
 
-  TextSpanExample({Key? key, required this.title}) : super(key: key);
+  const TextSpanExample({Key? key, required this.title}) : super(key: key);
 
   @override
   _TextSpanState createState() => _TextSpanState();
@@ -31,7 +31,6 @@ class _TextSpanState extends State<TextSpanExample> {
 
   Widget textSpanPage() {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         textSpan(),
@@ -39,7 +38,7 @@ class _TextSpanState extends State<TextSpanExample> {
     );
   }
 
-  textSpan() {
+  Widget textSpan() {
     return RichText(
       text: TextSpan(
         style: TextStyle(
@@ -65,7 +64,7 @@ class _TextSpanState extends State<TextSpanExample> {
               color: Colors.blue.shade900,
             ),
           ),
-          TextSpan(
+          const TextSpan(
             text: 'Playground',
           ),
         ],

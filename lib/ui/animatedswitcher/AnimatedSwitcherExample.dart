@@ -5,7 +5,8 @@
 import 'package:flutter/material.dart';
 
 class AnimatedSwitcherExample extends StatefulWidget {
-  AnimatedSwitcherExample({Key? key, required this.title}) : super(key: key);
+  const AnimatedSwitcherExample({Key? key, required this.title})
+      : super(key: key);
 
   final String title;
 
@@ -35,14 +36,17 @@ class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
           children: <Widget>[
             Column(
               children: <Widget>[
-                Text(
+                const Text(
                   'You have pushed the button this many times:',
                 ),
                 AnimatedSwitcher(
                   duration: const Duration(milliseconds: 500),
                   transitionBuilder:
                       (Widget child, Animation<double> animation) {
-                    return ScaleTransition(child: child, scale: animation);
+                    return ScaleTransition(
+                      scale: animation,
+                      child: child,
+                    );
                   },
                   child: Text(
                     '$_counter',
@@ -61,7 +65,7 @@ class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

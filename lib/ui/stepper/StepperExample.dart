@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class StepperExample extends StatefulWidget {
-  StepperExample({Key? key, required this.title}) : super(key: key);
+  const StepperExample({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -15,23 +15,22 @@ class StepperExample extends StatefulWidget {
 class _StepperExampleState extends State<StepperExample> {
   int stepCounter = 0;
   List<Step> steps = [
-    Step(
+    const Step(
       title: Text("Step One"),
       content: Text("This is the first step"),
       isActive: true,
     ),
-    Step(
+    const Step(
       title: Text("Step Two"),
       content: Text("This is the second step"),
       isActive: true,
     ),
     Step(
-      title: Text("Step Three"),
+      title: const Text("Step Three"),
       content: Wrap(
         spacing: 8.0, // gap between adjacent chips
-        runSpacing: 4.0, // gap between lines
-        direction: Axis.horizontal, // main axis (rows or columns)
-        children: <Widget>[
+        runSpacing: 4.0, // main axis (rows or columns)
+        children: const <Widget>[
           Chip(label: Text('Chips11')),
           Chip(label: Text('Chips12')),
           Chip(label: Text('Chips13')),
@@ -42,7 +41,7 @@ class _StepperExampleState extends State<StepperExample> {
       ),
       isActive: true,
     ),
-    Step(
+    const Step(
       title: Text("Step Four"),
       content: Text("This is the fourth step"),
       isActive: true,
@@ -56,9 +55,8 @@ class _StepperExampleState extends State<StepperExample> {
         title: Text(widget.title),
       ),
       body: Stepper(
-        currentStep: this.stepCounter,
+        currentStep: stepCounter,
         steps: steps,
-        type: StepperType.vertical,
         onStepTapped: (step) {
           setState(() {
             stepCounter = step;

@@ -10,7 +10,7 @@ abstract class _ThemeStore with Store {
   ThemeMode themeMode = ThemeMode.light;
 
   @action
-  changeTheme() {
+  void changeTheme() {
     themeMode == ThemeMode.light
         ? themeMode = ThemeMode.dark
         : themeMode = ThemeMode.light;

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class NestedList extends StatelessWidget {
   final String title;
 
-  NestedList(this.title);
+  const NestedList(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +25,15 @@ class NestedList extends StatelessWidget {
     );
   }
 
-  buildHorizontalListView() {
-    return Container(
+  Widget buildHorizontalListView() {
+    return SizedBox(
       height: 50.0,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
-        physics: ClampingScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         itemBuilder: (BuildContext context, int index) {
-          return Container(
+          return SizedBox(
             width: 50.0,
             child: ListTile(
               title: Text(index.toString()),

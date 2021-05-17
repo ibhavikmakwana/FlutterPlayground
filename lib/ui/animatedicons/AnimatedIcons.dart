@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedIconsDemo extends StatefulWidget {
-  AnimatedIconsDemo({Key? key, required this.title}) : super(key: key);
+  const AnimatedIconsDemo({Key? key, required this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -76,7 +76,7 @@ class _AnimatedIconsState extends State<AnimatedIconsDemo>
     );
   }
 
-  getAnimatedIcon(AnimatedIconData iconData, String title) {
+  Widget getAnimatedIcon(AnimatedIconData iconData, String title) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: InkWell(

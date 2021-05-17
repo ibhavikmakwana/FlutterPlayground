@@ -11,10 +11,10 @@ class StaggerAnimation extends StatelessWidget {
   StaggerAnimation({Key? key, required this.controller})
       :
 
-  // Each animation defined here transforms its value during the subset
-  // of the controller's duration defined by the animation's interval.
-  // For example the opacity animation transforms its value during
-  // the first 10% of the controller's duration.
+        // Each animation defined here transforms its value during the subset
+        // of the controller's duration defined by the animation's interval.
+        // For example the opacity animation transforms its value during
+        // the first 10% of the controller's duration.
 
         opacity = Tween<double>(
           begin: 0.0,
@@ -23,7 +23,7 @@ class StaggerAnimation extends StatelessWidget {
           CurvedAnimation(
             reverseCurve: Curves.easeIn,
             parent: controller,
-            curve: Interval(
+            curve: const Interval(
               0.0,
               0.100,
               curve: Curves.ease,
@@ -37,7 +37,7 @@ class StaggerAnimation extends StatelessWidget {
           CurvedAnimation(
             reverseCurve: Curves.elasticIn,
             parent: controller,
-            curve: Interval(
+            curve: const Interval(
               0.125,
               0.270,
               curve: Curves.bounceOut,
@@ -47,7 +47,7 @@ class StaggerAnimation extends StatelessWidget {
         height = Tween<double>(begin: 50.0, end: 150.0).animate(
           CurvedAnimation(
             parent: controller,
-            curve: Interval(
+            curve: const Interval(
               0.270,
               0.395,
               curve: Curves.ease,
@@ -60,7 +60,7 @@ class StaggerAnimation extends StatelessWidget {
         ).animate(
           CurvedAnimation(
             parent: controller,
-            curve: Interval(
+            curve: const Interval(
               0.250,
               0.395,
               curve: Curves.ease,
@@ -74,7 +74,7 @@ class StaggerAnimation extends StatelessWidget {
           CurvedAnimation(
             reverseCurve: Curves.elasticIn,
             parent: controller,
-            curve: Interval(
+            curve: const Interval(
               0.395,
               0.520,
               curve: Curves.ease,
@@ -87,7 +87,7 @@ class StaggerAnimation extends StatelessWidget {
         ).animate(
           CurvedAnimation(
             parent: controller,
-            curve: Interval(
+            curve: const Interval(
               0.520,
               0.770,
               curve: Curves.ease,
@@ -139,7 +139,7 @@ class StaggerAnimation extends StatelessWidget {
 }
 
 class StaggerDemo extends StatefulWidget {
-  StaggerDemo({Key? key, this.title}) : super(key: key);
+  const StaggerDemo({Key? key, this.title}) : super(key: key);
 
   final String? title;
 
@@ -165,7 +165,7 @@ class _StaggerDemoState extends State<StaggerDemo>
     super.dispose();
   }
 
-  Future<Null> _playAnimation() async {
+  Future<void> _playAnimation() async {
     try {
       await _controller.forward().orCancel;
       await _controller.reverse().orCancel;
@@ -205,5 +205,5 @@ class _StaggerDemoState extends State<StaggerDemo>
 }
 
 void main() {
-  runApp(MaterialApp(home: StaggerDemo()));
+  runApp(const MaterialApp(home: StaggerDemo()));
 }

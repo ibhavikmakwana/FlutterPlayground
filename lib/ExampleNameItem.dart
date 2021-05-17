@@ -24,9 +24,7 @@ class ExampleNameItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(4.0),
       child: Card(
         elevation: 4.0,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(0.0)),
-        ),
+        shape: const RoundedRectangleBorder(),
         child: Container(
           decoration: BoxDecoration(
             border: Border(
@@ -44,13 +42,11 @@ class ExampleNameItem extends StatelessWidget {
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Expanded(
                   child: Container(
-                    margin:
-                        EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
+                    margin: const EdgeInsets.symmetric(
+                        vertical: 16.0, horizontal: 8.0),
                     child: Text(
                       exampleNames.title,
                       softWrap: true,
@@ -59,8 +55,8 @@ class ExampleNameItem extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Icon(
                     Icons.chevron_right,
                   ),

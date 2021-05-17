@@ -2,11 +2,10 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
 import 'package:flutter/material.dart';
 
 class CollapsibleToolbar extends StatefulWidget {
-  CollapsibleToolbar({Key? key,required this.title}) : super(key: key);
+  const CollapsibleToolbar({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -21,7 +20,6 @@ class _CollapsibleToolbarState extends State<CollapsibleToolbar> {
         slivers: <Widget>[
           SliverAppBar(
             expandedHeight: 200.0,
-            floating: false,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(widget.title),
@@ -29,7 +27,7 @@ class _CollapsibleToolbarState extends State<CollapsibleToolbar> {
           ),
           SliverFixedExtentList(
               delegate: SliverChildBuilderDelegate(
-                    (context, index) => Text("Flutter list items"),
+                (context, index) => const Text("Flutter list items"),
               ),
               itemExtent: 24.0)
         ],

@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class BottomNavigation extends StatefulWidget {
-  BottomNavigation({Key? key, required this.title}) : super(key: key);
+  const BottomNavigation({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -23,6 +23,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
         title: Text(widget.title),
       ),
       body: PageView(
+        controller: _pageController,
+        physics: const BouncingScrollPhysics(),
+        onPageChanged: onPageChanged,
         children: <Widget>[
           Container(
             color: Colors.orangeAccent,
@@ -34,12 +37,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
             color: Colors.blueAccent,
           ),
         ],
-        controller: _pageController,
-        physics: BouncingScrollPhysics(),
-        onPageChanged: onPageChanged,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.photo),
             label: "Photo",
@@ -65,14 +65,14 @@ class _BottomNavigationState extends State<BottomNavigation> {
   void navigationTapped(int page) {
     _pageController!.animateToPage(
       page,
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeIn,
     );
   }
 
   void onPageChanged(int page) {
     setState(() {
-      this._page = page;
+      _page = page;
     });
   }
 

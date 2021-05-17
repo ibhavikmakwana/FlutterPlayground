@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedSizeDemo extends StatefulWidget {
-  AnimatedSizeDemo({Key? key, required this.title}) : super(key: key);
+  const AnimatedSizeDemo({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -31,6 +31,8 @@ class _AnimatedSizeDemoState extends State<AnimatedSizeDemo>
           children: <Widget>[
             AnimatedSize(
               curve: Curves.bounceInOut,
+              vsync: this,
+              duration: const Duration(seconds: 1),
               child: GestureDetector(
                 onTap: () {
                   setState(() {
@@ -53,8 +55,6 @@ class _AnimatedSizeDemoState extends State<AnimatedSizeDemo>
                   color: _color,
                 ),
               ),
-              vsync: this,
-              duration: Duration(seconds: 1),
             ),
           ],
         ),

@@ -4,10 +4,11 @@
 
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+
 class FlareExample extends StatefulWidget {
   final String title;
 
-  FlareExample(this.title);
+  const FlareExample(this.title);
 
   @override
   FlareExampleState createState() {
@@ -22,14 +23,10 @@ class FlareExampleState extends State<FlareExample> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Container(
-        child: Center(
-          child: FlareActor(
-            "assets/GoogleSantaTracker.flr",
-            alignment: Alignment.center,
-            fit: BoxFit.contain,
-            animation: "Untitled",
-          ),
+      body: const Center(
+        child: FlareActor(
+          "assets/GoogleSantaTracker.flr",
+          animation: "Untitled",
         ),
       ),
     );

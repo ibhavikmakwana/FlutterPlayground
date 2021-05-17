@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class ProgressButton extends StatefulWidget {
-  ProgressButton({Key? key, required this.title}) : super(key: key);
+  const ProgressButton({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -18,9 +18,9 @@ class ProgressButton extends StatefulWidget {
 class _ProgressButtonState extends State<ProgressButton>
     with TickerProviderStateMixin {
   int _state = 0;
-  late Animation _animation;
+  late Animation<double> _animation;
   late AnimationController _controller;
-  GlobalKey _globalKey = GlobalKey();
+  final GlobalKey _globalKey = GlobalKey();
   double _width = double.infinity;
 
   @override
@@ -41,17 +41,16 @@ class _ProgressButtonState extends State<ProgressButton>
           shadowColor: Colors.lightGreenAccent,
           color: Colors.lightGreen,
           borderRadius: BorderRadius.circular(25.0),
-          child: Container(
+          child: SizedBox(
             key: _globalKey,
             height: 48.0,
             width: _width,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.all(0.0),
+                padding: const EdgeInsets.all(0.0),
                 elevation: 4.0,
                 primary: Colors.lightGreen,
               ),
-              child: setUpButtonChild(),
               onPressed: () {
                 setState(() {
                   if (_state == 0) {
@@ -59,6 +58,7 @@ class _ProgressButtonState extends State<ProgressButton>
                   }
                 });
               },
+              child: setUpButtonChild(),
             ),
           ),
         ),
@@ -69,30 +69,29 @@ class _ProgressButtonState extends State<ProgressButton>
   ///
   /// Set up the child widget for the RaisedButton
   ///
-  setUpButtonChild() {
+  Widget setUpButtonChild() {
     if (_state == 0) {
-      return Text(
+      return const Text(
         "Click Here",
-        style: const TextStyle(
+        style: TextStyle(
           color: Colors.white,
           fontSize: 16.0,
         ),
       );
     } else if (_state == 1) {
-      return CircularProgressIndicator(
-        value: null,
+      return const CircularProgressIndicator(
         valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
       );
     } else {
-      return Icon(Icons.check, color: Colors.white);
+      return const Icon(Icons.check, color: Colors.white);
     }
   }
 
   void animateButton() {
-    double initialWidth = _globalKey.currentContext!.size!.width;
+    final double initialWidth = _globalKey.currentContext!.size!.width;
 
-    _controller =
-        AnimationController(duration: Duration(milliseconds: 300), vsync: this);
+    _controller = AnimationController(
+        duration: const Duration(milliseconds: 300), vsync: this);
     _animation = Tween(begin: 0.0, end: 1.0).animate(_controller)
       ..addListener(() {
         setState(() {
@@ -105,7 +104,7 @@ class _ProgressButtonState extends State<ProgressButton>
       _state = 1;
     });
 
-    Timer(Duration(milliseconds: 3300), () {
+    Timer(const Duration(milliseconds: 3300), () {
       setState(() {
         _state = 2;
       });

@@ -1,0 +1,26 @@
+include: package:lint/analysis_options.yaml
+analyzer:
+  errors:
+    missing_required_param: error
+    missing_return: error
+    must_be_immutable: error
+    parameter_assignments: error
+    sort_pub_dependencies: ignore
+    sort_unnamed_constructors_first: warning
+    avoid_print: ignore
+    file_names: ignore
+    avoid_function_literals_in_foreach_calls: ignore
+    argument_type_not_assignable: error
+    unnecessary_getters_setters: error
+    unnecessary_raw_strings: error
+    prefer_constructors_over_static_methods: error
+  exclude:
+    - "**/*.locator.dart"
+    - "**/*.router.dart"
+    - "**/*.logger.dart"
+    - "**/*.form.dart"
+    - "**/*.g.dart"
+linter:
+  rules:
+    parameter_assignments: true
+    always_use_package_imports: true

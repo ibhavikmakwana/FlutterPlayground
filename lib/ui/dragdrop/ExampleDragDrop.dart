@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class DragAndDropExample extends StatefulWidget {
   final String title;
 
-  DragAndDropExample({Key? key, required this.title}) : super(key: key);
+  const DragAndDropExample({Key? key, required this.title}) : super(key: key);
 
   @override
   DragAndDropAppState createState() => DragAndDropAppState();
@@ -57,10 +57,8 @@ class DotState extends State<Dot> {
     return Container(
         width: widget.size,
         height: widget.size,
-        decoration: BoxDecoration(
-            color: widget.color,
-            border: Border.all(width: 0.0),
-            shape: BoxShape.rectangle),
+        decoration:
+            BoxDecoration(color: widget.color, border: Border.all(width: 0.0)),
         child: widget.child);
   }
 }
@@ -101,17 +99,18 @@ class MovableRect extends StatelessWidget {
       color: Colors.blue.shade700,
       size: kRectSize,
     );
-    final Widget outlineRect = Container(
+    const Widget outlineRect = SizedBox(
         width: kRectSize,
         height: kRectSize,
-        child: const CustomPaint(painter: const OutlineRectPainter()));
+        child: CustomPaint(painter: OutlineRectPainter()));
     if (position == rectPosition) {
       return Draggable<bool>(
-          data: true,
-          child: rect,
-          childWhenDragging: outlineRect,
-          feedback: rect,
-          maxSimultaneousDrags: 2);
+        data: true,
+        childWhenDragging: outlineRect,
+        feedback: rect,
+        maxSimultaneousDrags: 2,
+        child: rect,
+      );
     } else {
       return DragTarget<bool>(onAccept: (bool data) {
         callback(position);

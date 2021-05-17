@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class RotationTransitionExample extends StatefulWidget {
   final String title;
 
-  RotationTransitionExample(this.title);
+  const RotationTransitionExample(this.title);
 
   @override
   _RotationTransitionExampleState createState() =>
@@ -43,7 +43,7 @@ class _RotationTransitionExampleState extends State<RotationTransitionExample>
         child: RotationTransition(
             turns: _animation,
             child: Container(
-              decoration: FlutterLogoDecoration(),
+              decoration: const FlutterLogoDecoration(),
               width: 200.0,
               height: 200.0,
             )),

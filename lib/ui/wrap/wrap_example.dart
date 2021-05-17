@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 class WrapExample extends StatelessWidget {
   final String title;
 
-  WrapExample(this.title);
+  const WrapExample(this.title);
 
   @override
   Widget build(BuildContext context) {
-    List colors = [Colors.red, Colors.green, Colors.yellow];
-    Random random = Random();
+    final List<Color> colors = [Colors.red, Colors.green, Colors.yellow];
+    final Random random = Random();
 
     return Scaffold(
       appBar: AppBar(
@@ -24,25 +24,25 @@ class WrapExample extends StatelessWidget {
               height: 100,
               width: 100,
             ),
-            SizedBox(width: 5, height: 5),
+            const SizedBox(width: 5, height: 5),
             Container(
               color: colors[random.nextInt(3)],
               height: 100,
               width: 100,
             ),
-            SizedBox(width: 5, height: 5),
+            const SizedBox(width: 5, height: 5),
             Container(
               color: colors[random.nextInt(3)],
               height: 100,
               width: 100,
             ),
-            SizedBox(width: 5, height: 5),
+            const SizedBox(width: 5, height: 5),
             Container(
               color: colors[random.nextInt(3)],
               height: 100,
               width: 100,
             ),
-            SizedBox(width: 5, height: 5),
+            const SizedBox(width: 5, height: 5),
             Container(
               color: colors[random.nextInt(3)],
               height: 100,

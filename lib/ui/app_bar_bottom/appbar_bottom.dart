@@ -31,16 +31,17 @@ class _AppBarBottomState extends State<AppBarBottom>
       appBar: AppBar(
         title: Text(widget.title),
         bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(48),
           child: Container(
             color: Colors.white,
             height: 48,
             alignment: Alignment.center,
             child: TabPageSelector(controller: _tabController),
           ),
-          preferredSize: Size.fromHeight(48),
         ),
       ),
       body: TabBarView(
+        controller: _tabController,
         children: <Widget>[
           Container(
             color: Colors.orangeAccent,
@@ -52,7 +53,6 @@ class _AppBarBottomState extends State<AppBarBottom>
             color: Colors.blueAccent,
           ),
         ],
-        controller: _tabController,
       ),
     );
   }

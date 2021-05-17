@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 class RawKeyboardDemo extends StatefulWidget {
   final String title;
 
-  RawKeyboardDemo({Key? key, required this.title}) : super(key: key);
+  const RawKeyboardDemo({Key? key, required this.title}) : super(key: key);
 
   @override
   _HardwareKeyDemoState createState() => _HardwareKeyDemoState();
@@ -53,8 +53,9 @@ class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
                 );
               }
 
-              if (_event == null)
+              if (_event == null) {
                 return Text('Press Volume key', style: textTheme.headline4);
+              }
 
               int? flags;
               int? codePoint;
