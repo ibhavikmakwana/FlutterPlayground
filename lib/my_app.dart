@@ -24,6 +24,7 @@ class MyApp extends StatelessObserverWidget {
         brightness: Brightness.light,
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
+      navigatorObservers: [observer],
       themeMode: Provider.of<ThemeStore>(context).themeMode,
       darkTheme: ThemeData(
         brightness: Brightness.dark,
