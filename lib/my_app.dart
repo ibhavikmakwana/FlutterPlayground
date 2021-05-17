@@ -7,14 +7,14 @@ import 'package:flutter_playground/values/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'store/theme_store.dart';
-import 'ui_ux/home_page/my_home_page_store.dart';
-import 'utils/Strings.dart';
+import 'package:flutter_playground/store/theme_store.dart';
+import 'package:flutter_playground/ui_ux/home_page/my_home_page_store.dart';
+import 'package:flutter_playground/utils/Strings.dart';
 
 class MyApp extends StatelessObserverWidget {
   static FirebaseAnalytics analytics = FirebaseAnalytics();
   static FirebaseAnalyticsObserver observer =
-  FirebaseAnalyticsObserver(analytics: analytics);
+      FirebaseAnalyticsObserver(analytics: analytics);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class MyApp extends StatelessObserverWidget {
       debugShowCheckedModeBanner: false,
       home: Provider(
         create: (context) => MyHomePageStore()..initList(),
-        child: MyHomePage(title: Strings.appName),
+        child: const MyHomePage(title: Strings.appName),
       ),
       routes: DefaultRoutes.routes(),
     );

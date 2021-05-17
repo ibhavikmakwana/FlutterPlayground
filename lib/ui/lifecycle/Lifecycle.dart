@@ -8,14 +8,14 @@ import 'package:flutter/widgets.dart';
 class Lifecycle extends StatefulWidget {
   final String title;
 
-  Lifecycle({Key? key, required this.title}) : super(key: key);
+  const Lifecycle({Key? key, required this.title}) : super(key: key);
 
   @override
   _LifecycleState createState() => _LifecycleState();
 }
 
 class _LifecycleState extends State<Lifecycle> with WidgetsBindingObserver {
-  List<AppLifecycleState> _appLifecycleState = [];
+  final List<AppLifecycleState> _appLifecycleState = [];
 
   @override
   void initState() {

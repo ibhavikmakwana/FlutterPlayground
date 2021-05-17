@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ExpandedExample extends StatelessWidget {
   final String title;
 
-  ExpandedExample(this.title);
+  const ExpandedExample(this.title);
 
   @override
   Widget build(BuildContext context) {

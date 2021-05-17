@@ -35,8 +35,8 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
         padding: EdgeInsets.zero,
         children: <Widget>[
           UserAccountsDrawerHeader(
-            accountName: Text("Flutter Example"),
-            accountEmail: Text("flutterexample@gmail.com"),
+            accountName: const Text("Flutter Example"),
+            accountEmail: const Text("flutterexample@gmail.com"),
             currentAccountPicture: circularAvatars(),
             otherAccountsPictures: <Widget>[
               circularAvatars(),
@@ -71,7 +71,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
                 createDrawerListTiles(Icons.photo, "Gallery"),
                 createDrawerListTiles(Icons.slideshow, "Slideshow"),
                 createDrawerListTiles(Icons.build, "Tools"),
-                Divider(),
+                const Divider(),
                 createDrawerListTiles(Icons.share, "Share"),
                 createDrawerListTiles(Icons.send, "Send"),
               ],
@@ -91,8 +91,11 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
+            decoration: const BoxDecoration(color: Colors.orangeAccent),
             child: Column(
-              children: <Widget>[
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const <Widget>[
                 FlutterLogo(
                   size: 48.0,
                 ),
@@ -111,17 +114,13 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
                   ),
                 ),
               ],
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.end,
             ),
-            decoration: BoxDecoration(color: Colors.orangeAccent),
           ),
           createDrawerListTiles(Icons.photo_camera, "Import"),
           createDrawerListTiles(Icons.photo, "Gallery"),
           createDrawerListTiles(Icons.slideshow, "Slideshow"),
           createDrawerListTiles(Icons.build, "Tools"),
-          Divider(),
+          const Divider(),
           createDrawerListTiles(Icons.share, "Share"),
           createDrawerListTiles(Icons.send, "Send"),
         ],
@@ -133,7 +132,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
   /// Account list tile
   ///
   Widget createDrawerAccountListTiles() {
-    return ListTile(
+    return const ListTile(
       leading: CircleAvatar(
         backgroundColor: Colors.orangeAccent,
         child: FlutterLogo(),
@@ -159,7 +158,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
       ),
       title: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           fontFamily: Strings.fontRobotoBold,
           fontSize: 16.0,
         ),
@@ -178,7 +177,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
   /// [CircleAvatar]
   ///
   Widget circularAvatars() {
-    return CircleAvatar(
+    return const CircleAvatar(
       backgroundColor: Colors.orangeAccent,
       child: FlutterLogo(),
     );

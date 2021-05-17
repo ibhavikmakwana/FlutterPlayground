@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class CupertinoActionSheetExample extends StatelessWidget {
   final String title;
 
-  CupertinoActionSheetExample(this.title);
+  const CupertinoActionSheetExample(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class CupertinoActionSheetExample extends StatelessWidget {
           previousPageTitle: "Back",
           middle: Text(title),
         ),
-        child: CupertinoActionSheet(
+        child: const CupertinoActionSheet(
           actions: <Widget>[
             Center(child: Text("First Action")),
             Center(child: Text("Second Action")),

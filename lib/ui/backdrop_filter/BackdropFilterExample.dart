@@ -2,7 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -10,7 +9,7 @@ import 'package:flutter/material.dart';
 class BackdropFilterExample extends StatelessWidget {
   final String title;
 
-  BackdropFilterExample(this.title);
+  const BackdropFilterExample(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,7 @@ class BackdropFilterExample extends StatelessWidget {
       body: Center(
         child: Stack(
           children: <Widget>[
-            FlutterLogo(
+            const FlutterLogo(
               size: 200.0,
             ),
             ClipRect(

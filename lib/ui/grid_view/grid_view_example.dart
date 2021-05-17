@@ -14,8 +14,8 @@ class GridViewExample extends StatelessWidget {
         title: Text(title),
       ),
       body: GridView.builder(
-          gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3),
           itemCount: 10,
           itemBuilder: (BuildContext context, int index) {
             return Item(index);

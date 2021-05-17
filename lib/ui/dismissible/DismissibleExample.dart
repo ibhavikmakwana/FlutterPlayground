@@ -2,13 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
 import 'package:flutter/material.dart';
 
 class DismissibleExample extends StatelessWidget {
   final String title;
 
-  DismissibleExample(this.title);
+  const DismissibleExample(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +21,8 @@ class DismissibleExample extends StatelessWidget {
           background: Container(
             color: Colors.red,
           ),
-          onDismissed: onDismissed(index),
-          movementDuration: Duration(seconds: 1),
+          onDismissed: onDismissed,
+          movementDuration: const Duration(seconds: 1),
           secondaryBackground: Container(
             color: Colors.yellow,
           ),
@@ -35,7 +34,7 @@ class DismissibleExample extends StatelessWidget {
     );
   }
 
-  onDismissed(int index) {
+  void onDismissed(DismissDirection index) {
     print("$index removed");
   }
 }

@@ -15,8 +15,9 @@ abstract class _MyHomePageStore with Store {
   @action
   void search(String query) {
     exampleList.forEach((ExampleNames example) {
-      if (example.title.toLowerCase().contains(query.toLowerCase()))
+      if (example.title.toLowerCase().contains(query.toLowerCase())) {
         searchResult.add(example);
+      }
     });
   }
 
@@ -24,7 +25,7 @@ abstract class _MyHomePageStore with Store {
   void initList() {
     exampleList = ObservableList.of(<ExampleNames>[
       ExampleNames(Strings.appBarTitle),
-      ExampleNames(Strings.TabBarTitle),
+      ExampleNames(Strings.tabBarTitle),
       ExampleNames(Strings.navigationDrawerTitle),
       ExampleNames(Strings.collapsibleToolbarTitle),
       ExampleNames(Strings.bottomNavigationTitle),
@@ -43,15 +44,15 @@ abstract class _MyHomePageStore with Store {
       ExampleNames(Strings.rotatedBoxTitle),
       ExampleNames(Strings.nestedListTitle),
       ExampleNames(Strings.cupertinoTimerPickerTitle),
-      ExampleNames(Strings.CupertinoActionSheetTitle),
-      ExampleNames(Strings.CupertinoProgressIndicatorTitle),
-      ExampleNames(Strings.GridPaperTitle),
-      ExampleNames(Strings.ChipsExampleTitle),
-      ExampleNames(Strings.ExpansionTileTitle),
-      ExampleNames(Strings.RotationTransitionTitle),
-      ExampleNames(Strings.FlowWidgetExampleTitle),
+      ExampleNames(Strings.cupertinoActionSheetTitle),
+      ExampleNames(Strings.cupertinoProgressIndicatorTitle),
+      ExampleNames(Strings.gridPaperTitle),
+      ExampleNames(Strings.chipsExampleTitle),
+      ExampleNames(Strings.expansionTileTitle),
+      ExampleNames(Strings.rotationTransitionTitle),
+      ExampleNames(Strings.flowWidgetExampleTitle),
       ExampleNames(Strings.dismissibleExampleTitle),
-      ExampleNames(Strings.BackdropFilterExampleTitle),
+      ExampleNames(Strings.backdropFilterExampleTitle),
 //  ExampleNames(Strings.googleMapsExampleTitle),
       ExampleNames(Strings.toolTipExampleTitle),
       ExampleNames(Strings.animatedCrossFadeExampleTitle),
@@ -61,9 +62,9 @@ abstract class _MyHomePageStore with Store {
       ExampleNames(Strings.wrapExampleTitle),
       ExampleNames(Strings.quickActionsTitle),
       ExampleNames(Strings.bottomAppBarTitle),
-      ExampleNames(Strings.TransformExampleTitle),
+      ExampleNames(Strings.transformExampleTitle),
       ExampleNames(Strings.admobPluginExample),
-      ExampleNames(Strings.GridViewExampleTitle),
+      ExampleNames(Strings.gridViewExampleTitle),
     ]);
   }
 }

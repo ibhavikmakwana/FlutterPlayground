@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class FlowWidgetExample extends StatefulWidget {
   final String title;
 
-  FlowWidgetExample(this.title);
+  const FlowWidgetExample(this.title);
 
   @override
   FlowWidgetExampleState createState() {
@@ -58,7 +58,7 @@ class FlowWidgetExampleState extends State<FlowWidgetExample>
             height: 50.0,
             color: red,
             child:
-            Center(child: Text('$i', textDirection: TextDirection.ltr))));
+                Center(child: Text('$i', textDirection: TextDirection.ltr))));
   }
 }
 
@@ -80,7 +80,8 @@ class ExampleFlowDelegate extends FlowDelegate {
 
     for (int i = 0; i < context.childCount; ++i) {
       context.paintChild(i,
-          opacity: opacity!, transform: Matrix4.translationValues(0.0, dy, 0.0));
+          opacity: opacity!,
+          transform: Matrix4.translationValues(0.0, dy, 0.0));
       dy += 0.65 * context.getChildSize(i)!.height;
     }
   }

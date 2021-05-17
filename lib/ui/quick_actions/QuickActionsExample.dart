@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quick_actions/quick_actions.dart';
 
 class QuickActionsExample extends StatefulWidget {
-  QuickActionsExample(this.title);
+  const QuickActionsExample(this.title);
 
   final String title;
 

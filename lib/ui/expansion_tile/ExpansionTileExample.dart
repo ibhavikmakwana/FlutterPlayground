@@ -47,7 +47,7 @@ final List<SampleData> data = <SampleData>[
 class ExpansionTileExample extends StatelessWidget {
   final String title;
 
-  ExpansionTileExample(this.title);
+  const ExpansionTileExample(this.title);
 
   @override
   Widget build(BuildContext context) {

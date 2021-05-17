@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class TextUnderline extends StatefulWidget {
   final String title;
 
-  TextUnderline({Key? key, required this.title}) : super(key: key);
+  const TextUnderline({Key? key, required this.title}) : super(key: key);
 
   @override
   _TextUnderlineState createState() => _TextUnderlineState();
@@ -26,7 +26,6 @@ class _TextUnderlineState extends State<TextUnderline> {
   Widget textSpanPage() {
     return Center(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           textUnderLine("Flutter", TextDecorationStyle.solid, Colors.green),
           textUnderLine("Flutter", TextDecorationStyle.dashed, Colors.blue),
@@ -37,7 +36,8 @@ class _TextUnderlineState extends State<TextUnderline> {
     );
   }
 
-  textUnderLine(String text, TextDecorationStyle decorationStyle, Color color) {
+  Widget textUnderLine(
+      String text, TextDecorationStyle decorationStyle, Color color) {
     return Text(
       text,
       style: TextStyle(

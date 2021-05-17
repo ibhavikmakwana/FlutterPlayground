@@ -38,20 +38,20 @@ class OpenSourceLicenses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Open source licenses')),
+      appBar: AppBar(title: const Text('Open source licenses')),
       body: ListView.separated(
-        separatorBuilder: (context, index) => Divider(),
+        separatorBuilder: (context, index) => const Divider(),
         itemCount: list.length,
         itemBuilder: (context, index) => ListTile(
           title: Text(list[index].name),
           onTap: () => navigateToLicence(context, list[index]),
         ),
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
       ),
     );
   }
 
-  navigateToLicence(BuildContext context, OpenSource licence) {
+  void navigateToLicence(BuildContext context, OpenSource licence) {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => LicenseDetail(licence: licence),

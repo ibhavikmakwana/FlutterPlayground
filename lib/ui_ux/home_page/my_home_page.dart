@@ -7,10 +7,10 @@ import 'package:flutter_playground/values/imports.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'my_home_page_store.dart';
+import 'package:flutter_playground/ui_ux/home_page/my_home_page_store.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -27,9 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void didChangeDependencies() {
-    if (store == null) {
-      store = Provider.of<MyHomePageStore>(context);
-    }
+    store ??= Provider.of<MyHomePageStore>(context);
     super.didChangeDependencies();
   }
 
@@ -43,20 +41,20 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: onFabPressed,
-        child: Icon(Icons.lightbulb_outline),
+        child: const Icon(Icons.lightbulb_outline),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
+        shape: const CircularNotchedRectangle(),
         child: Row(
-          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
-              icon: Icon(Icons.menu),
+              icon: const Icon(Icons.menu),
               onPressed: () => openMenuBottomSheet(context),
             ),
             IconButton(
-              icon: Icon(Icons.search),
+              icon: const Icon(Icons.search),
               onPressed: () => showSearch(
                 context: context,
                 delegate: CustomSearchDelegate(store),
@@ -64,10 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-        shape: CircularNotchedRectangle(),
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Flexible(
               child: ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(16)),
+                borderRadius: const BorderRadius.all(Radius.circular(16)),
                 child: Container(
                   margin: const EdgeInsets.all(16),
                   child: Image.asset(
@@ -96,7 +93,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Flexible(
-              fit: FlexFit.loose,
               child: _buildExampleItemsWidget(),
             ),
           ],
@@ -105,15 +101,15 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  _buildExampleItemsWidget() {
+  Widget _buildExampleItemsWidget() {
     return ListView.builder(
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (BuildContext context, int index) => ExampleNameItem(
         exampleNames: store!.exampleList[index],
       ),
       itemCount: store!.exampleList.length,
-      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
     );
   }
 
@@ -122,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
       Provider.of<ThemeStore>(context, listen: false).changeTheme();
 
   //Open Menu Bottom Sheet
-  openMenuBottomSheet(BuildContext context) {
+  void openMenuBottomSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
@@ -134,17 +130,17 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Wrap(
             children: <Widget>[
               ListTile(
-                title: Text('About'),
+                title: const Text('About'),
                 onTap: () => openAboutDialog(context),
               ),
-              Divider(),
+              const Divider(),
               ListTile(
-                title: Text('Open-source licenses'),
+                title: const Text('Open-source licenses'),
                 onTap: () => navigateToOpnSourceLicence(),
               ),
-              Divider(),
+              const Divider(),
               ListTile(
-                title: Text('Privacy Policy'),
+                title: const Text('Privacy Policy'),
                 onTap: _launchURL,
               ),
             ],
@@ -154,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  openAboutDialog(BuildContext context) {
+  void openAboutDialog(BuildContext context) {
     showAboutDialog(
       context: context,
       applicationLegalese:
@@ -167,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void _launchURL() async {
+  Future<void> _launchURL() async {
     const url = 'https://flutter-playground.flycricket.io/privacy.html';
     if (await canLaunch(url)) {
       await launch(url);

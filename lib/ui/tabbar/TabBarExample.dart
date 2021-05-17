@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class TabBarExample extends StatefulWidget {
   final String title;
 
-  TabBarExample({Key? key, required this.title}) : super(key: key);
+  const TabBarExample({Key? key, required this.title}) : super(key: key);
 
   @override
   _TabBarExampleState createState() => _TabBarExampleState();
@@ -29,7 +29,7 @@ class _TabBarExampleState extends State<TabBarExample>
       appBar: AppBar(
         title: Text(widget.title),
         bottom: TabBar(
-          tabs: [
+          tabs: const [
             Tab(
               text: "Tab 1",
             ),
@@ -44,6 +44,7 @@ class _TabBarExampleState extends State<TabBarExample>
         ),
       ),
       body: TabBarView(
+        controller: _tabController,
         children: <Widget>[
           Container(
             color: Colors.orangeAccent,
@@ -55,7 +56,6 @@ class _TabBarExampleState extends State<TabBarExample>
             color: Colors.blueAccent,
           ),
         ],
-        controller: _tabController,
       ),
     );
   }

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class GridPaperExample extends StatelessWidget {
   final String title;
 
-  GridPaperExample(this.title);
+  const GridPaperExample(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,10 @@ class GridPaperExample extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: GridPaper(color: Colors.red,child: Container(),),
+      body: GridPaper(
+        color: Colors.red,
+        child: Container(),
+      ),
     );
   }
 }
