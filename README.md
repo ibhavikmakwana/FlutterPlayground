@@ -1,6 +1,6 @@
 # Flutter Playground
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ae27cc3a3b32499cbf4c6d1614719c6f)](https://app.codacy.com/app/ibhavikmakwana/FlutterPlayground?utm_source=github.com&utm_medium=referral&utm_content=ibhavikmakwana/FlutterPlayground&utm_campaign=Badge_Grade_Dashboard)
@@ -107,6 +107,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://prasadsunny1.dev"><img src="https://avatars.githubusercontent.com/u/11705392?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sanni prasad</b></sub></a><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=prasadsunny1" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/dhuma1981"><img src="https://avatars.githubusercontent.com/u/298484?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dhrumil Shah</b></sub></a><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=dhuma1981" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/EdgarFabiano"><img src="https://avatars.githubusercontent.com/u/11666921?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Edgar Fabiano De Souza Filho</b></sub></a><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=EdgarFabiano" title="Code">💻</a></td>
   </tr>
 </table>
 
