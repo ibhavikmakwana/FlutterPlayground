@@ -1,4 +1,7 @@
 # Flutter Playground
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ae27cc3a3b32499cbf4c6d1614719c6f)](https://app.codacy.com/app/ibhavikmakwana/FlutterPlayground?utm_source=github.com&utm_medium=referral&utm_content=ibhavikmakwana/FlutterPlayground&utm_campaign=Badge_Grade_Dashboard)
 [![Codemagic build status](https://api.codemagic.io/apps/5d0de80099fdb700102145c9/5d0de80099fdb700102145c8/status_badge.svg)](https://codemagic.io/apps/5d0de80099fdb700102145c9/5d0de80099fdb700102145c8/latest_build)
@@ -92,3 +95,23 @@ Hit me on
     The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://prasadsunny1.dev"><img src="https://avatars.githubusercontent.com/u/11705392?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sanni prasad</b></sub></a><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=prasadsunny1" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
