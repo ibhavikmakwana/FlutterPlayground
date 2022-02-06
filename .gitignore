@@ -23,3 +23,8 @@ build/
 /android/misc/api-8857670977859340350-9644-c1e382e20443.json
 .flutter-plugins-dependencies
 .dart_tool/
+/android/app/flutter_playground.jks
+/upload_certificate.pem
+/lib/ads/ad_helper.dart
+/android/app/release/
+/ios/Flutter/flutter_export_environment.sh

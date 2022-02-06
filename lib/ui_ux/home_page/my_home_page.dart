@@ -1,13 +1,17 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/ads/ad_helper.dart';
 import 'package:flutter_playground/store/theme_store.dart';
+import 'package:flutter_playground/ui_ux/home_page/my_home_page_store.dart';
 import 'package:flutter_playground/ui_ux/open_source_licenses.dart';
 import 'package:flutter_playground/ui_ux/search_widget.dart';
 import 'package:flutter_playground/values/assets.dart';
 import 'package:flutter_playground/values/imports.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-import 'package:flutter_playground/ui_ux/home_page/my_home_page_store.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -19,11 +23,36 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   MyHomePageStore? store;
+  late BannerAd _ad;
+  bool _isAdLoaded = false;
 
   @override
   void initState() {
     super.initState();
+    _initGoogleMobileAds();
+    _ad = BannerAd(
+      adUnitId: AdHelper.bannerAdUnitId,
+      size: AdSize.banner,
+      request: const AdRequest(),
+      listener: BannerAdListener(
+        onAdLoaded: (_) {
+          setState(() {
+            _isAdLoaded = true;
+          });
+        },
+        onAdFailedToLoad: (ad, error) {
+          // Releases an ad resource when it fails to load
+          ad.dispose();
+
+          log('Ad load failed (code=${error.code} message=${error.message})');
+        },
+      ),
+    );
+    _ad.load();
   }
+
+  Future<InitializationStatus> _initGoogleMobileAds() =>
+      MobileAds.instance.initialize();
 
   @override
   void didChangeDependencies() {
@@ -33,6 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void dispose() {
+    _ad.dispose();
     super.dispose();
   }
 
@@ -72,9 +102,23 @@ class _MyHomePageState extends State<MyHomePage> {
             SafeArea(
               child: Container(
                 margin: const EdgeInsets.all(16),
-                child: Text(
-                  widget.title,
-                  style: Theme.of(context).textTheme.headline6,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        widget.title,
+                        style: Theme.of(context).textTheme.headline6,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        _launchURL(
+                          'https://github.com/ibhavikmakwana/FlutterPlayground',
+                        );
+                      },
+                      icon: SvgPicture.asset(Assets.icGithub),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -92,6 +136,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+            if (_isAdLoaded)
+              Center(
+                child: Container(
+                  width: _ad.size.width.toDouble(),
+                  height: 72.0,
+                  alignment: Alignment.center,
+                  child: AdWidget(ad: _ad),
+                ),
+              ),
             Flexible(
               child: _buildExampleItemsWidget(),
             ),
@@ -141,7 +194,9 @@ class _MyHomePageState extends State<MyHomePage> {
               const Divider(),
               ListTile(
                 title: const Text('Privacy Policy'),
-                onTap: _launchURL,
+                onTap: () => _launchURL(
+                  'https://flutter-playground.flycricket.io/privacy.html',
+                ),
               ),
             ],
           ),
@@ -163,8 +218,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Future<void> _launchURL() async {
-    const url = 'https://flutter-playground.flycricket.io/privacy.html';
+  Future<void> _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
     } else {
