@@ -23,6 +23,10 @@ jobs:
           key: ${{ runner.os }}-pub-cache-${{ hashFiles('**/pubspec.lock') }}
           restore-keys: ${{ runner.os }}-pub-cache-
 
+      - name: Set up keystore.properties
+        run: |
+          echo "${{ secrets.KEYSTORE_PROPERTIES }}" > android/key.properties
+
       - uses: subosito/flutter-action@v1.5.3
         with:
           channel: 'stable'
@@ -32,6 +36,11 @@ jobs:
 
       - name: Build release app bundle
         run: flutter build appbundle --release
+        env:
+          KEYSTORE_PATH: android/key.jks
+          KEYSTORE_ALIAS: my_keystore_alias
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
 
       - name: Authenticate with Google Play Console
         uses: google-github-actions/setup-gcloud@v1
