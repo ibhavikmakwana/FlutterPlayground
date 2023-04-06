@@ -68,12 +68,15 @@ class AppBarExample extends StatelessWidget {
               ],
               iconTheme: const IconThemeData(
                 color: Colors.black,
-              ),
-              textTheme: const TextTheme(
-                headline6: TextStyle(
+              ), toolbarTextStyle: const TextTheme(
+                titleLarge: TextStyle(
                   color: Colors.black,
                 ),
-              ),
+              ).bodyMedium, titleTextStyle: const TextTheme(
+                titleLarge: TextStyle(
+                  color: Colors.black,
+                ),
+              ).titleLarge,
             ),
           ),
 

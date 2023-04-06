@@ -47,9 +47,8 @@ class _ProgressButtonState extends State<ProgressButton>
             width: _width,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(0.0),
+                padding: const EdgeInsets.all(0.0), backgroundColor: Colors.lightGreen,
                 elevation: 4.0,
-                primary: Colors.lightGreen,
               ),
               onPressed: () {
                 setState(() {

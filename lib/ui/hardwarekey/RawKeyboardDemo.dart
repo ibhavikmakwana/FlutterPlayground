@@ -49,12 +49,12 @@ class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
                   onTap: () {
                     FocusScope.of(context).requestFocus(_focusNode);
                   },
-                  child: Text('Tap to focus', style: textTheme.headline4),
+                  child: Text('Tap to focus', style: textTheme.headlineMedium),
                 );
               }
 
               if (_event == null) {
-                return Text('Press Volume key', style: textTheme.headline4);
+                return Text('Press Volume key', style: textTheme.headlineMedium);
               }
 
               int? flags;
@@ -75,12 +75,12 @@ class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text('${_event.runtimeType}', style: textTheme.subtitle1),
-                  Text('flags: $flags', style: textTheme.subtitle1),
-                  Text('codePoint: $codePoint', style: textTheme.subtitle1),
-                  Text('keyCode: $keyCode', style: textTheme.subtitle1),
-                  Text('scanCode: $scanCode', style: textTheme.subtitle1),
-                  Text('metaState: $metaState', style: textTheme.subtitle1),
+                  Text('${_event.runtimeType}', style: textTheme.titleMedium),
+                  Text('flags: $flags', style: textTheme.titleMedium),
+                  Text('codePoint: $codePoint', style: textTheme.titleMedium),
+                  Text('keyCode: $keyCode', style: textTheme.titleMedium),
+                  Text('scanCode: $scanCode', style: textTheme.titleMedium),
+                  Text('metaState: $metaState', style: textTheme.titleMedium),
                 ],
               );
             },

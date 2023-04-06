@@ -46,9 +46,7 @@ class _TextExamplesState extends State<TextExamples> {
       padding: const EdgeInsets.all(8.0),
       child: TextButton(
         style: TextButton.styleFrom(
-          shape: const RoundedRectangleBorder(),
-          primary: Colors.red,
-          onSurface: Colors.white,
+          foregroundColor: Colors.red, shape: const RoundedRectangleBorder(), disabledForegroundColor: Colors.white.withOpacity(0.38),
         ),
         onPressed: () {
           Navigator.pushNamed(context, route);

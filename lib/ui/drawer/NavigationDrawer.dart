@@ -5,12 +5,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/utils/Strings.dart';
 
-class NavigationDrawer extends StatefulWidget {
+class NavigationDrawerExample extends StatefulWidget {
   @override
-  _NavigationDrawerState createState() => _NavigationDrawerState();
+  _NavigationDrawerExampleState createState() => _NavigationDrawerExampleState();
 }
 
-class _NavigationDrawerState extends State<NavigationDrawer> {
+class _NavigationDrawerExampleState extends State<NavigationDrawerExample> {
   bool _isVisible = true;
 
   String _title = "Navigation Example";

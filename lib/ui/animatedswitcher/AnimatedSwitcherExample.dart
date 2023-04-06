@@ -54,7 +54,7 @@ class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
                     // child each time the count changes, so that it will begin its animation
                     // when the count changes.
                     key: ValueKey<int>(_counter),
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                 ),
               ],

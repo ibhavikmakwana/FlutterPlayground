@@ -27,6 +27,8 @@ export 'package:flutter_playground/ui/expanded_example/expanded_example.dart';
 export 'package:flutter_playground/ui/expansion_tile/ExpansionTileExample.dart';
 export 'package:flutter_playground/ui/flare/flare_example.dart';
 export 'package:flutter_playground/ui/flow_example/FlowWidgetExample.dart';
+export 'package:flutter_playground/ui/grid_view/grid_view_example.dart'
+    hide Item;
 export 'package:flutter_playground/ui/gridpaper/GridPaperExample.dart';
 export 'package:flutter_playground/ui/hardwarekey/RawKeyboardDemo.dart';
 export 'package:flutter_playground/ui/lifecycle/Lifecycle.dart';
@@ -47,5 +49,3 @@ export 'package:flutter_playground/ui/tooltip/tooltip.dart';
 export 'package:flutter_playground/ui/transform/transform_example.dart';
 export 'package:flutter_playground/ui/wrap/wrap_example.dart';
 export 'package:flutter_playground/utils/Strings.dart';
-export 'package:flutter_playground/ui/grid_view/grid_view_example.dart'
-    hide Item;
