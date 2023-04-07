@@ -27,6 +27,9 @@ jobs:
         run: |
           echo "${{ secrets.KEYSTORE_PROPERTIES }}" > android/key.properties
 
+      - name: Download google-services.json
+        run: echo "$FIREBASE_CONFIG" > ./android/app/google-services.json
+
       - uses: subosito/flutter-action@v1.5.3
         with:
           channel: 'stable'
